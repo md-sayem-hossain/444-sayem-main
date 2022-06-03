@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACN,KAAK,EAAE,cAAc;CACxB;;AACD,AAAA,SAAS,CAAC;EACN,KAAK,EAAE,cAAc;CACxB",
+    "sources": [
+        "motivation-sschreiben.component.scss"
+    ],
+    "names": [],
+    "file": "motivation-sschreiben.component.css"
+}

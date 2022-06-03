@@ -1,0 +1,69 @@
+<div class="first-step">
+    <div class="motivation-container">
+         
+        <div class="row">
+            <div class="col-100">
+                <span class="small-heading grey-color">
+                    Die folgenden Fragen können dir an einem Bewerbungsgespräch gestellt werden (Quelle: berufsberatung.ch)
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-100">
+                <label class="grey-color">
+                    Versuche die Fragen zu beantworten - am Schluss kannst du die Fragen und deine Antworten in einem Dokument herunterladen und dein
+                    Bewerbungsgespräch üben.                </label>
+            </div>
+        </div>
+        <div class="mb-20"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">1) Wer hat dich beim Schreiben deines Bewerbungsdossier unterstützt?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepOneData.textArea10" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepOneData.textArea10PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+
+        <div class="mb-10"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">2) Wie sind deine Schulnoten?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepOneData.textArea11" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepOneData.textArea11PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+
+        <div class="mb-10"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">3) Wie sind deine Zeugnisse (Verhalten/ Absenzen)?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepOneData.textArea12" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepOneData.textArea12PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+        <div class="mb-20"></div>
+    </div>
+
+</div>
+<div class="mb-20"></div>
+
+ <a class="next-btn" (click)="onNext()">weiter</a>

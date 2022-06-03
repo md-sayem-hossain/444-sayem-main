@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,WAAW,CAAC;EACR,KAAK,EAAE,eAAe;CACzB;;AAED,AAAA,cAAc,CAAC;EACX,aAAa,EAAE,mBAAmB;EAClC,UAAU,EAAE,IAAI;EAChB,aAAa,EAAE,IAAI;CACtB",
+    "sources": [
+        "cv-pdf-preview.component.scss"
+    ],
+    "names": [],
+    "file": "cv-pdf-preview.component.css"
+}

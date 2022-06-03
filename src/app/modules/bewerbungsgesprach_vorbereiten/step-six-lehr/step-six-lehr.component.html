@@ -1,0 +1,68 @@
+<div class="first-step">
+    <div class="motivation-container">
+
+        <div class="row">
+            <div class="col-100">
+                <span class="small-heading grey-color">
+                 </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-100">
+                <label class="grey-color">
+                 </label>
+            </div>
+        </div>
+        <div class="mb-20"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">16) Erzähle etwas über deine Familie (Eltern, Geschwister, Beruf, Schule, Wer unterstützt dich?)</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepSixData6.textArea16" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepSixData6.textArea16PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+
+        <div class="mb-10"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">17) Falls du die Lehrstelle beginnst, wie kommst du an den Arbeitsort?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepSixData6.textArea17" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepSixData6.textArea17PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+
+        <div class="mb-10"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">18) Wie sieht deine Zukunft aus? (beruflich, privat)</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepSixData6.textArea18" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepSixData6.textArea18PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+        <div class="mb-20"></div>
+    </div>
+
+</div>
+<div class="mb-20"></div>
+<a class="next-btn back-btn" (click)="onBack()">zurück</a>
+
+ <a class="next-btn" (click)="onNext()">weiter</a>

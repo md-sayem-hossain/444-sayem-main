@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,UAAU,CAAC;EACP,KAAK,EAAE,EAAE;CACZ",
+    "sources": [
+        "trail-and-reference.component.scss"
+    ],
+    "names": [],
+    "file": "trail-and-reference.component.css"
+}

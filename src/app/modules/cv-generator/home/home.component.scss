@@ -1,0 +1,98 @@
+.home-content {
+    text-align: center;
+    .btns {
+        display: inline-flex;
+        .create-cv-btn {
+            width: 400px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+            font-family: "DM Sans";
+            cursor: pointer;
+            border-radius: 75px;
+            background-color: #ffdf59;
+            font-weight: 550;
+            margin-right: 20px;
+        }
+    }
+}
+
+p {
+    font-size: 14.4px !important;
+}
+b {
+    font-size: 14.4px !important;
+}
+
+u:hover {
+    background-color: #ffdf59;
+    font-size: 15px !important;
+  }
+
+.alert-box {
+    font-family: sans-serif;
+    margin: -15px 20px 20px 20px;
+}
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 60px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    text-align: center;
+    margin: auto;
+  }
+  
+  .cv-btns {
+    p{
+       cursor: pointer;
+    margin-top: 5px;
+    }
+   
+}
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 25%;
+    margin-bottom: 100px;
+  }
+  .modal-content img{
+      width: 100%;
+  }
+  /* The Close Button */
+  .close {
+    color: #ffffff;
+    float: right;
+    font-size: 25px;
+    font-weight: 600;
+    background: red;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 22222; 
+    top: -33px;
+    right: -33px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }

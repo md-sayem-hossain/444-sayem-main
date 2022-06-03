@@ -1,0 +1,68 @@
+<div class="first-step">
+    <div class="motivation-container">
+
+        <div class="row">
+            <div class="col-100">
+                <span class="small-heading grey-color">
+                 </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-100">
+                <label class="grey-color">
+                 </label>
+            </div>
+        </div>
+        <div class="mb-20"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">10) Was erwartest du von deiner Lehrstelle?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepFourData4.textArea7" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepFourData4.textArea7PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+
+        <div class="mb-10"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">11) Welches sind deine Stärken und deine Schwächen?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepFourData4.textArea8" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepFourData4.textArea8PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+
+        <div class="mb-10"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">12) Arbeitsverhalten: Kannst du anpacken und bist du ausdauernd? Nenne Beispiele von dir!</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepFourData4.textArea9" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepFourData4.textArea9PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+        <div class="mb-20"></div>
+    </div>
+
+</div>
+<div class="mb-20"></div>
+<a class="next-btn back-btn" (click)="onBack()">zurück</a>
+
+ <a class="next-btn" (click)="onNext()">weiter</a>

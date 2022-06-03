@@ -1,0 +1,10 @@
+.content {
+  min-height: 70vh;
+  width: 40vw;
+}
+
+.error {
+  font-family: sans-serif;
+  text-align: center;
+}
+/*# sourceMappingURL=error.component.css.map */

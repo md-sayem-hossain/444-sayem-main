@@ -1,0 +1,68 @@
+<div class="first-step">
+    <div class="motivation-container">
+
+        <div class="row">
+            <div class="col-100">
+                <span class="small-heading grey-color">
+                 </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-100">
+                <label class="grey-color">
+                 </label>
+            </div>
+        </div>
+        <div class="mb-20"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">7) Warum hast du dich für diese Firma entschieden?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepThreeData3.textArea4" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepThreeData3.textArea4PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+
+        <div class="mb-10"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">8) Kannst du erklären, was die Firma macht? (Produkte, Dienstleistungen)</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepThreeData3.textArea5" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepThreeData3.textArea5PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+
+        <div class="mb-10"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">9) Welche Schnupperlehren hast du bis jetzt absolviert? Was hat dir gefallen und was nicht?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepThreeData3.textArea6" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepThreeData3.textArea6PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+        <div class="mb-20"></div>
+    </div>
+
+</div>
+<div class="mb-20"></div>
+<a class="next-btn back-btn" (click)="onBack()">zurück</a>
+
+ <a class="next-btn" (click)="onNext()">weiter</a>

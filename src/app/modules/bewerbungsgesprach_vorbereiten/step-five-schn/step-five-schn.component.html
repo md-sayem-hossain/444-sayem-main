@@ -1,0 +1,68 @@
+<div class="first-step">
+    <div class="motivation-container">
+
+        <div class="row">
+            <div class="col-100">
+                <span class="small-heading grey-color">
+                 </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-100">
+                <label class="grey-color">
+                 </label>
+            </div>
+        </div>
+        <div class="mb-20"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">13) Kannst du mit anderen zusammenarbeiten? Nenne Beispiele aus der Schule/ Freizeit.</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepFiveData5.textArea13" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepFiveData5.textArea13PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+
+        <div class="mb-10"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">14) Wie reagierst du in einer Konfliktsituation oder in einem Streit? Nenne Beispiele von dir.</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepFiveData5.textArea14" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepFiveData5.textArea14PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+
+        <div class="mb-10"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">15) Welche Hobbys hast du und wie verbringst du deine Freizeit/ Schulferien?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepFiveData5.textArea15" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepFiveData5.textArea15PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+        <div class="mb-20"></div>
+    </div>
+
+</div>
+<div class="mb-20"></div>
+<a class="next-btn back-btn" (click)="onBack()">zurück</a>
+
+<a class="next-btn" (click)="onNext()">weiter</a>

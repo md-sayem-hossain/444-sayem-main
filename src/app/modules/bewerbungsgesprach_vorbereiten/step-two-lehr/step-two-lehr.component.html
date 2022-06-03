@@ -1,0 +1,69 @@
+<div class="first-step">
+    <div class="motivation-container">
+
+        <div class="row">
+            <div class="col-100">
+                <span class="small-heading grey-color">
+                    
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-100">
+                <label class="grey-color">
+                                  </label>
+            </div>
+        </div>
+        <div class="mb-20"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">4) Wie gerne erledigst du Hausaufgaben und wie lernst du für Prüfungen (Was ist deine Lernstrategie)?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepTwoData.textArea1" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepTwoData.textArea1PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+
+        <div class="mb-10"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">5) Warum möchtest du diesen Beruf erlernen?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepTwoData.textArea2" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepTwoData.textArea2PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+
+        <div class="mb-10"></div>
+        <div class="row">
+            <div class="col-100">
+                <label for="fname" class="ques_col">6) Erfüllst du die schulischen und persönlichen Voraussetzungen für die Lehrstelle?</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-100">
+                <textarea id="description" [(ngModel)]="commonService.lehrStepTwoData.textArea3" class="col-100"
+                    name="comment-area" rows="5"
+                    placeholder={{commonService.lehrStepTwoData.textArea3PlaceHolder}}></textarea>
+            </div>
+        </div>
+
+        <div class="mb-20"></div>
+    </div>
+
+</div>
+<div class="mb-20"></div>
+<a class="next-btn back-btn" (click)="onBack()">zurück</a>
+
+ <a class="next-btn" (click)="onNext()">weiter</a>

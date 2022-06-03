@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACJ,KAAK,EAAE,cAAc;CACxB",
+    "sources": [
+        "cv-generator.component.scss"
+    ],
+    "names": [],
+    "file": "cv-generator.component.css"
+}

@@ -1,0 +1,80 @@
+
+<div class="home-content">
+    <div class="btns">
+        <div class="cv-btns">
+             <a class="create-cv-btn" (click)="navigateTo('/cv-generator')">
+            Lebenslauf erstellen 
+        </a>
+        <p id="myBtn" onclick="modelOnClick()">Beispiel Lebenslauf</p>
+
+         </div>
+        <div class="cv-btns">
+             <a class="create-cv-btn" (click)="navigateTo('/motivation-sschreiben')">
+            Motivationsschreiben erstellen
+        </a>
+        <p id="myBtn2" onclick="modelOn2Click()">Beispiel Motivationsschreiben</p>
+       </div>
+
+       
+    </div>
+    <br>
+    <br>
+    <div class="btns">
+     
+      <div class="cv-btns">
+           <a class="create-cv-btn" (click)="navigateTo('/bewerbungsgesprach_vorbereiten')">
+            Bewerbungsgespräch vorbereiten
+      </a>
+      </div>
+
+  </div>
+     <br>
+     <br>
+     <br>
+
+  <div class="down-div">
+      <h4>EINFACH - SCHNELL &  OHNE HILFE bewerben</h4>
+      <p>Lebenslauf, Motivationsschreiben und Bewerbungsfragen als</p>
+      <img src="assets/images/pdfandwordicon.png" alt="image" width="60">
+      <h4>DOWNLOADEN</h4>
+  </div>
+  
+
+
+</div>
+
+<div class="cv-generator" *ngIf="isShowCookiesContainer">
+    <div class="content">
+        <div (click)="crossClick()" class="clickable" style="text-align: right; margin-top: -20px; margin-right: -20px;">
+            <img src="assets/images/red cross.png" width="40">
+        </div>
+        <div class="alert-box">
+            <b>Der Schutz deiner Daten ist uns wichtig</b>
+            <p align="justify">
+                Wir verwenden Cookies zur Unterstützung der Benutzerfreundlichkeit, damit man den Lebenslauf und das Motivationsschreiben erstellen kann. Mit Wegklicken dieses Fensters, stimmst du der Cookie-Nutzung zu. <u class="clickable" (click)="navigateTo('/datenschutzerklärung')">Datenschutzerklärung</u></p>
+        </div>
+    </div>
+</div>
+
+<div id="myModal" class="modal" onclick="modelOffClick()">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="modelOffClick()">&times;</span>
+      <img src="assets/images/basic-cv-template.png" alt="">
+      
+    </div>
+  
+  </div>
+  
+  <div id="myModal2" class="modal" onclick="modelOff2Click()">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close" onclick="modelOff2Click()">&times;</span>
+      <img src="assets/images/demo-letter.png" alt="">
+      
+    </div>
+  
+  </div>
+  
