@@ -16,9 +16,9 @@ export class StepTwoLehrComponent implements OnInit {
   onNext() {
 
     this.commonService.msStep = 3
-    localStorage.setItem('lehrStepTwoData', JSON.stringify(this.commonService.lehrStepTwoData))
+    localStorage.setItem('lehrStepTwoData2', JSON.stringify(this.commonService.lehrStepTwoData2))
     localStorage.setItem('msStep', JSON.stringify(this.commonService.msStep))
-    console.log("lehrStepTwoData", this.commonService.lehrStepTwoData)
+    console.log("lehrStepTwoData2", this.commonService.lehrStepTwoData2)
   }
 
   onBack() {

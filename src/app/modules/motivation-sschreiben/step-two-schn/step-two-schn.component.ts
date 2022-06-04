@@ -17,8 +17,8 @@ export class StepTwoSchnComponent implements OnInit {
 
     this.commonService.msStep = 3
     localStorage.setItem('msStep', JSON.stringify(this.commonService.msStep))
-    localStorage.setItem('schnStepTwoData', JSON.stringify(this.commonService.schnStepTwoData))
-    console.log("schnStepTwoData", this.commonService.schnStepTwoData)
+    localStorage.setItem('schnStepTwoData2', JSON.stringify(this.commonService.schnStepTwoData2))
+    console.log("schnStepTwoData2", this.commonService.schnStepTwoData2)
 
   }
 

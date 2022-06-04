@@ -56,6 +56,27 @@ export class CommonService {
 
 
 
+   lehrStepTwoData2 = {
+    textArea1: '',
+    textArea2: '',
+    textArea3: '',
+    textArea1PlaceHolder: 'Wir haben keine Hausaufgaben mehr. Wir haben aber drei Mal pro Woche die persönliche Lernzeit (PLZ) und dort kann man Sachen nachholen oder üben. Für die Prüfungen schreibe ich mir immer eine Zusammenfassung und lerne mit dieser.',
+    textArea2PlaceHolder: 'Ich habe den Beruf Detailhandelsassistent zwei Mal geschnuppert und die Arbeiten haben mir sehr gefallen. Ich möchte meine Lehre in einem Grossunternehmen absolvieren, damit ich nach der Lehre eine Weiterbildung machen kann.',
+    textArea3PlaceHolder: 'Schulisch: Ja, ich mache im Unterricht gut mit und lerne für Prüfungen und schreibe gute Noten. Persönlich: Ich bin pünktlich, freundlich und kann gut allein oder in einem Team arbeiten.',
+  }
+
+  schnStepTwoData2 = {
+    textArea1: '',
+    textArea2: '',
+    textArea3: '',
+    textArea1PlaceHolder: 'Wir haben keine Hausaufgaben mehr. Wir haben aber drei Mal pro Woche die persönliche Lernzeit (PLZ) und dort kann man Sachen nachholen oder üben. Für die Prüfungen schreibe ich mir immer eine Zusammenfassung und lerne mit dieser.',
+    textArea2PlaceHolder: 'Ich habe den Beruf Detailhandelsassistent zwei Mal geschnuppert und die Arbeiten haben mir sehr gefallen. Ich möchte meine Lehre in einem Grossunternehmen absolvieren, damit ich nach der Lehre eine Weiterbildung machen kann.',
+    textArea3PlaceHolder: 'Schulisch: Ja, ich mache im Unterricht gut mit und lerne für Prüfungen und schreibe gute Noten. Persönlich: Ich bin pünktlich, freundlich und kann gut allein oder in einem Team arbeiten.',
+   }
+
+
+
+
   lehrStepThreeData3 = {
     textArea4: '',
     textArea5: '',
