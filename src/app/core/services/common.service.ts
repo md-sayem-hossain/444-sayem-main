@@ -34,15 +34,14 @@ export class CommonService {
     textArea10PlaceHolder: 'Ich habe den Lebenslauf und das Motivationsschreiben mit der Seite Lehrstell.ch verfasst und meine IF-Lehrperson hat beides korrigiert. Mein älterer Bruder ist bereits in der Lehre und hat mein Bewerbungsdossier durchgeschaut und mir noch Tipps gegeben.',
     textArea11PlaceHolder: 'Ich bin nicht der Klassenbeste, aber auch nicht schlecht in der Schule. Gute Noten habe ich im Englisch und im RZG, weil mich diese Fächer sehr interessieren. Im Fach Mathi und NT habe ich Mühe und muss viel lernen. Die Noten sind da nicht so gut, aber ich versuche noch besser zu werden.',
     textArea12PlaceHolder: 'Meine Klassenlehrerin sagt, dass sie mein Verhalten gut findet. Ich versuche mich immer an die Schulhausregeln zu halten. Ich könnte jedoch im Unterricht noch selbständiger werden.',
-  }
-
+  }  
   lehrStepTwoData = {
     textArea1: '',
     textArea2: '',
     textArea3: '',
     textArea1PlaceHolder: 'Wir haben keine Hausaufgaben mehr. Wir haben aber drei Mal pro Woche die persönliche Lernzeit (PLZ) und dort kann man Sachen nachholen oder üben. Für die Prüfungen schreibe ich mir immer eine Zusammenfassung und lerne mit dieser.',
     textArea2PlaceHolder: 'Ich habe den Beruf Detailhandelsassistent zwei Mal geschnuppert und die Arbeiten haben mir sehr gefallen. Ich möchte meine Lehre in einem Grossunternehmen absolvieren, damit ich nach der Lehre eine Weiterbildung machen kann.',
-    textArea3PlaceHolder: 'Schulisch: Ja, ich mache im Unterricht gut mit und lerne für Prüfungen und schreibe gute Noten. Persönlich: Ich bin pünktlich, freundlich und kann gut allein oder in einem Team arbeiten.',
+    textArea3PlaceHolder: 'Schulisch: Ja, ich mache im Unterricht gut mit und lerne für Prüfungen und schreibe gute Noten.    Persönlich: Ich bin pünktlich, freundlich und kann gut allein oder in einem Team arbeiten.'
   }
 
   schnStepTwoData = {
@@ -51,7 +50,7 @@ export class CommonService {
     textArea3: '',
     textArea1PlaceHolder: 'Wir haben keine Hausaufgaben mehr. Wir haben aber drei Mal pro Woche die persönliche Lernzeit (PLZ) und dort kann man Sachen nachholen oder üben. Für die Prüfungen schreibe ich mir immer eine Zusammenfassung und lerne mit dieser.',
     textArea2PlaceHolder: 'Ich habe den Beruf Detailhandelsassistent zwei Mal geschnuppert und die Arbeiten haben mir sehr gefallen. Ich möchte meine Lehre in einem Grossunternehmen absolvieren, damit ich nach der Lehre eine Weiterbildung machen kann.',
-    textArea3PlaceHolder: 'Schulisch: Ja, ich mache im Unterricht gut mit und lerne für Prüfungen und schreibe gute Noten. Persönlich: Ich bin pünktlich, freundlich und kann gut allein oder in einem Team arbeiten.',
+    textArea3PlaceHolder: 'Schulisch: Ja, ich mache im Unterricht gut mit und lerne für Prüfungen und schreibe gute Noten.  Persönlich: Ich bin pünktlich, freundlich und kann gut allein oder in einem Team arbeiten.'
    }
 
 
@@ -60,18 +59,18 @@ export class CommonService {
     textArea1: '',
     textArea2: '',
     textArea3: '',
-    textArea1PlaceHolder: 'Wir haben keine Hausaufgaben mehr. Wir haben aber drei Mal pro Woche die persönliche Lernzeit (PLZ) und dort kann man Sachen nachholen oder üben. Für die Prüfungen schreibe ich mir immer eine Zusammenfassung und lerne mit dieser.',
-    textArea2PlaceHolder: 'Ich habe den Beruf Detailhandelsassistent zwei Mal geschnuppert und die Arbeiten haben mir sehr gefallen. Ich möchte meine Lehre in einem Grossunternehmen absolvieren, damit ich nach der Lehre eine Weiterbildung machen kann.',
-    textArea3PlaceHolder: 'Schulisch: Ja, ich mache im Unterricht gut mit und lerne für Prüfungen und schreibe gute Noten. Persönlich: Ich bin pünktlich, freundlich und kann gut allein oder in einem Team arbeiten.',
+    textArea1PlaceHolder: 'Ich habe im Internet gesehen, dass Sie eine Lehrstelle als Logistiker mit Beginn im August 2022 anbieten. Ich bewerbe mich hiermit um diese Lehrstelle. Sehr gerne würde ich in Ihrem Unternehmen mit anpacken und die Ausbildung zum Logistiker EBA absolvieren.',
+    textArea2PlaceHolder: 'Der Beruf des Logistikers habe ich bereits beim Schnuppern bei der Firma Logik AG kennengelernt. Dort merkte ich, dass ich mich für eine Ausbildung als Logistiker bewerben werde, da mir die Schnuppertage in diesem Beruf sehr gefallen haben.',
+    textArea3PlaceHolder: 'Die Kontrolle und der Transport der Waren mit dem Gabelstapler bereiten mir grosse Freude. Auch der Kontakt mit Kunden gefällt mir. Ich arbeite gerne praktisch, packe mit an und erledige Aufträge konzentriert und zügig. Die Firma Logistik AG würde mir als Lehrbetrieb gefallen, da es ein familiäres Unternehmen ist.',
   }
 
   schnStepTwoData2 = {
     textArea1: '',
     textArea2: '',
     textArea3: '',
-    textArea1PlaceHolder: 'Wir haben keine Hausaufgaben mehr. Wir haben aber drei Mal pro Woche die persönliche Lernzeit (PLZ) und dort kann man Sachen nachholen oder üben. Für die Prüfungen schreibe ich mir immer eine Zusammenfassung und lerne mit dieser.',
-    textArea2PlaceHolder: 'Ich habe den Beruf Detailhandelsassistent zwei Mal geschnuppert und die Arbeiten haben mir sehr gefallen. Ich möchte meine Lehre in einem Grossunternehmen absolvieren, damit ich nach der Lehre eine Weiterbildung machen kann.',
-    textArea3PlaceHolder: 'Schulisch: Ja, ich mache im Unterricht gut mit und lerne für Prüfungen und schreibe gute Noten. Persönlich: Ich bin pünktlich, freundlich und kann gut allein oder in einem Team arbeiten.',
+    textArea1PlaceHolder: 'Ich habe im Internet gesehen, dass Sie eine Lehrstelle als Logistiker mit Beginn im August 2022 anbieten. Ich bewerbe mich hiermit um diese Lehrstelle. Sehr gerne würde ich in Ihrem Unternehmen mit anpacken und die Ausbildung zum Logistiker EBA absolvieren.',
+    textArea2PlaceHolder: 'Der Beruf des Logistikers habe ich bereits beim Schnuppern bei der Firma Logik AG kennengelernt. Dort merkte ich, dass ich mich für eine Ausbildung als Logistiker bewerben werde, da mir die Schnuppertage in diesem Beruf sehr gefallen haben.',
+    textArea3PlaceHolder: 'Die Kontrolle und der Transport der Waren mit dem Gabelstapler bereiten mir grosse Freude. Auch der Kontakt mit Kunden gefällt mir. Ich arbeite gerne praktisch, packe mit an und erledige Aufträge konzentriert und zügig. Die Firma Logistik AG würde mir als Lehrbetrieb gefallen, da es ein familiäres Unternehmen ist.',
    }
 
 
@@ -81,7 +80,7 @@ export class CommonService {
     textArea4: '',
     textArea5: '',
     textArea6: '',
-    textArea4PlaceHolder: 'Ich habe bereits bei Ihnen geschnuppert und es hat mir sehr gefallen. Ich möchte zu Ihnen, weil mir viele berichtet haben, dass die Lehrmeister sehr gut zu den Lehrlingen schauen und alle Lehrlinge die ich kenne sehr gerne zur Arbeit kamen.',
+    textArea4PlaceHolder: 'Ich habe bereits bei Ihnen geschnuppert und es hat mir sehr gefallen. Ich möchte zu Ihnen, weil mir viele berichtet haben, dass die Lehrmeister sehr gut zu den Lehrlingen schauen und alle Lehrlinge, die ich kenne sehr gerne zur Arbeit kamen.',
     textArea5PlaceHolder: 'Gehe auf die Website der Firma. Schaue nach, welche Produkte oder Dienstleistungen von der Firma angeboten werden und notiere dies in dieses Feld hier.',
     textArea6PlaceHolder: 'Die Kontrolle und der Transport der Waren mit dem Gabelstapler bereiten mir grosse Freude. Auch der Kontakt mit Kunden gefällt mir. Ich arbeite gerne praktisch, packe mit an und erledige Aufträge konzentriert und zügig. Die Firma Logistik AG würde mir als Lehrbetrieb gefallen, da es ein familiäres Unternehmen ist.Ich habe bereits 4 Schnupperlehren gemacht: <br>  Positiv fand ich: Kundenkontakt, Team, Abwechslung. <br> Negativ fand ich: Bei zwei Betrieben durfte ich den ganzen Tag fast nur zusehen und nichts selber machen',
   }
@@ -90,7 +89,7 @@ export class CommonService {
     textArea4: '',
     textArea5: '',
     textArea6: '',
-    textArea4PlaceHolder: 'Ich habe bereits bei Ihnen geschnuppert und es hat mir sehr gefallen. Ich möchte zu Ihnen, weil mir viele berichtet haben, dass die Lehrmeister sehr gut zu den Lehrlingen schauen und alle Lehrlinge die ich kenne sehr gerne zur Arbeit kamen.',
+    textArea4PlaceHolder: 'Ich habe bereits bei Ihnen geschnuppert und es hat mir sehr gefallen. Ich möchte zu Ihnen, weil mir viele berichtet haben, dass die Lehrmeister sehr gut zu den Lehrlingen schauen und alle Lehrlinge, die ich kenne sehr gerne zur Arbeit kamen.',
     textArea5PlaceHolder: 'Gehe auf die Website der Firma. Schaue nach, welche Produkte oder Dienstleistungen von der Firma angeboten werden und notiere dies in dieses Feld hier.',
     textArea6PlaceHolder: 'Die Kontrolle und der Transport der Waren mit dem Gabelstapler bereiten mir grosse Freude. Auch der Kontakt mit Kunden gefällt mir. Ich arbeite gerne praktisch, packe mit an und erledige Aufträge konzentriert und zügig. Die Firma Logistik AG würde mir als Lehrbetrieb gefallen, da es ein familiäres Unternehmen ist.Ich habe bereits 4 Schnupperlehren gemacht: <br>  Positiv fand ich: Kundenkontakt, Team, Abwechslung. <br> Negativ fand ich: Bei zwei Betrieben durfte ich den ganzen Tag fast nur zusehen und nichts selber machen',
    }
@@ -120,8 +119,8 @@ export class CommonService {
     textArea14: '',
     textArea15: '',
     textArea13PlaceHolder: 'Ich kann sehr gut im Team arbeiten. In der Schule haben wir im Projektunterricht oft in verschiedenen Gruppen gearbeitet und in der Freizeit spiele ich Basketball und dort ist Teamwork sehr wichtig.',
-    textArea14PlaceHolder: 'In der Primarschule konnte ich nicht gut streiten und wurde teilweise sehr wütend. Heute verhalte ich mich in Konfliktsituationen ruhig und überleg immer zuerst was ich mache oder sage.',
-    textArea15PlaceHolder: 'Ich spiele Basketball in der U15-Mannschaft im BSK Muster. In der Freizeit gehe ich gerne in die Stadt mit Freunden. und in den Schulferien gehe oft mit meiner Familie nach Portugal, da ich ursprünglich von dort komme.',
+    textArea14PlaceHolder: 'In der Primarschule konnte ich nicht gut streiten und wurde teilweise sehr wütend. Heute verhalte ich mich in Konfliktsituationen ruhig und überlege immer zuerst was ich mache oder sage.',
+    textArea15PlaceHolder: 'Ich spiele Basketball in der U15-Mannschaft im BSK Muster. In der Freizeit gehe ich gerne in die Stadt mit Freunden und in den Schulferien gehe oft mit meiner Familie nach Portugal, da ich ursprünglich von dort komme.',
   }
 
   schnStepFiveData5 = {
@@ -129,8 +128,8 @@ export class CommonService {
     textArea14: '',
     textArea15: '',
     textArea13PlaceHolder: 'Ich kann sehr gut im Team arbeiten. In der Schule haben wir im Projektunterricht oft in verschiedenen Gruppen gearbeitet und in der Freizeit spiele ich Basketball und dort ist Teamwork sehr wichtig.',
-    textArea14PlaceHolder: 'In der Primarschule konnte ich nicht gut streiten und wurde teilweise sehr wütend. Heute verhalte ich mich in Konfliktsituationen ruhig und überleg immer zuerst was ich mache oder sage.',
-    textArea15PlaceHolder: 'Ich spiele Basketball in der U15-Mannschaft im BSK Muster. In der Freizeit gehe ich gerne in die Stadt mit Freunden. und in den Schulferien gehe oft mit meiner Familie nach Portugal, da ich ursprünglich von dort komme.',
+    textArea14PlaceHolder: 'In der Primarschule konnte ich nicht gut streiten und wurde teilweise sehr wütend. Heute verhalte ich mich in Konfliktsituationen ruhig und überlege immer zuerst was ich mache oder sage.',
+    textArea15PlaceHolder: 'Ich spiele Basketball in der U15-Mannschaft im BSK Muster. In der Freizeit gehe ich gerne in die Stadt mit Freunden und in den Schulferien gehe oft mit meiner Familie nach Portugal, da ich ursprünglich von dort komme.',
   }
 
 
