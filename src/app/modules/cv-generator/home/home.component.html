@@ -1,5 +1,5 @@
 
-<div class="home-content" style="margin-top: 100px;">
+<div class="home-content" style="margin-top: 60px;">
     <div class="btns">
         <div class="cv-btns">
              <a class="create-cv-btn" (click)="navigateTo('/cv-generator')">
@@ -32,7 +32,7 @@
      <br>
      <br>
 
-  <div class="down-div">
+  <div class="down-div" style="    margin-bottom: 10%;">
       <h4>EINFACH - SCHNELL &  OHNE HILFE bewerben</h4>
       <p>Lebenslauf, Motivationsschreiben und Bewerbungsfragen als</p>
       <img src="assets/images/pdfandwordicon.png" alt="image" width="60">
@@ -43,14 +43,15 @@
 
 </div>
 
+
 <div class="cv-generator" *ngIf="isShowCookiesContainer">
-    <div class="content">
+    <div class="content" style="width: 350px;height: auto;border-radius: 10px;background-color: #fff;position: fixed;bottom: 80px;right: 40px;z-index: 222222;">
         <div (click)="crossClick()" class="clickable" style="text-align: right; margin-top: -20px; margin-right: -20px;">
             <img src="assets/images/red cross.png" width="40">
         </div>
         <div class="alert-box">
             <b>Der Schutz deiner Daten ist uns wichtig</b>
-            <p align="justify">
+            <p align="justify" style="    margin-top: 20px;">
                 Wir verwenden Cookies zur Unterstützung der Benutzerfreundlichkeit, damit man den Lebenslauf und das Motivationsschreiben erstellen kann. Mit Wegklicken dieses Fensters, stimmst du der Cookie-Nutzung zu. <u class="clickable" (click)="navigateTo('/datenschutzerklärung')">Datenschutzerklärung</u></p>
         </div>
     </div>
