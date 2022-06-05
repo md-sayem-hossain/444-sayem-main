@@ -65,14 +65,16 @@ u:hover {
   .modal-content {
     background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    // padding: 20px;
     border: 1px solid #888;
-    width: 25%;
+    width: 27%;
+    position: relative;
     margin-bottom: 100px;
   }
   .modal-content img{
       width: 100%;
   }
+
   /* The Close Button */
   .close {
     color: #ffffff;
@@ -84,10 +86,10 @@ u:hover {
     width: 30px;
     line-height: 30px;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
     z-index: 22222; 
-    top: -33px;
-    right: -33px;
+    top: -10px;
+    right: -10px;
   }
   
   .close:hover,

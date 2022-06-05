@@ -25,7 +25,7 @@ export class StepSixSchnComponent implements OnInit {
   }
 
   onBack() {
-    this.commonService.msStep = 1
+    this.commonService.msStep = 5
     localStorage.setItem('msStep', JSON.stringify(this.commonService.msStep))
 
   }

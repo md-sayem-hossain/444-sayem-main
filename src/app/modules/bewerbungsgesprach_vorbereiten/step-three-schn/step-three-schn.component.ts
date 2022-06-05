@@ -24,7 +24,7 @@ export class StepThreeSchnComponent implements OnInit {
     // this.router.navigateByUrl('/bewerbungsgesprach_vorbereiten/schn-preview')
   }
   onBack() {
-    this.commonService.msStep = 1
+    this.commonService.msStep = 2
     localStorage.setItem('msStep', JSON.stringify(this.commonService.msStep))
 
   }
