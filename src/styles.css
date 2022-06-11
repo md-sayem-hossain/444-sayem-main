@@ -491,7 +491,27 @@ image-cropper {
   padding: 0px 4px 0px 4px;
   margin-left: 10px;
 }
+.info-Box-line3{
+  font-family: sans-serif;
+  color: gray;
+  border: #eff1f4 solid 3px;
+  border-radius: 4px;
+  width: auto;
+  height: auto;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0px 4px 0px 4px;
+  margin-left: 10px;
+  inline-size: auto;
+  overflow-wrap: break-word;
+  display: inline-table;
+  margin-bottom: 0;
+}
+.info-Box-line3 p{
+   
+  margin-bottom: 0;
 
+} 
 textarea {
   resize: none;
   width: auto;
