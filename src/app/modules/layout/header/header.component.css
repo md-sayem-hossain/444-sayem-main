@@ -22,8 +22,8 @@
 }
 
 .header .custom-navbar .nav-logo img {
-  width: 300px;
-  height: 100px;
+  width: 200px;
+  height: 70px;
 }
 
 .header .custom-navbar .meue-names {
@@ -41,6 +41,6 @@
 }
 
 .header .custom-navbar .meue-names .items span {
-  font-size: 16.8px;
+  font-size: 14px;
 }
 /*# sourceMappingURL=header.component.css.map */

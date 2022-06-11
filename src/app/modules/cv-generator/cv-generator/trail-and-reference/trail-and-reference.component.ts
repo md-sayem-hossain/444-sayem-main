@@ -40,7 +40,7 @@ export class TrailAndReferenceComponent implements OnInit {
     }
   }
   numericOnly(event: any): boolean {
-    if(event.key === '+'){
+    if(event.key === '+' || event.key === ' '){
       return true;
     }
     let patt = /^([0-9])$/;
