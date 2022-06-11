@@ -161,8 +161,8 @@ export class CvPdfPreviewComponent implements OnInit {
                             new ImageRun({
                                 data: this.commonService.personalData?.image as string,
                                 transformation: {
-                                    width: 163.61,
-                                    height: 180,
+                                    width: 150,
+                                    height: 200,
                                 },
                                 floating: {
                                     horizontalPosition: {
