@@ -149,4 +149,6 @@ export class PErsonalComponent implements OnInit {
     localStorage.setItem('siblings', JSON.stringify(this.commonService.siblings))
 
   }
+
+  
 }

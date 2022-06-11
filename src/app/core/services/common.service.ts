@@ -34,7 +34,7 @@ export class CommonService {
     textArea10PlaceHolder: 'Ich habe den Lebenslauf und das Motivationsschreiben mit der Seite Lehrstell.ch verfasst und meine IF-Lehrperson hat beides korrigiert. Mein älterer Bruder ist bereits in der Lehre und hat mein Bewerbungsdossier durchgeschaut und mir noch Tipps gegeben.',
     textArea11PlaceHolder: 'Ich bin nicht der Klassenbeste, aber auch nicht schlecht in der Schule. Gute Noten habe ich im Englisch und im RZG, weil mich diese Fächer sehr interessieren. Im Fach Mathi und NT habe ich Mühe und muss viel lernen. Die Noten sind da nicht so gut, aber ich versuche noch besser zu werden.',
     textArea12PlaceHolder: 'Meine Klassenlehrerin sagt, dass sie mein Verhalten gut findet. Ich versuche mich immer an die Schulhausregeln zu halten. Ich könnte jedoch im Unterricht noch selbständiger werden.',
-  }  
+  }   
   lehrStepTwoData = {
     textArea1: '',
     textArea2: '',

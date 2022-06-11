@@ -243,6 +243,8 @@
             <image-cropper style="height: 215px !important;" *ngIf="showDoneBtn" class="imag-box" [imageChangedEvent]="imageChangedEvent"
                 [maintainAspectRatio]="true" [aspectRatio]="3/ 4" (imageCropped)="imageCropped($event)"
                 (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()"></image-cropper>
+
+                
             <button type="button" class="clickable" *ngIf="showDoneBtn" (click)="imageCropedDone()">Bild
                 einfügen</button>
         </div>
