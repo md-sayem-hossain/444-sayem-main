@@ -5,7 +5,8 @@
 .home-content .btns {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
-  display: inline-flex;
+  /* display: inline-flex; */
+  display: block;
 }
 
 .home-content .btns .create-cv-btn {

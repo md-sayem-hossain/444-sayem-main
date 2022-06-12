@@ -1,6 +1,53 @@
-
 <div class="home-content" style="margin-top: 60px;">
-    <div class="btns">
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6"><img src="assets/images/userpc.png" alt=""></div>
+      <div class="col-md-6">
+        <div class="btns">
+          <div class="cv-btns">
+            <a class="create-cv-btn" (click)="navigateTo('/cv-generator')">
+              Lebenslauf erstellen
+            </a>
+            <p id="myBtn" onclick="modelOnClick()" style="text-decoration: underline;"> Beispiel Lebenslauf</p>
+
+          </div>
+          <div class="cv-btns">
+            <a class="create-cv-btn" (click)="navigateTo('/motivation-sschreiben')">
+              Motivationsschreiben erstellen
+            </a>
+            <p id="myBtn2" onclick="modelOn2Click()" style="text-decoration: underline;">Beispiel Motivationsschreiben
+            </p>
+          </div>
+          <div class="cv-btns">
+            <a class="create-cv-btn" (click)="navigateTo('/bewerbungsgesprach_vorbereiten')">
+              Bewerbungsgespräch vorbereiten
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+        <div class="home-text">
+          <h3>Erstelle deine Bewerbungsunterlagen einfach, schnell und ohne Hilfe!</h3>
+          <div class="line-home"></div>
+          <p>Download der Dokumente als Word und Pdf - Dateien möglich</p>
+          <h4 class="bottom-text">
+            Wichtig: Auf unserer Website werden keine Daten gespeichert oder an Dritte weitergegeben!
+          </h4>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+
+  <!-- <div class="btns">
         <div class="cv-btns">
              <a class="create-cv-btn" (click)="navigateTo('/cv-generator')">
             Lebenslauf erstellen 
@@ -13,13 +60,12 @@
             Motivationsschreiben erstellen
         </a>
         <p id="myBtn2" onclick="modelOn2Click()" style="text-decoration: underline;">Beispiel Motivationsschreiben</p>
-       </div>
-
+       </div> 
        
-    </div>
-    <br>
-    <br>
-    <div class="btns">
+       
+    </div>  -->
+
+  <!-- <div class="btns">
      
       <div class="cv-btns">
            <a class="create-cv-btn" (click)="navigateTo('/bewerbungsgesprach_vorbereiten')">
@@ -28,53 +74,53 @@
       </div>
 
   </div>
-     <br>
-     <br>
-     <br>
+     
 
   <div class="down-div" style="    margin-bottom: 10%;">
       <p style="margin-left: -10px;">Lebenslauf, Motivationsschreiben und Bewerbungsfragen als</p>
       <img src="assets/images/pdfandwordicon.png" alt="image" width="60" style="margin-left: -10px;">
       <h4>DOWNLOADEN</h4>
-  </div>
-  
+  </div> -->
+
 
 
 </div>
 
 
 <div class="cv-generator" *ngIf="isShowCookiesContainer">
-    <div class="content" style="width: 350px;height: auto;border-radius: 10px;background-color: #fff;position: fixed;bottom: 80px;right: 40px;z-index: 222222;">
-        <div (click)="crossClick()" class="clickable" style="text-align: right; margin-top: -20px; margin-right: -20px;">
-            <img src="assets/images/red cross.png" width="40">
-        </div>
-        <div class="alert-box">
-            <b>Der Schutz deiner Daten ist uns wichtig</b>
-            <p align="justify" style="    margin-top: 20px;">
-                Wir verwenden Cookies zur Unterstützung der Benutzerfreundlichkeit, damit man den Lebenslauf und das Motivationsschreiben erstellen kann. Mit Wegklicken dieses Fensters, stimmst du der Cookie-Nutzung zu. <u class="clickable" (click)="navigateTo('/datenschutzerklärung')">Datenschutzerklärung</u></p>
-        </div>
+  <div class="content"
+    style="width: 350px;height: auto;border-radius: 10px;background-color: #fff;position: fixed;top: 30%;right: 40px;z-index: 222222;">
+    <div (click)="crossClick()" class="clickable" style="text-align: right; margin-top: -20px; margin-right: -20px;">
+      <img src="assets/images/red cross.png" width="40">
     </div>
+    <div class="alert-box">
+      <b>Der Schutz deiner Daten ist uns wichtig</b>
+      <p align="justify" style="    margin-top: 20px;">
+        Wir verwenden Cookies zur Unterstützung der Benutzerfreundlichkeit, damit man den Lebenslauf und das
+        Motivationsschreiben erstellen kann. Mit Wegklicken dieses Fensters, stimmst du der Cookie-Nutzung zu. <u
+          class="clickable" (click)="navigateTo('/datenschutzerklärung')">Datenschutzerklärung</u></p>
+    </div>
+  </div>
 </div>
 
 <div id="myModal" class="modal" onclick="modelOffClick()">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close" onclick="modelOffClick()">&times;</span>
-      <img src="assets/images/basic-cv-template.jpg" alt="">
-      
-    </div>
-  
-  </div>
-  
-  <div id="myModal2" class="modal" onclick="modelOff2Click()">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="modelOffClick()">&times;</span>
+    <img src="assets/images/basic-cv-template.jpg" alt="">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close" onclick="modelOff2Click()">&times;</span>
-      <img src="assets/images/demo-letter.jpg" alt="">
-      
-    </div>
-  
   </div>
-  
+
+</div>
+
+<div id="myModal2" class="modal" onclick="modelOff2Click()">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" onclick="modelOff2Click()">&times;</span>
+    <img src="assets/images/demo-letter.jpg" alt="">
+
+  </div>
+
+</div>
