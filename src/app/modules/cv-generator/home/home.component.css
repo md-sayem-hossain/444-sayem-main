@@ -11,7 +11,7 @@
 
 .home-content .btns .create-cv-btn {
   width: 400px;
-  height: 80px;
+  height: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,7 +24,7 @@
   font-size: 16px;
   font-family: "DM Sans";
   cursor: pointer;
-  border-radius: 75px;
+  border-radius: 0px;
   background-color: #ffdf59;
   font-weight: 550;
   /* margin-right: 20px; */

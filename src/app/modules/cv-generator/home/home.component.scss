@@ -18,14 +18,14 @@
             // margin-right: 20px;
 
             width: 250px;
-            height: 50px;
+            height: 40px;
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 12px;
             font-family: "DM Sans";
             cursor: pointer;
-            border-radius: 75px;
+            border-radius: 0px;
             background-color: #ffdf59;
             font-weight: 550;
             // margin-right: 20px;
@@ -112,4 +112,8 @@ u:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  .home-text{
+
   }
