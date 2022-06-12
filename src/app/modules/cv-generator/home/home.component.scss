@@ -4,18 +4,32 @@
         // display: inline-flex;
         display: block;
         .create-cv-btn {
-            width: 400px;
-            height: 80px;
+            // width: 400px;
+            // height: 80px;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            // font-size: 16px;
+            // font-family: "DM Sans";
+            // cursor: pointer;
+            // border-radius: 75px;
+            // background-color: #ffdf59;
+            // font-weight: 550;
+            // margin-right: 20px;
+
+            width: 250px;
+            height: 50px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 16px;
+            font-size: 12px;
             font-family: "DM Sans";
             cursor: pointer;
             border-radius: 75px;
             background-color: #ffdf59;
             font-weight: 550;
             margin-right: 20px;
+
         }
     }
 }
