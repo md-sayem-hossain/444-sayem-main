@@ -14,6 +14,8 @@ export class PErsonalComponent implements OnInit {
   date = new Date()
   cropDone = false
   showDoneBtn = false
+   
+
   constructor(public commonService: CommonService, private _formBuilder: FormBuilder,) { }
 
   ngOnInit(): void {
@@ -39,6 +41,7 @@ export class PErsonalComponent implements OnInit {
     this.showDoneBtn = true
     this.imageChangedEvent = event;
   }
+ 
 
   imageCropped(event: ImageCroppedEvent) {
     console.log('This is imageCropped-->', event)
@@ -61,7 +64,7 @@ export class PErsonalComponent implements OnInit {
 
   imageCropedDone() {
     this.cropDone = true
-    this.showDoneBtn = false
+    this.showDoneBtn = false 
     this.personalForm.controls['image'].setValue(this.croppedImage)
   }
 
