@@ -589,7 +589,7 @@ export class CvPdfPreviewComponent implements OnInit {
                 break: br
             }));
             referenzenParagraph.addChildElement(new TextRun({
-                text: `Telefon ${reference?.mobile}`,
+                text: `${reference?.mobile? 'Telefon ' + reference?.mobile:''}`,
                 break: 1
             }));
             referenzenParagraph.addChildElement(new TextRun({
