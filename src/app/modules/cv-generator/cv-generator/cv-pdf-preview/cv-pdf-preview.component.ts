@@ -168,7 +168,7 @@ export class CvPdfPreviewComponent implements OnInit {
                                 },
                                 floating: {
                                     horizontalPosition: {
-                                        offset: 5898400,
+                                        offset: 5850000,
                                     },
                                     verticalPosition: {
                                         offset: 1111500,
