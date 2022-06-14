@@ -84,7 +84,7 @@ u:hover {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 45%;
+  width: 50%;
   margin-bottom: 100px;
 }
 
@@ -96,21 +96,38 @@ u:hover {
 .close {
   color: #ffffff;
   float: right;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 600;
   background: red;
-  height: 30px;
-  width: 30px;
-  line-height: 30px;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
   border-radius: 50%;
-  position: relative;
+  position: absolute;
   z-index: 22222;
-  top: -33px;
-  right: -33px;
+  top: -22px;
+  right: -22px;
+}
+
+.close2 {
+  color: #ffffff;
+  float: right;
+  font-size: 35px;
+  font-weight: 600;
+  background: red;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 22222;
+  bottom: -22px;
+  right: -22px;
 }
 
 .close:hover,
-.close:focus {
+.close:focus,.close2:hover,
+.close2:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;

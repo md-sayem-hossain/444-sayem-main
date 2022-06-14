@@ -14,8 +14,10 @@ import {
     ImageRun,
     TextWrappingType,
     TextWrappingSide,
+    Alignment,
 } from "docx";
 import { DatePipe } from '@angular/common';
+import { Certificate } from 'crypto';
 // declare function myfunction(params1: string, params2: string): any;
 // declare function getPDF(): any;
 @Component({
@@ -161,12 +163,12 @@ export class CvPdfPreviewComponent implements OnInit {
                             new ImageRun({
                                 data: this.commonService.personalData?.image as string,
                                 transformation: {
-                                    width: 150,
-                                    height: 200,
+                                    width: 135,
+                                    height: 180,
                                 },
                                 floating: {
                                     horizontalPosition: {
-                                        offset: 5599400,
+                                        offset: 5898400,
                                     },
                                     verticalPosition: {
                                         offset: 1111500,
@@ -176,7 +178,7 @@ export class CvPdfPreviewComponent implements OnInit {
                                         side: TextWrappingSide.BOTH_SIDES,
                                     },
                                     margins: {
-                                        top: 201440,
+                                        top: 201440  
                                     },
                                 },
                             }),
