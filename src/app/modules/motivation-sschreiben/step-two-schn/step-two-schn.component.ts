@@ -15,7 +15,7 @@ export class StepTwoSchnComponent implements OnInit {
 
   onNext() {
 
-    this.commonService.msStep = 3
+    this.commonService.msStep = 4
     localStorage.setItem('msStep', JSON.stringify(this.commonService.msStep))
     localStorage.setItem('schnStepTwoData2', JSON.stringify(this.commonService.schnStepTwoData2))
     console.log("schnStepTwoData2", this.commonService.schnStepTwoData2)
@@ -23,7 +23,7 @@ export class StepTwoSchnComponent implements OnInit {
   }
 
   onBack() {
-    this.commonService.msStep = 1
+    this.commonService.msStep = 2
     localStorage.setItem('msStep', JSON.stringify(this.commonService.msStep))
 
   }

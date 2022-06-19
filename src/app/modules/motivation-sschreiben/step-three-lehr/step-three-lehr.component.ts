@@ -22,7 +22,7 @@ export class StepThreeLehrComponent implements OnInit {
   }
 
   onBack() {
-    this.commonService.msStep = 2
+    this.commonService.msStep = 3
     localStorage.setItem('msStep', JSON.stringify(this.commonService.msStep))
 
   }

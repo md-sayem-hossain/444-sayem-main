@@ -9,26 +9,39 @@
             <app-step-one> </app-step-one>
         </ng-container>
 
+        <ng-container *ngIf="commonService.msStep==2">
+            <span class="heading-btn">SEITE 2</span>
+            <app-step-two> </app-step-two>
+        </ng-container>
+
+
+     
+
+
         <!-- Second-step For Lehr -->
-        <ng-container *ngIf="commonService.msStep==2 && commonService.msType=='lehrstelle' ">
+        <ng-container *ngIf="commonService.msStep==3 && commonService.msType=='lehrstelle' ">
             <span class="heading-btn width-60">SEITE 2/ LEHRSTELLE</span>
             <app-step-two-lehr></app-step-two-lehr>
         </ng-container>
+        <!-- Second-step For Lehr -->
+        <ng-container *ngIf="commonService.msStep==3 && commonService.msType=='schnupperlehre' ">
+            <span class="heading-btn width-60">SEITE 2/ LEHRSTELLE</span>
+            <app-step-two-schn></app-step-two-schn>
+        </ng-container>
+
+
+      
 
         <!-- Second-step For Lehr-->
-        <ng-container *ngIf="commonService.msStep==3 && commonService.msType=='lehrstelle' ">
+        <ng-container *ngIf="commonService.msStep==4 && commonService.msType=='lehrstelle' ">
             <span class="heading-btn width-60">SEITE 3/ LEHRSTELLE</span>
             <app-step-three-lehr></app-step-three-lehr>
         </ng-container>
 
-        <!-- Second-step For Schn -->
-        <ng-container *ngIf="commonService.msStep==2 && commonService.msType=='schnupperlehre' ">
-            <span class="heading-btn width-70">SEITE 2/ SCHNUPPERLEHRE</span>
-            <app-step-two-schn></app-step-two-schn>
-        </ng-container>
+      
 
         <!-- Second-step For Schn-->
-        <ng-container *ngIf="commonService.msStep==3 && commonService.msType=='schnupperlehre'">
+        <ng-container *ngIf="commonService.msStep==4 && commonService.msType=='schnupperlehre'">
             <span class="heading-btn width-70">SEITE 3/ SCHNUPPERLEHRE</span>
             <app-step-three-schn></app-step-three-schn>
         </ng-container>
