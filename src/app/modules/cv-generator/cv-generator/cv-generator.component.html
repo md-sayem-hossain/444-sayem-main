@@ -7,7 +7,6 @@
         <ng-container *ngIf="commonService.step==1">
             <span class="heading-btn">PERSONALIEN</span>
             <app-personal> </app-personal>
-
         </ng-container>
 
         <!-- Second-step -->
@@ -16,11 +15,17 @@
             <app-school-and-hobbys></app-school-and-hobbys>
         </ng-container>
 
-        <!-- Second-step -->
+        <!-- Third -step -->
         <ng-container *ngIf="commonService.step==3">
             <span class="heading-btn wth-60">SCHNUPPERLEHREN UND REFERENZEN</span>
             <app-trail-and-reference></app-trail-and-reference>
         </ng-container>
 
+
+         <!-- Four -step -->
+         <ng-container *ngIf="commonService.step==4">
+            <span class="heading-btn wth-60">SCHNUPPERLEHREN UND REFERENZEN</span>
+            <app-cv-pdf-preview></app-cv-pdf-preview>
+        </ng-container>
     </div>
 </div>
