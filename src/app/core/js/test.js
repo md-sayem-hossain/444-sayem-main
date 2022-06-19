@@ -1,3 +1,6 @@
+// const { disposeEmitNodes } = require("typescript");
+// const { brotliDecompressSync } = require("zlib");
+
 function myfunction(params1, params2) {
   console.log('param1', params1);
   console.log('param2', params2);
@@ -71,5 +74,9 @@ function modelOff2Click() {
   document.getElementById("myModal2").style.display = "none";
 }
 
-
  
+  document.getElementById("languageType").select2({
+    tags: true
+  }); 
+ 
+
