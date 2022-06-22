@@ -2,7 +2,7 @@
     <div class="header">
         Lebenslauf erstellen
     </div>
-    <div class="content">
+    <div class="content content2">
         <!-- First-step -->
         <ng-container *ngIf="commonService.step==1">
             <span class="heading-btn">PERSONALIEN</span>
@@ -23,9 +23,10 @@
 
 
          <!-- Four -step -->
-         <ng-container *ngIf="commonService.step==4">
-            <span class="heading-btn wth-60">SCHNUPPERLEHREN UND REFERENZEN</span>
-            <app-cv-pdf-preview></app-cv-pdf-preview>
-        </ng-container>
+        
     </div>
+    <ng-container *ngIf="commonService.step==4">
+        <!-- <span class="heading-btn wth-60">CV Preview</span> -->
+        <app-cv-pdf-preview></app-cv-pdf-preview>
+    </ng-container>
 </div>

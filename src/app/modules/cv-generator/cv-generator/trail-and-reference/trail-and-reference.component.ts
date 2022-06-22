@@ -19,10 +19,11 @@ export class TrailAndReferenceComponent implements OnInit {
 
     console.log('Page 3 data-->', this.commonService.trailApprentice, this.commonService.references)
     // this.commonService.step = 4
+    this.commonService.step = 4
     localStorage.setItem('trailApprentice', JSON.stringify(this.commonService.trailApprentice))
     localStorage.setItem('references', JSON.stringify(this.commonService.references))
     localStorage.setItem('step', JSON.stringify(this.commonService.step))
-    this.router.navigateByUrl('/cv-generator/preview')
+    // this.router.navigateByUrl('/cv-generator/preview')
   }
 
   onBack() {

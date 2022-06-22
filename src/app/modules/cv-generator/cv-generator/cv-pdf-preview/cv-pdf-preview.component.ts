@@ -103,7 +103,9 @@ export class CvPdfPreviewComponent implements OnInit {
     }
 
     onBack() {
-        this.router.navigateByUrl('/cv-generator')
+        this.router.navigateByUrl('/cv-generator');
+        this.commonService.step = 3
+    localStorage.setItem('step', JSON.stringify(this.commonService.step))
     }
 
     isObjectEmpty(Obj: any) {
