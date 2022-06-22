@@ -80,11 +80,11 @@
             </div>
         </div>
         <div class="row">
-            <div class="left-language-side" style="width: 428.19px;">
-                <ng-container *ngFor="let language of commonService.languages ;let i = index">
+            <div class="left-language-side" style="width: 480px;">
+                <ng-container *ngFor="let language of commonService.languages ;let i = index" >
                     <div class="row">
-                        <div style="width: 142.39px;">
-                            <input type="text" list="language" [(ngModel)]="language.language" />
+                        <div style="width: 48%;">
+                            <input type="text" list="language" [(ngModel)]="language.language"  id="mytext2" placeholder="select..." />
                             <datalist id="language">
                                 <option>Deutsch</option>
                                 <option>Englisch</option>
@@ -108,14 +108,14 @@
                                  line-height: 1;
                                 border-radius: 0.25rem;
                                 cursor: pointer;
-                                background-color: #ffdf59;
+                                background-color: transparent;
                              }
                         </style>
-                        <div style="width: 225.45px;">
+                        <div style="width: 100%;">
                             <div style="display: flex; align-items:center;">
-                                <input type="text" list="languageType" id="mytext" [(ngModel)]="language.type" style="width: 100% !important;" placeholder="Select ..." />
-
-                                <button class="btn" onclick="document.getElementById('mytext').value = ''" style="margin-left: 5px;">klar</button>
+                                <input type="text" list="languageType" id="mytext" [(ngModel)]="language.type" style="width: 100% !important;" placeholder="Select ..."  />
+                                
+                                <button class="btn" onclick="document.getElementById('mytext').value = '';document.getElementById('mytext2').value = '';" style="margin-left: 5px;">❌ Löschen</button>
                             </div>
                             
                                 <datalist id="languageType"  class="js-example-tags">
