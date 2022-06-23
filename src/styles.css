@@ -850,3 +850,21 @@ body {
   background-color: #292929;
 }
 /*# sourceMappingURL=styles.css.map */
+
+
+
+@media (min-width: 600px) and (max-width: 800px) {
+
+  .home-content{
+    margin-top: 25px !important;
+
+  }
+  .home-text{
+    margin-top: 15px !important;
+  }
+  .bottom-text{
+    margin-top: 3% !important;
+  }
+  
+  
+  }
