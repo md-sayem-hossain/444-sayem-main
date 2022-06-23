@@ -13,10 +13,11 @@ export class StepTwoComponent implements OnInit {
   date = new Date()
   cropDone = false
   showDoneBtn = false
+
   constructor(public commonService: CommonService, private _formBuilder: FormBuilder,) { }
 
-  ngOnInit(): void {
-    let msPersonalForm = this.commonService.msPersonalForm
+  ngOnInit(): void {    
+     let msPersonalForm = this.commonService.msPersonalForm
     if (msPersonalForm) {
       this.initmsPersonalForm(msPersonalForm)
     } else {

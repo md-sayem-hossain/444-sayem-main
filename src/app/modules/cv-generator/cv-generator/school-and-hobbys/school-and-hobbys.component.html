@@ -73,7 +73,8 @@
                     Sprachen
                     <div class="info-Box-line3"> 
                        <p>
-                        Klicke in die Felder und wähle aus oder schreibe direkt in beide Felder hinein.
+                        <!-- Klicke in die Felder und wähle aus oder schreibe direkt in beide Felder hinein. -->
+                        Klicke in die Felder und wähle aus oder schreibe direkt in beide Felder hinein oder lösche den Text mit der Zurück-Taste.
                        </p>  
                     </div>
                 </span>
@@ -83,8 +84,9 @@
             <div class="left-language-side" style="width: 480px;">
                 <ng-container *ngFor="let language of commonService.languages ;let i = index" >
                     <div class="row">
-                        <div style="width: 48%;">
-                            <input type="text" list="language" [(ngModel)]="language.language"  id="mytext2" placeholder="wähle aus..." />
+                        <!-- <div style="width: 48%;"> -->
+                        <div class="col-3">
+                            <input type="text" list="language" [(ngModel)]="language.language"  id="mytext2" placeholder="Wähle aus..." onfocus="this.value=''" onchange="this.blur();" />
                             <datalist id="language">
                                 <option>Deutsch</option>
                                 <option>Englisch</option>
@@ -111,11 +113,12 @@
                                 background-color: transparent;
                              }
                         </style>
-                        <div style="width: 100%;">
+                        <!-- <div style="width: 100%;"> -->
+                        <div style=" " class="col-6">
                             <div style="display: flex; align-items:center;">
-                                <input type="text" list="languageType" id="mytext" [(ngModel)]="language.type" style="width: 100% !important;" placeholder="wähle aus ..."  />
+                                <input type="text" list="languageType" id="mytext" [(ngModel)]="language.type" style="width: 100% !important;" placeholder="Wähle aus ..." onfocus="this.value=''" onchange="this.blur();" />
                                 
-                                <button class="btn" onclick="document.getElementById('mytext').value = '';document.getElementById('mytext2').value = '';" style="margin-left: 5px;">❌ Löschen</button>
+                                <!-- <button class="btn" onclick="document.getElementById('mytext').value = '';document.getElementById('mytext2').value = '';" style="margin-left: 5px;">❌ Löschen</button> -->
                             </div>
                             
                                 <datalist id="languageType"  class="js-example-tags">

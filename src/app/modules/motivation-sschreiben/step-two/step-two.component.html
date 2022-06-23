@@ -8,10 +8,13 @@
                     <label for="date" class="">Ich schreibe ein Motivationsschreiben für eine:</label>
                 </div>
                 <div class="col-4-4">
-                    <select style="width: 215px; margin-left: 10px;" data-placeholder="" [ngModelOptions]="{standalone: true}"
-                        [(ngModel)]="commonService.msType">
+                    <select style="width: 215px; margin-left: 10px;" data-placeholder="" >
+
+                        <!-- <select style="width: 215px; margin-left: 10px;" data-placeholder="" [ngModelOptions]="{standalone: true}"
+                        [(ngModel)]="commonService.msType"  > -->
                         <option value="lehrstelle">Lehrstelle</option>
-                        <option value="schnupperlehre">Schnupperlehre</option>
+                        <option value="schnupperlehre" selected>Schnupperlehre</option>
+
                     </select>
                 </div>
             </div>
