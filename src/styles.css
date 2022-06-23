@@ -389,7 +389,7 @@ body {
   position: absolute;
   bottom: 0px;
   right: 0px;
-  margin: 0px 50px 30px 0px;
+  margin: 0px 20px 30px 0px;
   font-size: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -411,7 +411,7 @@ body {
   bottom: 0px;
   left: 0px;
   border: #eff1f4 solid 2px;
-  margin: 0px 0px 30px 25px;
+  margin: 0px 0px 30px 30px;
 }
 
 .next-btn.second-btn {

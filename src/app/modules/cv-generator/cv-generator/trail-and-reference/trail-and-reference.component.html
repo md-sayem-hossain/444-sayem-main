@@ -19,7 +19,7 @@
                 <div class="col-1-3">
                     <label for="Last" class="">Von</label>
                 </div>
-                <div class="col-1-1">
+                <div class="col-1-5">
                     <input type="date" max="{{date | date:'yyyy-MM-dd'}}" [(ngModel)]="trail.von" id="Last"
                         class="col-9" name="Last" />
                 </div>
@@ -27,11 +27,11 @@
                 <div style="width: 51px;">
                     <label for="First" class="label-float-right">Bis</label>
                 </div>
-                <div class="col-1-1">
+                <div class="col-1-5">
                     <input type="date" max="{{date | date:'yyyy-MM-dd'}}" [(ngModel)]="trail.bis" id="First"
                         class="clickable col-9" name="First" />
                 </div>
-                <span style="margin-left: 127px;" class="clickable" (click)="deleteTrailObject(i)">&#10060;</span>
+                <span style="margin-left: 50px;" class="clickable" (click)="deleteTrailObject(i)">&#10060;</span>
                 <span class="clickable delete-text" (click)="deleteTrailObject(i)"
                     style="margin-top: 4px;">Löschen</span>
             </div>
