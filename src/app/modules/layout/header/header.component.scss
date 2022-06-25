@@ -36,3 +36,17 @@
     background-color: none !important;
     font-size: 40px;
 }
+
+
+.mbl-popup-body{
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+  
+  @media (min-width: 100px) and (max-width: 1000px) {
+  
+    .mbl-popup-main{
+      display:  block !important;
+    }
+    
+    }

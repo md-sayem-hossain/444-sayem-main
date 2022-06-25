@@ -133,3 +133,23 @@ u:hover {
   cursor: pointer;
 }
 /*# sourceMappingURL=home.component.css.map */
+
+
+
+
+
+
+
+
+.mbl-popup-body{
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@media (min-width: 100px) and (max-width: 1000px) {
+
+  .mbl-popup-main{
+    display:  block !important;
+  }
+  
+  }

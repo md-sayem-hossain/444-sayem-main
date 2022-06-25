@@ -686,3 +686,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin-top: 10px;
 }
 
+.chkclass_custom{
+    display: flex !important;
+    align-items: center !important;
+    // justify-content: center !important;
+  }
+  .chkclass_custom input{
+    width: 12% !important;
+    margin-left: 20px;
+  }

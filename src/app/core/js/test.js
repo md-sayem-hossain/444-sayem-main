@@ -74,9 +74,35 @@ function modelOff2Click() {
   document.getElementById("myModal2").style.display = "none";
 }
 
+
+function modelOn3Click() {
+  document.getElementById("myModal3").style.display = "block";
+}
+
+function modelOff3Click() {
+  document.getElementById("myModal3").style.display = "none";
+}
+
+ console.log("i am running");
+// if (screen.width > 1024) {
+//   // document.getElementById("myModal3").style.display = "block";
+//   $("#myModal3").modal('show');
+
+// }
+
+
+// $(window).on('load', function() {
+//   $("#myBtn3").click();
+// });
+
+// else if(screen.width > 1024) {
+//   document.getElementById("myModal3").style.display = "none";
+// }
+
  
   document.getElementById("languageType").select2({
     tags: true
   }); 
  
+
 
