@@ -709,3 +709,26 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     .mychcktable tbody tr td {
         width: 80px;
     }
+
+
+
+
+
+
+    @media (min-width: 100px) and (max-width: 1200px) {
+
+        .mbl-popup-main{
+          display:  block !important;
+        }
+        footer{
+          display: none !important;
+        }
+        
+        .header{
+          display: none !important;
+        }
+        .content{
+            display: none !important;
+        }
+        }
+      

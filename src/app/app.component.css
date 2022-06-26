@@ -47,7 +47,13 @@
   .mbl-popup-main{
     display:  block !important;
   }
+  footer{
+    display: none !important;
+  }
   
+  .header{
+    display: none !important;
+  }
   }
 
  
