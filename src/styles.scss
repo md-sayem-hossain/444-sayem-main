@@ -695,3 +695,14 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     width: 12% !important;
     margin-left: 20px;
   }
+  .mycheck {
+    width: 20px !important;
+}
+.mychcktable tbody{
+    display: flex;
+    align-item: center;
+    justify-content:center;
+    } 
+    .mychcktable tbody tr{
+    margin-right:20px;
+    }
