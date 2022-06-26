@@ -906,3 +906,6 @@ body {
     .mychcktable tbody tr{
     margin-right:20px;
     }
+    .mychcktable tbody tr td {
+      width: 80px;
+  }
