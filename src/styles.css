@@ -852,11 +852,15 @@ body {
 /*# sourceMappingURL=styles.css.map */
 
 
+.home-content{
+   zoom: 0.9 !important;
 
-@media (min-width: 600px) and (max-width: 800px) {
+}
+@media (min-width: 1000px) and (max-width: 1600px) {
 
   .home-content{
     margin-top: 25px !important;
+    zoom: 0.9 !important;
 
   }
   .home-text{
