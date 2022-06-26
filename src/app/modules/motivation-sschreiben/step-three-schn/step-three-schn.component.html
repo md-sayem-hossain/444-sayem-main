@@ -109,30 +109,31 @@
         <div class="mb-10"></div>
         <div class="row">
 
-            <div class="col-1-7">
-                <label for="Lebenslauf" class="">Lebenslauf</label>
-            </div>
-            <div class="col-0-5 clickable">
-                <input type="checkbox" [(ngModel)]="commonService.schnStepThreeData.lebenslauf" name="Lebenslauf"
-                    class="height-18" id="Lebenslauf" value="value">
-            </div>
-
-            <div class="col-2 clickable">
-                <label for="Zeugnisse" class="ml-20">Zeugnisse</label>
-            </div>
-            <div class="col-0-5">
-                <input type="checkbox" [(ngModel)]="commonService.schnStepThreeData.zeugnisse" name="Zeugnisse"
-                    class="height-18" id="Zeugnisse" value="value">
-
-            </div>
-
-            <div class="col-2">
-                <label for="Eigene" class="label-float-right">Eigene:</label>
-            </div>
-            <div class="col-3-5">
-                <input type="text" [(ngModel)]="commonService.schnStepThreeData.eigene" id="Eigene" class="col-9 "
-                    name="Eigene" maxlength="50" />
-            </div>
+            <table class="mychcktable">
+                <tbody>
+                  <tr style="margin-right: 0px;">
+                    <td><label for="Lebenslauf">Lebenslauf</label></td>
+                    <td>
+                        <input type="checkbox"  class="mycheck" [(ngModel)]="commonService.schnStepThreeData.lebenslauf" name="Lebenslauf"
+                        id="Lebenslauf" value="value">
+                    </td>
+                  </tr>
+                  <tr style="margin-right: 0px;"> 
+                    <td> <label for="Zeugnisse">Zeugnisse</label></td>
+                    <td>
+                        <input type="checkbox" class="mycheck"  [(ngModel)]="commonService.schnStepThreeData.zeugnisse" name="Zeugnisse"
+                        id="Zeugnisse" value="value">
+                    </td>
+                  </tr>
+                  <tr style="margin-right: 0px;">
+                    <td><label for="Eigene">Eigene:</label></td>
+                    <td>
+                        <input type="text" [(ngModel)]="commonService.schnStepThreeData.eigene" id="Eigene"
+                        name="Eigene" maxlength="50" style="width: 200px;" />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
 
         </div>
 
