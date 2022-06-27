@@ -80,8 +80,13 @@ function modelOn3Click() {
 }
 
 function modelOff3Click() {
-  document.getElementById("myModal3").style.display = "none";
+  document.getElementsByClassName("mbl-popup-main").style.display = 'none !important';
 }
+
+function modelOff4Click() {
+  document.getElementById("myModal3").attr("display","none !important");
+}
+ 
 
  console.log("i am running");
 // if (screen.width > 1024) {
@@ -99,10 +104,5 @@ function modelOff3Click() {
 //   document.getElementById("myModal3").style.display = "none";
 // }
 
- 
-  document.getElementById("languageType").select2({
-    tags: true
-  }); 
- 
 
-
+ 
