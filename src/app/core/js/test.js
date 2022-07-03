@@ -105,4 +105,71 @@ function modelOff4Click() {
 // }
 
 
- 
+function generate() {
+  const doc = new docx.Document({
+    sections: [
+      {
+        properties: {},
+        children: [
+          new docx.Paragraph({
+            children: [
+             new docx.TextRun({
+                text: "1) Wer hat dich beim Schreiben deines Bewerbungsdossiers unterstützt?",
+                bold: true,
+               }),
+                new docx.TextRun({
+                text: "DOCX browser Word document generation",
+                spacing: {
+                   before: 400,
+                       },
+                size: 50,
+                break:1,
+                italics: true,
+                color: "8282ff",
+              }),
+               new docx.TextRun({
+                text: "Note:",
+                break:1,
+              }),
+                new docx.TextRun({
+                text: "2) Wie sind deine Schulnoten?",
+                bold: true,
+                break:1,
+              }),
+                new docx.TextRun({
+                text: "",
+                break:1,
+                italics: true,
+              }),
+              new docx.TextRun({
+                text: "Note:",
+                break:1,
+              }),
+               new docx.TextRun({
+                text: "3) Wie sind deine Zeugnisse (Verhalten/ Absenzen)?",
+                bold: true,
+                 break:1,
+              }),
+                new docx.TextRun({
+                text: " ",
+                break:1,
+                italics: true,
+                color: "8282ff",
+              }),
+              new docx.TextRun({
+                text: "Note:",
+                break:1,
+              })           
+        ]
+          })
+        ]
+      }
+    ]
+  });
+
+  docx.Packer.toBlob(doc).then((blob) => {
+    console.log(blob);
+    saveAs(blob, "example.docx");
+    console.log("Document created successfully");
+  });
+}

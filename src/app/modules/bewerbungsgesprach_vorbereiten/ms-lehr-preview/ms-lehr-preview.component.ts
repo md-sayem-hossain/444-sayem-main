@@ -4,6 +4,20 @@ import html2canvas from 'html2canvas';
 import { CommonService } from 'src/app/core/services/common.service';
 import { Router } from '@angular/router';
 import { DomSanitizer } from "@angular/platform-browser";
+import {
+  Document,
+  Packer,
+  Paragraph,
+  TextRun,
+  HeadingLevel,
+  BorderStyle,
+  ImageRun,
+  TextWrappingType,
+  TextWrappingSide,
+  Alignment,
+} from "docx";
+
+
 @Component({
   selector: 'app-ms-lehr-preview',
   templateUrl: './ms-lehr-preview.component.html',
@@ -65,31 +79,135 @@ export class MsLehrPreviewComponent implements OnInit {
     });
   }
 
-  exportToWord() {
-    var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>lehrstell-motivation-sschreiben</title></head><body style='font-family: Calibri'>";
-    var postHtml = "</body></html>";
-    var html = preHtml + this.content.nativeElement.innerHTML + postHtml;
 
-    // Specify link url
-    var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
 
-    // Specify file name
-    let filename = 'lehrstell-motivation-sschreiben' + new Date().toUTCString() + '.doc'
-    // Create download link element
-    var downloadLink = document.createElement("a");
 
-    document.body.appendChild(downloadLink);
+//sayem
+exportToWord() {
+  const doc = new Document({
+      styles: {
+          default: {
+              heading2: {
+                  run: {
+                      size: 30,
+                      bold: true,
+                      color: "000000",
+                      font: "Calibri"
+                  },
+                  paragraph: {
+                      spacing: {
+                          after: 120,
+                      },
+                  },
+              }
+          },
+          paragraphStyles: [
+              {
+                  id: "paragraphStyle",
+                  name: "ParagraphStyle",
+                  basedOn: "Normal",
+                  next: "Normal",
+                  run: {
+                      color: "000000",
+                      font: "Calibri"
+                  }
+              }
+          ]
+      },
+      title: 'lehrstell-lebenslauf',
+      sections: [{
+          properties: {
+              page: {
+                  margin: {
+                      top: 700,
+                      bottom: 700,
+                      left: 700,
+                      right: 700
+                  }
+              }
+          },
+          children: [
+               
+              new Paragraph({
+                  text: "Hello",
+                  heading: HeadingLevel.HEADING_2
+              }),
+              
+              new Paragraph({
+                style: "paragraphStyle",
+                spacing: {
+                    before: 400,
+                },
+                children: [
+                    new TextRun({
+                      text: "1) Wer hat dich beim Schreiben deines Bewerbungsdossiers unterstützt?",
+                      bold: true,
+                      size: 26,
+                    }),
+                    new TextRun({
+                      break:1,
+                        text: `${this.commonService.lehrStepOneData.textArea10}`,
+                        italics: true,
+                        color: "8282ff",
+                    })
+                ],
+            }),
+           ],
+      }],
+  });
 
-    downloadLink.href = url;
+  Packer.toBlob(doc).then((blob) => {
+      let url = window.URL.createObjectURL(blob);
+      let a = document.createElement('a');
+      document.body.appendChild(a);
+      a.setAttribute('style', 'display: none');
+      a.href = url;
+      a.download = 'lehrstell-lebenslauf' + new Date().toUTCString() + '.doc';
+      a.click();
+      window.URL.revokeObjectURL(url);
+      a.remove();
+  });
+}
 
-    // Setting the file name
-    downloadLink.download = filename;
 
-    //triggering the function
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
 
-  }
+
+
+
+
+
+
+
+
+
+
+
+
+  // exportToWord() {
+  //   var preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>lehrstell-motivation-sschreiben</title></head><body style='font-family: Calibri'>";
+  //   var postHtml = "</body></html>";
+  //   var html = preHtml + this.content.nativeElement.innerHTML + postHtml;
+
+  //   // Specify link url
+  //   var url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
+
+  //   // Specify file name
+  //   let filename = 'lehrstell-motivation-sschreiben' + new Date().toUTCString() + '.doc'
+  //   // Create download link element
+  //   var downloadLink = document.createElement("a");
+
+  //   document.body.appendChild(downloadLink);
+
+  //   downloadLink.href = url;
+
+  //   // Setting the file name
+  //   downloadLink.download = filename;
+
+  //   //triggering the function
+  //   downloadLink.click();
+  //   document.body.removeChild(downloadLink);
+
+  // }
 
   isObjectEmpty(Obj: any) {
     for (var key in Obj) {
