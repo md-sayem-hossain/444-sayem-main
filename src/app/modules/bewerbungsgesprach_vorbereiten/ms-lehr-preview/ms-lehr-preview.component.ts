@@ -145,13 +145,14 @@ exportToWord() {
                       size: 24,
                     }),
                     new TextRun({
-                      break:1,
+                        break:2,
                         text: `${this.commonService.lehrStepOneData.textArea10}`,
                         italics: true,
                         size: 24,
                         color: "8282ff",
                     }),
                     new TextRun({
+                      break:2,
                       text: "Note:",
                       bold: true,
                       size: 20,

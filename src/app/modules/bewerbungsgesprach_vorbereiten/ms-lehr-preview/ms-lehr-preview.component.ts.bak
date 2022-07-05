@@ -145,13 +145,14 @@ exportToWord() {
                       size: 24,
                     }),
                     new TextRun({
-                      break:1,
+                        break:1.5,
                         text: `${this.commonService.lehrStepOneData.textArea10}`,
                         italics: true,
                         size: 24,
                         color: "8282ff",
                     }),
                     new TextRun({
+                      break:2,
                       text: "Note:",
                       bold: true,
                       size: 20,
@@ -168,7 +169,7 @@ exportToWord() {
       document.body.appendChild(a);
       a.setAttribute('style', 'display: none');
       a.href = url;
-      a.download = 'lehrstell-lebenslauf' + new Date().toUTCString() + '.doc';
+      a.download = 'lehrstell-motivation-sschreiben' + new Date().toUTCString() + '.doc';
       a.click();
       window.URL.revokeObjectURL(url);
       a.remove();
