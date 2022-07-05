@@ -168,7 +168,7 @@ exportToWord() {
       document.body.appendChild(a);
       a.setAttribute('style', 'display: none');
       a.href = url;
-      a.download = 'lehrstell-motivation-sschreiben' + new Date().toUTCString() + '.doc';
+      a.download = 'lehrstell-lebenslauf' + new Date().toUTCString() + '.doc';
       a.click();
       window.URL.revokeObjectURL(url);
       a.remove();
