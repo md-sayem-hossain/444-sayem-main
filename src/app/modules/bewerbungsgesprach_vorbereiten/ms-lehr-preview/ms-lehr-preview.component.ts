@@ -153,10 +153,32 @@ exportToWord() {
                     }),
                     new TextRun({
                       break:2,
-                      text: "Note:",
+                      text: "Notiz:",
                       bold: true,
                       size: 20,
-                    })
+                    }),
+                    
+                    
+                    
+                     new TextRun({
+                      text: "2) Wie sind deine Schulnoten?",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepOneData.textArea11}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+                    
                 ],
             }),
            ],

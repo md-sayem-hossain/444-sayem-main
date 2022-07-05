@@ -145,7 +145,7 @@ exportToWord() {
                       size: 24,
                     }),
                     new TextRun({
-                        break:1.5,
+                        break:2,
                         text: `${this.commonService.lehrStepOneData.textArea10}`,
                         italics: true,
                         size: 24,
