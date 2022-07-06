@@ -119,10 +119,10 @@ exportToWord() {
           properties: {
               page: {
                   margin: {
-                      top: 1000,
-                      bottom: 1000,
-                      left: 1000,
-                      right: 1000
+                      top: 1500,
+                      bottom: 1500,
+                      left: 1500,
+                      right: 1500
                   }
               }
           },
@@ -518,8 +518,103 @@ exportToWord() {
                       size: 20,
                     }),
 
+                    new TextRun({
+                      break:5,
+                      text: "Fragen, die DU am Gespräch stellen kannst.",
+                      bold: true,
+                      size: 28,
+                    }),
 
-                    
+                    new TextRun({
+                      break:1,
+                      text: "Suche die Infos auf der Webseite der Firma und mache dir Notizen dazu.",
+                      bold: true,
+                      size: 28,
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "a) Wie viele Mitarbeiter hat die Firma? ",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                      break:1,
+                      text: "b) Wie erfolgt die Ausbildung? Wer ist zuständig dafür? ",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                      break:1,
+                      text: "c) Welche Lehrberufe bietet die Firma noch an? ",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                      break:1,
+                      text: "d) Wie verläuft die Ausbildung? Welche Bereiche/Abteilungen werde ich kennenlernen? ",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                      break:1,
+                      text: "e) Wer wird die zuständige Person während meiner Ausbildung sein? ",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                      break:1,
+                      text: "f) Wie sind die Arbeitszeiten? ",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                      break:1,
+                      text: "g) An welchen Tagen findet die Berufsschule statt und wo ist die Berufsschule? ",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                      break:1,
+                      text: "h) Muss ich bei der Arbeit spezielle Kleidung tragen oder welche Vorgaben gibt es sonst noch? ",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                      break:1,
+                      text: "i) Auf Ihrer Webseite ist mir aufgefallen, dass... können Sie mir dies genauer erklären? ",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                      break:1,
+                      text: "j) Wie geht es nun weiter nach dem Vorstellunggespräch? Bis wann erhalte ich Bescheid? ",
+                      bold: true,
+                      size: 24,
+                    }),
+                     
+
+
+
+
+
+
+
+
+
+
+//                     Fragen, die DU am Gespräch stellen kannst. 
+// Suche die Infos auf der Webseite der Firma und mache dir Notizen dazu.
+// a) Wie viele Mitarbeiter hat die Firma? 
+// b) Wie erfolgt die Ausbildung? Wer ist zuständig dafür?
+// c) Welche Lehrberufe bietet die Firma noch an?
+// d) Wie verläuft die Ausbildung? Welche Bereiche/Abteilungen werde ich kennenlernen?
+// e) Wer wird die zuständige Person während meiner Ausbildung sein?
+// f) Wie sind die Arbeitszeiten?
+// g) An welchen Tagen findet die Berufsschule statt und wo ist die Berufsschule?
+// h) Muss ich bei der Arbeit spezielle Kleidung tragen oder welche Vorgaben gibt es sonst noch?
+// i) Auf Ihrer Webseite ist mir aufgefallen, dass... können Sie mir dies genauer erklären?
+// j) Wie geht es nun weiter nach dem Vorstellunggespräch? Bis wann erhalte ich Bescheid?
+
                 ],
             }),
            ],
