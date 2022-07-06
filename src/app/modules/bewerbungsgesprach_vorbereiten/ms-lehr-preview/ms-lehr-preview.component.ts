@@ -160,7 +160,8 @@ exportToWord() {
                     
                     
                     
-                     new TextRun({
+                    new TextRun({
+                      break:2,
                       text: "2) Wie sind deine Schulnoten?",
                       bold: true,
                       size: 24,
@@ -178,6 +179,346 @@ exportToWord() {
                       bold: true,
                       size: 20,
                     }),
+                    
+
+
+                    new TextRun({
+                      break:2,
+                      text: "3) Wie sind deine Zeugnisse (Verhalten/ Absenzen)?",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepOneData.textArea12}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+
+                    new TextRun({
+                      break:2,
+                      text: "4) Wie gerne erledigst du Hausaufgaben und wie lernst du für Prüfungen (Was ist deine Lernstrategie)?",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepTwoData.textArea1}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "5) Warum möchtest du diesen Beruf erlernen?",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepTwoData.textArea2}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "6) Erfüllst du die schulischen und persönlichen Voraussetzungen für die Lehrstelle?",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepTwoData.textArea3}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "7) Warum hast du dich für diese Firma entschieden?",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepThreeData3.textArea4}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "8) Kannst du erklären, was die Firma macht? (Produkte, Dienstleistungen)",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepThreeData3.textArea5}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "9) Welche Schnupperlehren hast du bis jetzt absolviert? Was hat dir gefallen und was nicht?",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepThreeData3.textArea6}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "10) Was erwartest du von deiner Lehrstelle?",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepFourData4.textArea7}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "11) Welches sind deine Stärken und deine Schwächen?",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepFourData4.textArea8}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "12) Arbeitsverhalten: Kannst du anpacken und bist du ausdauernd? Nenne Beispiele von dir!",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepFourData4.textArea9}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "13) Kannst du mit anderen zusammenarbeiten? Nenne Beispiele aus der Schule/ Freizeit.",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepFiveData5.textArea13}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "14) Wie reagierst du in einer Konfliktsituation oder in einem Streit? Nenne Beispiele von dir.",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepFiveData5.textArea14}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "15) Welche Hobbys hast du und wie verbringst du deine Freizeit/ Schulferien?",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepFiveData5.textArea15}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "16) Erzähle etwas über deine Familie (Eltern, Geschwister, Beruf, Schule, wer unterstützt dich?)",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepSixData6.textArea16}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "17) Falls du die Lehrstelle beginnst, wie kommst du an den Arbeitsort?",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepSixData6.textArea17}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
+                    new TextRun({
+                      break:2,
+                      text: "18) Wie sieht deine Zukunft aus? (beruflich, privat)",
+                      bold: true,
+                      size: 24,
+                    }),
+                    new TextRun({
+                        break:2,
+                        text: `${this.commonService.lehrStepSixData6.textArea18}`,
+                        italics: true,
+                        size: 24,
+                        color: "8282ff",
+                    }),
+                    new TextRun({
+                      break:2,
+                      text: "Notiz:",
+                      bold: true,
+                      size: 20,
+                    }),
+
+
                     
                 ],
             }),
