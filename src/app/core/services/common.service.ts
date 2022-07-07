@@ -451,5 +451,81 @@ export class CommonService {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+    //sayem
+    let lehrStepOneData = localStorage.getItem('schnStepOneData')
+    if (lehrStepOneData) {
+      this.lehrStepOneData = JSON.parse(lehrStepOneData)
+    }
+
+    // let schnStepOneData = localStorage.getItem('schnStepOneData')
+    // if (schnStepOneData) {
+    //   this.schnStepOneData = JSON.parse(schnStepOneData)
+    // }
+    let lehrStepTwoData2 = localStorage.getItem('lehrStepTwoData2')
+    if (lehrStepTwoData2) {
+      this.lehrStepTwoData2 = JSON.parse(lehrStepTwoData2)
+    }
+    let schnStepTwoData2 = localStorage.getItem('schnStepTwoData2')
+    if (schnStepTwoData2) {
+      this.schnStepTwoData2 = JSON.parse(schnStepTwoData2)
+    }
+
+
+
+
+    let lehrStepThreeData3 = localStorage.getItem('lehrStepThreeData3')
+    if (lehrStepThreeData3) {
+      this.lehrStepThreeData3 = JSON.parse(lehrStepThreeData3)
+    }
+    let schnStepThreeData3 = localStorage.getItem('schnStepThreeData3')
+    if (schnStepThreeData3) {
+      this.schnStepThreeData3 = JSON.parse(schnStepThreeData3)
+    }
+
+
+
+    let lehrStepFourData4 = localStorage.getItem('lehrStepFourData4')
+    if (lehrStepFourData4) {
+      this.lehrStepFourData4 = JSON.parse(lehrStepFourData4)
+    }
+
+    let schnStepFourData4 = localStorage.getItem('schnStepFourData4')
+    if (schnStepFourData4) {
+      this.schnStepFourData4 = JSON.parse(schnStepFourData4)
+    }
+
+
+    let lehrStepFiveData5= localStorage.getItem('lehrStepFiveData5')
+    if (lehrStepFiveData5) {
+      this.lehrStepFiveData5 = JSON.parse(lehrStepFiveData5)
+    }
+    let schnStepFiveData5 = localStorage.getItem('schnStepFiveData5')
+    if (schnStepFiveData5) {
+      this.schnStepFiveData5 = JSON.parse(schnStepFiveData5)
+    }
+
+
+
+    let lehrStepSixData6 = localStorage.getItem('lehrStepSixData6')
+    if (lehrStepSixData6) {
+      this.lehrStepSixData6 = JSON.parse(lehrStepSixData6)
+    }
+    let schnStepSixData6 = localStorage.getItem('schnStepSixData6')
+    if (schnStepSixData6) {
+      this.schnStepSixData6 = JSON.parse(schnStepSixData6)
+    }
+
+
   }
 }
