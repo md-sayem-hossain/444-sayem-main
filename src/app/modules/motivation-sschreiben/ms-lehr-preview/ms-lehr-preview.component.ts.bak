@@ -136,10 +136,10 @@ export class MsLehrPreviewComponent implements OnInit {
             },
           },
           children: [
-             new Paragraph({
-                 text: "Vorbereitungsfragen für dein Bewerbungsgespräch",
-                 heading: HeadingLevel.HEADING_2
-             }),
+            // new Paragraph({
+            //     text: "Vorbereitungsfragen für dein Bewerbungsgespräch",
+            //     heading: HeadingLevel.HEADING_2
+            // }),
 
             new Paragraph({
               style: 'paragraphStyle',
