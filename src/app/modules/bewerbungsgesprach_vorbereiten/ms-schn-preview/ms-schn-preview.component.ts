@@ -4,6 +4,22 @@ import html2canvas from 'html2canvas';
 import { CommonService } from 'src/app/core/services/common.service';
 import { Router } from '@angular/router';
 import { DomSanitizer } from "@angular/platform-browser";
+import {
+  Document,
+  Packer,
+  Paragraph,
+  TextRun,
+  HeadingLevel,
+  BorderStyle,
+  ImageRun,
+  TextWrappingType,
+  TextWrappingSide,
+  Alignment,
+} from "docx";
+
+
+
+
 @Component({
   selector: 'app-ms-schn-preview',
   templateUrl: './ms-schn-preview.component.html',
@@ -123,7 +139,7 @@ exportToWord() {
                     }),
                     new TextRun({
                         break:2,
-                        text: `${this.commonService.schnStepOneData.textArea10}`,
+                        text: `${this.commonService.lehrStepOneData.textArea10}`,
                         italics: true,
                         size: 24,
                         color: "8282ff",
@@ -145,7 +161,7 @@ exportToWord() {
                     }),
                     new TextRun({
                         break:2,
-                        text: `${this.commonService.schnStepOneData.textArea11}`,
+                        text: `${this.commonService.lehrStepOneData.textArea11}`,
                         italics: true,
                         size: 24,
                         color: "8282ff",
@@ -167,7 +183,7 @@ exportToWord() {
                     }),
                     new TextRun({
                         break:2,
-                        text: `${this.commonService.schnStepOneData.textArea12}`,
+                        text: `${this.commonService.lehrStepOneData.textArea12}`,
                         italics: true,
                         size: 24,
                         color: "8282ff",
