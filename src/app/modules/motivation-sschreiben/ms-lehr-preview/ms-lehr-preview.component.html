@@ -27,15 +27,15 @@
                     <p align="justify">{{commonService.msPersonalForm?.place ? commonService.msPersonalForm?.place + ',' : ''}} {{commonService.msPersonalForm?.dob | date : 'dd. MMMM yyyy'}} </p>
                     <div class="mb-10"></div>
                     <!-- class="bold" -->
-                    <p align="justify"><b> Bewerbung um eine {{commonService.msType |titlecase}} als
-                            {{commonService.msPersonalForm?.dfBeruf |titlecase}}
-                            {{commonService.msPersonalForm?.ebaOrEfz }}</b>
+                    <p align="justify"> <b> Bewerbung um eine {{commonService.msType|titlecase}} als
+                        {{commonService.msPersonalForm?.dfBeruf |titlecase}}
+                        {{commonService.msPersonalForm?.ebaOrEfz }}</b>
                     </p>
                     <div class="mb-10"></div>
                     <p class="mb-15px" *ngIf="commonService.msPersonalForm?.schreibst=='unknown'">
                         Sehr geehrte Damen und Herren
                     </p>
-                    <p *ngIf="commonService.msPersonalForm?.schreibst!='unknown'  ">
+                    <p *ngIf="commonService.msPersonalForm?.schreibst!='unknown'">
                         Sehr
                         <span *ngIf="commonService.msPersonalForm?.schreibst=='Frau'">geehrte</span>
                         <span *ngIf="commonService.msPersonalForm?.schreibst=='Herr'">geehrter</span>
