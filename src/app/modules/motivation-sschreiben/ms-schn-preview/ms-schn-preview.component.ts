@@ -16,6 +16,9 @@ import {
   TextWrappingSide,
   Alignment,
 } from 'docx';
+import { DatePipe } from '@angular/common';
+
+
 @Component({
   selector: 'app-ms-schn-preview',
   templateUrl: './ms-schn-preview.component.html',
@@ -67,154 +70,322 @@ export class MsSchnPreviewComponent implements OnInit {
 
 
 
- //sayem
- exportToWord() {
-  const doc = new Document({
-    styles: {
-      default: {
-        heading2: {
-          run: {
-            size: 36,
-            bold: true,
-            color: '000000',
-            font: 'Calibri',
-          },
-          paragraph: {
-            spacing: {
-              after: 400,
+ 
+
+  //sayem
+  exportToWord() {
+    const doc = new Document({
+      styles: {
+        default: {
+          heading2: {
+            run: {
+              size: 36,
+              bold: true,
+              color: '000000',
+              font: 'Calibri',
+            },
+            paragraph: {
+              
+              spacing: {
+                after: 400,
+              },
             },
           },
         },
+        paragraphStyles: [
+          {
+            id: 'paragraphStyle',
+            name: 'ParagraphStyle',
+            basedOn: 'Normal',
+            next: 'Normal',
+            run: {
+              color: '000000',
+              font: 'Calibri',
+            },
+          },
+        ],
       },
-      paragraphStyles: [
+      title: 'lehrstell-motivation-sschreiben',
+      sections: [
         {
-          id: 'paragraphStyle',
-          name: 'ParagraphStyle',
-          basedOn: 'Normal',
-          next: 'Normal',
-          run: {
-            color: '000000',
-            font: 'Calibri',
-          },
-        },
-      ],
-    },
-    title: 'lehrstell-motivation-sschreiben',
-    sections: [
-      {
-        properties: {
-          page: {
-            margin: {
-              top: 1500,
-              bottom: 1500,
-              left: 1500,
-              right: 1500,
+          properties: {
+            page: {
+              margin: {
+                top: 1500,
+                bottom: 1500,
+                left: 1500,
+                right: 1500,
+              },
             },
           },
-        },
-        children: [
-          // new Paragraph({
-          //     text: "Vorbereitungsfragen für dein Bewerbungsgespräch",
-          //     heading: HeadingLevel.HEADING_2
-          // }),
-
-          new Paragraph({
-            style: 'paragraphStyle',
-            spacing: {
-              before: 700,
-            },
-            children: [
-              // Md Sayem Hossain
-              // Middle hali street 10
-              // 4215 Chittagong
-              // my@email.com
-              // 018888888888
-
-              // Md Sayem Hossain
-              new TextRun({
-                text: `${this.commonService.msPersonalForm.firstName}`,
-              }),
-              new TextRun({
-                text: ' ',
-              }),
-              new TextRun({
-                text: `${this.commonService.msPersonalForm.lastName}`,
-              }),
-
-              // Middle hali street 10
+          children: [
+            new Paragraph({
+              style: 'paragraphStyle',
+              spacing: {
+              },
+              children: [
+                
+                new TextRun({
+                  size: 24,
+                  text: `${this.commonService.msPersonalForm?.firstName +' '+this.commonService.msPersonalForm?.lastName}`,
+                }),
+               
+                new TextRun({
+                  break:1,
+                  size: 24,
+                  text: `${this.commonService.msPersonalForm?.street +' '+this.commonService.msPersonalForm?.number}`,
+                }),
+                
               new TextRun({
                 break:1,
-                text: `${this.commonService.msPersonalForm.street}`,
+                size: 24,
+                text: `${this.commonService.msPersonalForm?.zip +' '+this.commonService.msPersonalForm?.place}`,
+              }),
+          
+              new TextRun({
+                break:1,
+                size: 24,
+                text: `${this.commonService.msPersonalForm?.email}`,
+              }),
+              
+              new TextRun({
+                break:1,
+                size: 24,
+                text: `${this.commonService.msPersonalForm?.mobile}`,
+              }),
+
+
+
+              // {{commonService.msPersonalForm?.derFirma}}<br>
+              // <span *ngIf="commonService.msPersonalForm.schreibst != 'unknown'">
+              // {{commonService.msPersonalForm?.schreibst}} {{commonService.msPersonalForm?.schreibst1Name +'
+              // '+commonService.msPersonalForm?.schreibst2Name }}<br>
+              // </span>
+              // {{commonService.msPersonalForm?.dfStreet }}<br>
+              // {{commonService.msPersonalForm?.dfZip +' '+commonService.msPersonalForm?.dfPlace}}
+              new TextRun({
+                break:2,
+                size: 24,
+                text: `${this.commonService.msPersonalForm?.derFirma}`,
+              }),
+              
+              new TextRun({
+                break:1,
+                size: 24,
+                text: `${this.commonService.msPersonalForm.schreibst != 'unknown'?  this.commonService.msPersonalForm?.schreibst + ' '+this.commonService.msPersonalForm?.schreibst1Name + ' '+this.commonService.msPersonalForm?.schreibst2Name :''}`,
+                // text: `${this.commonService.msPersonalForm?.schreibst + ' '+this.commonService.msPersonalForm?.schreibst1Name + ' '+this.commonService.msPersonalForm?.schreibst2Name}`,
               }),
               new TextRun({
-                text: ' ',
+                break:1,
+                size: 24,
+                text: `${this.commonService.msPersonalForm?.dfStreet}`,
               }),
               new TextRun({
-                text: `${this.commonService.msPersonalForm.Number}`,
+                break:1,
+                size: 24,
+                text: `${this.commonService.msPersonalForm?.dfZip + ' '+this.commonService.msPersonalForm?.dfPlace}`,
               }),
+
+
+
+              // <p align="justify">{{commonService.msPersonalForm?.place ? commonService.msPersonalForm?.place + ',' : ''}} {{commonService.msPersonalForm?.dob | date : 'dd. MMMM yyyy'}} </p>
+
+              new TextRun({
+                break:2,
+                size: 24,
+                text: `${this.commonService.msPersonalForm?.place? this.commonService.msPersonalForm?.place+',':''} ${this.commonService.msPersonalForm?.dob? new DatePipe('de-ch').transform(this.commonService.msPersonalForm?.dob, 'dd. MMMM yyyy') : ''}`,
+              }),
+
+
+
+
+      //         <p align="justify"><b> Bewerbung um eine {{commonService.msType |titlecase}} als
+      //         {{commonService.msPersonalForm?.dfBeruf |titlecase}}
+      //         {{commonService.msPersonalForm?.ebaOrEfz }}</b>
+      // </p>
+
+              new TextRun({
+                break:2,
+                size: 24,
+                bold: true,
+                text: `${'Bewerbung um eine '+this.commonService.msType + ' als '}`,
+              }),
+              new TextRun({
+                bold: true,
+                size: 24,
+                text: `${this.commonService.msPersonalForm?.dfBeruf+ ' '}`,
+              }),
+              new TextRun({
+                bold: true,
+                size: 24,
+                text: `${this.commonService.msPersonalForm?.ebaOrEfz}`,
+              }),
+
+
+
+              // <p class="mb-15px" *ngIf="commonService.msPersonalForm?.schreibst=='unknown'">
+              //           
+              //       </p>
+
+              new TextRun({
+                break:1,
+                size: 24,
+                text: `${this.commonService.msPersonalForm?.schreibst=='unknown'? 'Sehr geehrte Damen und Herren':' '}`,
+              }),
+            
+
+
+
+
+          //     <p *ngIf="commonService.msPersonalForm?.schreibst!='unknown'">
+          //     Sehr
+          //     <span *ngIf="commonService.msPersonalForm?.schreibst=='Frau'">geehrte </span>
+          //     <span *ngIf="commonService.msPersonalForm?.schreibst=='Herr'">geehrter </span>
+          //     {{commonService.msPersonalForm?.schreibst}}
+          //     {{commonService.msPersonalForm?.schreibst2Name}}
+          // </p>
+
+
+          new TextRun({
+            break:1,
+            // bold: true,
+            size: 24,
+            text: `${this.commonService.msPersonalForm?.schreibst!='unknown'?  this.commonService.msPersonalForm?.schreibst=='Frau'? 'Sehr Geehrte':'' +this.commonService.msPersonalForm?.schreibst=='Herr'? 'Sehr Geehrter':'' :''}`,
+          }),
+          new TextRun({
+            // break:1,
+            size: 24,
+            text: `${' '+this.commonService.msPersonalForm?.schreibst}`,
+          }),
+          new TextRun({
+            size: 24,
+            // break:1,
+            text: `${' '+this.commonService.msPersonalForm?.schreibst2Name}`,
+          }),
+
+
+              
+// <p class="mb-15px" align="justify"> {{commonService.lehrStepTwoData2.textArea1}}</p>
+// <p class="mb-15px" align="justify">{{commonService.lehrStepTwoData2.textArea2}}</p>
+// <p class="mb-15px" align="justify">{{commonService.lehrStepTwoData2.textArea3}}</p>
+// <p class="mb-15px" align="justify">{{commonService.lehrStepThreeData.textArea1}}</p>
+             
+              new TextRun({
+                break:2,
+                size: 24,
+                text: `${this.commonService.schnStepTwoData2.textArea1}`,
+              }),
+              new TextRun({
+                break:2,
+                size: 24,
+                text: `${this.commonService.schnStepTwoData2.textArea2}`,
+              }),
+              new TextRun({
+                break:2,
+                size: 24,
+                text: `${this.commonService.schnStepTwoData2.textArea3}`,
+              }),
+              new TextRun({
+                break:2,
+                size: 24,
+                text: `${this.commonService.lehrStepThreeData.textArea1}`,
+              }),
+              new TextRun({
+                break:2,
+                size: 24,
+                text: `Ich freue mich, wenn Sie mich zu einem Vorstellungsgespräch einladen, damit ich Sie von meiner Persönlichkeit überzeugen kann und warte gespannt auf Ihre Antwort.`,
+              }),
+
+            new TextRun({
+                break:2,
+                size: 24,
+                text: `Freundliche Grüsse`,
+              }),
+              
+              
+              new TextRun({
+                break:2,
+                size: 24,
+                text: `${this.commonService.msPersonalForm?.firstName +' '+this.commonService.msPersonalForm?.lastName}`,
+              }),
+          //     <p align="justify">
+          //     {{commonService.msPersonalForm?.firstName +' '+commonService.msPersonalForm?.lastName}}
+          //     <!-- Mike Muster -->
+          // </p>
+         
+  
+
+
+          new TextRun({
+            break:3,
+            size: 24,
+            text: `${this.beilagen!=''?'Beilagen: ':''}`,
+          }),
+          new TextRun({
+            break:1,
+            size: 24,
+            text: `${this.beilagen}`,
+          }),
+        
+
+      //     <p class="ms-bottom-text" *ngIf="beilagen!=''">Beilagen: <br>
+      //     {{beilagen}}
+      // </p>
+
+
+     
+
+
+
+
+// <!-- Static text -->
+// <p align="justify">Ich freue mich, wenn Sie mich zu einem Vorstellungsgespräch einladen, damit ich Sie von meiner Persönlichkeit überzeugen kann und warte gespannt auf Ihre Antwort.
+// </p><br/>
+// <!-- Static text -->
+// <p align="justify">
+// </p>
+              
+              
+
+
+
+
+// <div class="mb-10"></div>
+// <p align="justify">
+//   {{}}
+//   <!-- Mike Muster -->
+// </p>
              
 
 
-            // 4215 Chittagong
-            new TextRun({
-              break:1,
-              text: `${this.commonService.msPersonalForm.zip}`,
+// <!-- Static heading -->
+// <div class="mb-10"></div>
+// <p class="ms-bottom-text" *ngIf="beilagen!=''">Beilagen: <br>
+//   {{beilagen}}
+// </p>
+                
+
+              
+              ],
             }),
-            new TextRun({
-              text: ' ',
-            }),
-            new TextRun({
-              text: `${this.commonService.msPersonalForm.place}`,
-            }),
-            
-            
-            // 4215 Chittagong
-            new TextRun({
-              break:1,
-              text: `${this.commonService.msPersonalForm.email}`,
-            }),
-            
+          ],
+        },
+      ],
+    });
 
-
-            // 4215 Chittagong
-            new TextRun({
-              break:1,
-              text: `${this.commonService.msPersonalForm.mobile}`,
-            }),
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            ],
-          }),
-        ],
-      },
-    ],
-  });
-
-  Packer.toBlob(doc).then((blob) => {
-    let url = window.URL.createObjectURL(blob);
-    let a = document.createElement('a');
-    document.body.appendChild(a);
-    a.setAttribute('style', 'display: none');
-    a.href = url;
-    a.download =
-      'lehrstell-motivation-sschreiben' + new Date().toUTCString() + '.doc';
-    a.click();
-    window.URL.revokeObjectURL(url);
-    a.remove();
-  });
-}
+    Packer.toBlob(doc).then((blob) => {
+      let url = window.URL.createObjectURL(blob);
+      let a = document.createElement('a');
+      document.body.appendChild(a);
+      a.setAttribute('style', 'display: none');
+      a.href = url;
+      a.download =
+        'lehrstell-motivation-sschreiben' + new Date().toUTCString() + '.doc';
+      a.click();
+      window.URL.revokeObjectURL(url);
+      a.remove();
+    });
+  }
 
 
 
