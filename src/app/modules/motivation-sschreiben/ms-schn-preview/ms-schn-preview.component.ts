@@ -252,11 +252,11 @@ export class MsSchnPreviewComponent implements OnInit {
             size: 24,
             text: `${this.commonService.msPersonalForm?.schreibst!='unknown'?  this.commonService.msPersonalForm?.schreibst=='Frau'? 'Sehr Geehrte':'' +this.commonService.msPersonalForm?.schreibst=='Herr'? 'Sehr Geehrter':'' :''}`,
           }),
-          new TextRun({
-            // break:1,
-            size: 24,
-            text: `${' '+this.commonService.msPersonalForm?.schreibst}`,
-          }),
+          // new TextRun({
+          //   // break:1,
+          //   size: 24,
+          //   text: `${' '+this.commonService.msPersonalForm?.schreibst}`,
+          // }),
           new TextRun({
             size: 24,
             // break:1,
