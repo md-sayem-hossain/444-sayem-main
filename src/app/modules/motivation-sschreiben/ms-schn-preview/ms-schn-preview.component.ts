@@ -72,6 +72,9 @@ export class MsSchnPreviewComponent implements OnInit {
 
  
 
+  liness = this.commonService.msPersonalForm?.schreibst != 'unknown'? this.commonService.msPersonalForm?.schreibst+' '+this.commonService.msPersonalForm?.schreibst1Name + ' '+this.commonService.msPersonalForm?.schreibst2Name:``;  
+  textRuns = this.commonService.msPersonalForm?.schreibst != 'unknown'? this.liness.split('\n').map(line=>new TextRun({break:1,text:line})):this.liness.split('\n').map(line=>new TextRun({text:line}))
+ 
   //sayem
   exportToWord() {
     const doc = new Document({
@@ -168,13 +171,23 @@ export class MsSchnPreviewComponent implements OnInit {
                 size: 24,
                 text: `${this.commonService.msPersonalForm?.derFirma}`,
               }),
-              
+
               new TextRun({
-                break:1,
                 size: 24,
-                text: `${this.commonService.msPersonalForm.schreibst != 'unknown'?  this.commonService.msPersonalForm?.schreibst + ' '+this.commonService.msPersonalForm?.schreibst1Name + ' '+this.commonService.msPersonalForm?.schreibst2Name :''}`,
-                // text: `${this.commonService.msPersonalForm?.schreibst + ' '+this.commonService.msPersonalForm?.schreibst1Name + ' '+this.commonService.msPersonalForm?.schreibst2Name}`,
+                text: `${this.commonService.msPersonalForm?.schreibst == 'unknown'? '' : ''}`,
               }),
+
+
+              
+
+              new TextRun({ 
+                size: 24,
+                children:  this.textRuns,
+                // text: `${this.commonService.msPersonalForm?.schreibst != 'unknown'? this.commonService.msPersonalForm?.schreibst+' '+this.commonService.msPersonalForm?.schreibst1Name + ' '+this.commonService.msPersonalForm?.schreibst2Name:``}`,
+               }),
+               
+
+
               new TextRun({
                 break:1,
                 size: 24,
@@ -260,7 +273,7 @@ export class MsSchnPreviewComponent implements OnInit {
           new TextRun({
             size: 24,
             // break:1,
-            text: `${' '+this.commonService.msPersonalForm?.schreibst2Name}`,
+            text: `${this.commonService.msPersonalForm?.schreibst!='unknown'? ' '+this.commonService.msPersonalForm?.schreibst2Name:''}`,
           }),
 
 

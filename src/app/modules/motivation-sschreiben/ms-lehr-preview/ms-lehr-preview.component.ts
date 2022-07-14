@@ -21,11 +21,16 @@ import {
   TextWrappingType,
   TextWrappingSide,
   Alignment,
+  ThematicBreak,
+  InsertedTextRun,
 } from 'docx';
 import { DatePipe } from '@angular/common';
 
 
 import { NgIf } from '@angular/common';
+import { lineBreak, LINE_BREAK } from 'html2canvas/dist/types/css/property-descriptors/line-break';
+import { EMPTY, empty } from 'rxjs';
+import { wordBreak } from 'html2canvas/dist/types/css/property-descriptors/word-break';
 
 @Component({
   selector: 'app-ms-lehr-preview',
@@ -162,8 +167,10 @@ export class MsLehrPreviewComponent implements OnInit {
 
 
 
+ // `${this.commonService.msPersonalForm?.schreibst != 'unknown'? :``}`,
 
-
+ liness = this.commonService.msPersonalForm?.schreibst != 'unknown'? this.commonService.msPersonalForm?.schreibst+' '+this.commonService.msPersonalForm?.schreibst1Name + ' '+this.commonService.msPersonalForm?.schreibst2Name:``;  
+ textRuns = this.commonService.msPersonalForm?.schreibst != 'unknown'? this.liness.split('\n').map(line=>new TextRun({break:1,text:line})):this.liness.split('\n').map(line=>new TextRun({text:line}))
 
 
   //sayem
@@ -224,7 +231,8 @@ export class MsLehrPreviewComponent implements OnInit {
                   text: `${this.commonService.msPersonalForm?.firstName +' '+this.commonService.msPersonalForm?.lastName}`,
                 }),
                
-                new TextRun({
+
+               new TextRun({
                   break:1,
                   size: 24,
                   text: `${this.commonService.msPersonalForm?.street +' '+this.commonService.msPersonalForm?.number}`,
@@ -262,13 +270,23 @@ export class MsLehrPreviewComponent implements OnInit {
                 size: 24,
                 text: `${this.commonService.msPersonalForm?.derFirma}`,
               }),
-              
+
               new TextRun({
-                break:1,
                 size: 24,
-                text: `${this.commonService.msPersonalForm.schreibst != 'unknown'?  this.commonService.msPersonalForm?.schreibst + ' '+this.commonService.msPersonalForm?.schreibst1Name + ' '+this.commonService.msPersonalForm?.schreibst2Name :''}`,
-                // text: `${this.commonService.msPersonalForm?.schreibst + ' '+this.commonService.msPersonalForm?.schreibst1Name + ' '+this.commonService.msPersonalForm?.schreibst2Name}`,
+                text: `${this.commonService.msPersonalForm?.schreibst == 'unknown'? '' : ''}`,
               }),
+
+
+              
+
+              new TextRun({ 
+                size: 24,
+                children:  this.textRuns,
+                // text: `${this.commonService.msPersonalForm?.schreibst != 'unknown'? this.commonService.msPersonalForm?.schreibst+' '+this.commonService.msPersonalForm?.schreibst1Name + ' '+this.commonService.msPersonalForm?.schreibst2Name:``}`,
+               }),
+               
+
+
               new TextRun({
                 break:1,
                 size: 24,
@@ -330,31 +348,17 @@ export class MsLehrPreviewComponent implements OnInit {
 
 
 
-
-          //     <p *ngIf="commonService.msPersonalForm?.schreibst!='unknown'">
-          //     Sehr
-          //     <span *ngIf="commonService.msPersonalForm?.schreibst=='Frau'">geehrte </span>
-          //     <span *ngIf="commonService.msPersonalForm?.schreibst=='Herr'">geehrter </span>
-          //     {{commonService.msPersonalForm?.schreibst}}
-          //     {{commonService.msPersonalForm?.schreibst2Name}}
-          // </p>
-
-
           new TextRun({
             break:2,
             // bold: true,
             size: 24,
-            text: `${this.commonService.msPersonalForm?.schreibst!='unknown'?  this.commonService.msPersonalForm?.schreibst=='Frau'? 'Sehr Geehrte':'' +this.commonService.msPersonalForm?.schreibst=='Herr'? 'Sehr Geehrter':'' :''}`,
+            text: `${this.commonService.msPersonalForm?.schreibst!='unknown'?  this.commonService.msPersonalForm?.schreibst=='Frau'? 'Sehr Geehrte':'' + this.commonService.msPersonalForm?.schreibst=='Herr'? 'Sehr Geehrter':'' :''}`,
           }),
-          // new TextRun({
-          //   // break:1,
-          //   size: 24,
-          //   text: `${' '+this.commonService.msPersonalForm?.schreibst}`,
-          // }),
+         
           new TextRun({
             size: 24,
             // break:1,
-            text: `${' '+this.commonService.msPersonalForm?.schreibst2Name}`,
+            text: `${this.commonService.msPersonalForm?.schreibst!='unknown'? ' '+this.commonService.msPersonalForm?.schreibst2Name:''}`,
           }),
 
 
