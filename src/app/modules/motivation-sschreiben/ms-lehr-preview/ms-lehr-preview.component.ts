@@ -228,6 +228,7 @@ export class MsLehrPreviewComponent implements OnInit {
 
                 new TextRun({
                   size: 24,
+                  font: 'Calibri',
                   text: `${this.commonService.msPersonalForm?.firstName + ' ' + this.commonService.msPersonalForm?.lastName}`,
                 }),
 
@@ -235,23 +236,27 @@ export class MsLehrPreviewComponent implements OnInit {
                 new TextRun({
                   break: 1,
                   size: 24,
+                  font: 'Calibri',
                   text: `${this.commonService.msPersonalForm?.street + ' ' + this.commonService.msPersonalForm?.number}`,
                 }),
 
                 new TextRun({
                   break: 1,
                   size: 24,
+                  font: 'Calibri',
                   text: `${this.commonService.msPersonalForm?.zip + ' ' + this.commonService.msPersonalForm?.place}`,
                 }),
 
                 new TextRun({
                   break: 1,
                   size: 24,
+                  font: 'Calibri',
                   text: `${this.commonService.msPersonalForm?.email}`,
                 }),
 
                 new TextRun({
                   break: 1,
+                  font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.msPersonalForm?.mobile}`,
                 }),
@@ -267,12 +272,14 @@ export class MsLehrPreviewComponent implements OnInit {
                 // {{commonService.msPersonalForm?.dfZip +' '+commonService.msPersonalForm?.dfPlace}}
                 new TextRun({
                   break: 2,
+                  font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.msPersonalForm?.derFirma}`,
                 }),
 
                 new TextRun({
                   size: 24,
+                  font: 'Calibri',
                   text: `${this.commonService.msPersonalForm?.schreibst == 'unknown' ? '' : ''}`,
                 }),
 
@@ -280,6 +287,7 @@ export class MsLehrPreviewComponent implements OnInit {
 
 
                 new TextRun({
+                  font: 'Calibri',
                   size: 24,
                   children: this.textRuns,
                   // text: `${this.commonService.msPersonalForm?.schreibst != 'unknown'? this.commonService.msPersonalForm?.schreibst+' '+this.commonService.msPersonalForm?.schreibst1Name + ' '+this.commonService.msPersonalForm?.schreibst2Name:``}`,
@@ -288,12 +296,14 @@ export class MsLehrPreviewComponent implements OnInit {
 
 
                 new TextRun({
+                  font: 'Calibri',
                   break: 1,
                   size: 24,
                   text: `${this.commonService.msPersonalForm?.dfStreet}`,
                 }),
                 new TextRun({
                   break: 1,
+                  font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.msPersonalForm?.dfZip + ' ' + this.commonService.msPersonalForm?.dfPlace}`,
                 }),
@@ -303,6 +313,7 @@ export class MsLehrPreviewComponent implements OnInit {
                 // <p align="justify">{{commonService.msPersonalForm?.place ? commonService.msPersonalForm?.place + ',' : ''}} {{commonService.msPersonalForm?.dob | date : 'dd. MMMM yyyy'}} </p>
 
                 new TextRun({
+                  font: 'Calibri',
                   break: 2,
                   size: 24,
                   text: `${this.commonService.msPersonalForm?.place ? this.commonService.msPersonalForm?.place + ',' : ''} ${this.commonService.msPersonalForm?.dob ? new DatePipe('de-ch').transform(this.commonService.msPersonalForm?.dob, 'dd. MMMM yyyy') : ''}`,
@@ -317,6 +328,7 @@ export class MsLehrPreviewComponent implements OnInit {
                 // </p>
 
                 new TextRun({
+                  font: 'Calibri',
                   break: 2,
                   size: 24,
                   bold: true,
@@ -324,12 +336,14 @@ export class MsLehrPreviewComponent implements OnInit {
                 }),
                 new TextRun({
                   bold: true,
+                  font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.msPersonalForm?.dfBeruf + ' '}`,
                 }),
                 new TextRun({
                   bold: true,
                   size: 24,
+                  font: 'Calibri',
                   text: `${this.commonService.msPersonalForm?.ebaOrEfz}`,
                 }),
 
@@ -340,6 +354,7 @@ export class MsLehrPreviewComponent implements OnInit {
                 //       </p>
 
                 new TextRun({
+                  font: 'Calibri',
                   break: 2,
                   size: 24,
                   text: `${this.commonService.msPersonalForm?.schreibst == 'unknown' ? 'Sehr geehrte Damen und Herren' : ''}`,
@@ -351,12 +366,14 @@ export class MsLehrPreviewComponent implements OnInit {
                 new TextRun({
                   break: 2,
                   // bold: true,
+                  font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst == 'Frau' ? 'Sehr geehrte Frau' : '' + this.commonService.msPersonalForm?.schreibst == 'Herr' ? 'Sehr geehrter Herr' : '' : ''}`,
                 }),
 
                 new TextRun({
                   size: 24,
+                  font: 'Calibri',
                   // break:1,
                   text: `${this.commonService.msPersonalForm?.schreibst != 'unknown' ? ' ' + this.commonService.msPersonalForm?.schreibst2Name : ''}`,
                 }),
@@ -367,27 +384,32 @@ export class MsLehrPreviewComponent implements OnInit {
               children: [
                 new TextRun({
                   break: 2,
+                  font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.lehrStepTwoData2.textArea1}`,
                 }),
                 new TextRun({
                   break: 2,
                   size: 24,
+                  font: 'Calibri',
                   text: `${this.commonService.lehrStepTwoData2.textArea2}`,
                 }),
                 new TextRun({
                   break: 2,
+                  font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.lehrStepTwoData2.textArea3}`,
                 }),
                 new TextRun({
                   break: 2,
                   size: 24,
+                  font: 'Calibri',
                   text: `${this.commonService.lehrStepThreeData.textArea1}`,
                 }),
                 new TextRun({
                   break: 2,
                   size: 24,
+                  font: 'Calibri',
                   text: `Ich freue mich, wenn Sie mich zu einem Vorstellungsgespräch einladen, damit ich Sie von meiner Persönlichkeit überzeugen kann und warte gespannt auf Ihre Antwort.`,
                 }),
 
@@ -400,6 +422,7 @@ export class MsLehrPreviewComponent implements OnInit {
 
                 new TextRun({
                   break: 2,
+                  font: 'Calibri',
                   size: 24,
                   text: `Freundliche Grüsse`,
                 }),
@@ -407,6 +430,7 @@ export class MsLehrPreviewComponent implements OnInit {
 
                 new TextRun({
                   break: 2,
+                  font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.msPersonalForm?.firstName + ' ' + this.commonService.msPersonalForm?.lastName}`,
                 }),
@@ -421,10 +445,12 @@ export class MsLehrPreviewComponent implements OnInit {
                 new TextRun({
                   break: 3,
                   size: 24,
+                  font: 'Calibri',
                   text: `${this.beilagen != '' ? 'Beilagen: ' : ''}`,
                 }),
                 new TextRun({
                   break: 1,
+                  font: 'Calibri',
                   size: 24,
                   text: `${this.beilagen}`,
                 }),
