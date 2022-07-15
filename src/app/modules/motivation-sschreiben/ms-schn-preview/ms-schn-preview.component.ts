@@ -280,19 +280,19 @@ export class MsSchnPreviewComponent implements OnInit {
                   // bold: true,
                   size: 24,
                   font: 'Calibri',
-                  text: `${this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst == 'Frau' ? 'Sehr geehrte' : '' + this.commonService.msPersonalForm?.schreibst == 'Herr' ? 'Sehr geehrter' : '' : ''}`,
+                  text: `${this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst == 'Frau' ? 'Sehr geehrte Frau '+this.commonService.msPersonalForm?.schreibst2Name : '' + this.commonService.msPersonalForm?.schreibst == 'Herr' ? 'Sehr geehrter Herr '+ this.commonService.msPersonalForm?.schreibst2Name : '' : ''}`,
                 }),
                 // new TextRun({
                 //   // break:1,
                 //   size: 24,
                 //   text: `${' '+this.commonService.msPersonalForm?.schreibst}`,
                 // }),
-                new TextRun({
-                  size: 24,
-                  font: 'Calibri',
-                  // break:1,
-                  text: `${this.commonService.msPersonalForm?.schreibst != 'unknown' ? ' ' + this.commonService.msPersonalForm?.schreibst2Name : ''}`,
-                }),
+                // new TextRun({
+                //   size: 24,
+                //   font: 'Calibri',
+                //   // break:1,
+                //   text: `${this.commonService.msPersonalForm?.schreibst != 'unknown' ? ' ' + this.commonService.msPersonalForm?.schreibst2Name : ''}`,
+                // }),
 
 
 
