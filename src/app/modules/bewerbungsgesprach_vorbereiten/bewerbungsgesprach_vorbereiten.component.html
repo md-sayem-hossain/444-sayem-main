@@ -3,7 +3,7 @@
         Bewerbungsgespräch</div>
     <div class="content" style="width: 800px;">
         <!-- First-step -->
-        <ng-container *ngIf="commonService.msStep==1">
+        <ng-container *ngIf="commonService.msStep==1 && commonService.msType=='lehrstelle'">
             <span class="heading-btn">SEITE 1 VON 6/ BEWERBUNGSFRAGEN</span>
             <app-step-one> </app-step-one>
         </ng-container>

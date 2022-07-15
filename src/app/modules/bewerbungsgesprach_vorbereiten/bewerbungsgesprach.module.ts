@@ -31,16 +31,12 @@ import { MsSchnPreviewComponent } from './ms-schn-preview/ms-schn-preview.compon
     StepThreeLehrComponent,
     StepTwoSchnComponent,
     StepThreeSchnComponent,
-
-
     StepFourLehrComponent,
     StepFourSchnComponent,
     StepFiveLehrComponent,
     StepFiveSchnComponent,
     StepSixLehrComponent,
     StepSixSchnComponent,
-
-
     MsLehrPreviewComponent,
     MsSchnPreviewComponent
   ],
@@ -48,7 +44,7 @@ import { MsSchnPreviewComponent } from './ms-schn-preview/ms-schn-preview.compon
     CommonModule,
     BewerbungsgesprachRoutingModule,
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule, 
   ]
 })
-export class bewerbungsgesprach { }
+export class Bewerbungsgesprach { }

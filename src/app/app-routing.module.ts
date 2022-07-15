@@ -30,7 +30,7 @@ const routes: Routes = [
   {
     path: 'bewerbungsgesprach_vorbereiten',
     loadChildren: () => import('./modules/bewerbungsgesprach_vorbereiten/bewerbungsgesprach.module')
-      .then(m => m.bewerbungsgesprach),
+      .then(m => m.Bewerbungsgesprach),
   },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
 
