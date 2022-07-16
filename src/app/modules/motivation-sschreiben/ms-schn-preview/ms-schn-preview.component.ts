@@ -71,7 +71,7 @@ export class MsSchnPreviewComponent implements OnInit {
 
 
 
-  liness = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst + ' ' + this.commonService.msPersonalForm?.schreibst1Name + ' ' + this.commonService.msPersonalForm?.schreibst2Name : ``;
+  liness = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst + this.commonService.msPersonalForm?.schreibst1Name!=''? ' '+this.commonService.msPersonalForm?.schreibst1Name:'' + ' ' + this.commonService.msPersonalForm?.schreibst2Name : ``;
   textRuns = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.liness.split('\n').map(line => new TextRun({ break: 1, text: line })) : this.liness.split('\n').map(line => new TextRun({ text: line }))
 
   //sayem
@@ -256,7 +256,7 @@ export class MsSchnPreviewComponent implements OnInit {
                 //       </p>
 
                 new TextRun({
-                  break: 1,
+                  break: 2,
                   font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.msPersonalForm?.schreibst == 'unknown' ? 'Sehr geehrte Damen und Herren' : ' '}`,
@@ -302,8 +302,7 @@ export class MsSchnPreviewComponent implements OnInit {
               
               children: [
 
-                new TextRun({
-                  break: 2,
+                new TextRun({ 
                   font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.schnStepTwoData2.textArea1}`,
@@ -320,25 +319,60 @@ export class MsSchnPreviewComponent implements OnInit {
                   font: 'Calibri',
                   text: `${this.commonService.schnStepTwoData2.textArea3}`,
                 }),
+                // new TextRun({
+                //   break: 2,
+                //   size: 24,
+                //   font: 'Calibri',
+                //   text: `${this.commonService.lehrStepThreeData.textArea1}`,
+                // }),
                 new TextRun({
                   break: 2,
                   size: 24,
                   font: 'Calibri',
-                  text: `${this.commonService.lehrStepThreeData.textArea1}`,
-                }),
-                new TextRun({
-                  break: 2,
-                  size: 24,
-                  font: 'Calibri',
-                  text: `Ich freue mich, wenn Sie mich zu einem Vorstellungsgespräch einladen, damit ich Sie von meiner Persönlichkeit überzeugen kann und warte gespannt auf Ihre Antwort.`,
+                  text: `Ideale Termine zum Schnuppern sind für mich:`,
                 }),
 
               ],
             }),
+            // *ngIf="commonService.schnStepThreeData.T1Von!='' && commonService.schnStepThreeData.T1Bis!=''">
+            //                 {{commonService.schnStepThreeData.T1Von | date : 'dd.MM yyyy'}} -
+            //                 {{commonService.schnStepThreeData.T1Bis | date : 'dd.MM yyyy'}} <br>
             new Paragraph({
               children: [
-
-
+                new TextRun({
+                  font: 'Calibri',
+                  break: 2,
+                  size: 24,
+                  // ${this.commonService.msPersonalForm?.dob ? new DatePipe('de-ch').transform(this.commonService.msPersonalForm?.dob, 'dd. MMMM yyyy') : ''}
+                  text: `${this.commonService.schnStepThreeData.T1Von!='' && this.commonService.schnStepThreeData.T1Bis!=''? new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T1Von, 'dd. MMMM yyyy')+' '+new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T1Bis, 'dd. MMMM yyyy'):''}`,
+                }),
+              ],
+            }),
+            new Paragraph({
+              children: [
+                new TextRun({
+                  font: 'Calibri',
+                  size: 24,
+                   text: `${this.commonService.schnStepThreeData.T2Von!='' && this.commonService.schnStepThreeData.T2Bis!=''? new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T2Von, 'dd. MMMM yyyy')+' '+new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T2Bis, 'dd. MMMM yyyy'):''}`,
+                }),
+              ],
+            }),
+            new Paragraph({
+              children: [
+                new TextRun({
+                  font: 'Calibri',
+                  size: 24,
+                   text: `${this.commonService.schnStepThreeData.T3Von!='' && this.commonService.schnStepThreeData.T3Bis!=''? new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T3Von, 'dd. MMMM yyyy')+' '+new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T3Bis, 'dd. MMMM yyyy'):''}`,
+                }),
+              ],
+            }),
+            new Paragraph({
+              children: [
+                new TextRun({
+                  font: 'Calibri',
+                  size: 24,
+                  text: `Ich freue mich von Ihnen zu hören.`,
+                }),
                 new TextRun({
                   break: 2,
                   font: 'Calibri',

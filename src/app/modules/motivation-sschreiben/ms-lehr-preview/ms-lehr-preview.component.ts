@@ -169,7 +169,7 @@ export class MsLehrPreviewComponent implements OnInit {
 
   // `${this.commonService.msPersonalForm?.schreibst != 'unknown'? :``}`,
 
-  liness = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst + ' ' + this.commonService.msPersonalForm?.schreibst1Name + ' ' + this.commonService.msPersonalForm?.schreibst2Name : ``;
+  liness = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst + this.commonService.msPersonalForm?.schreibst1Name!=''? ' '+this.commonService.msPersonalForm?.schreibst1Name:'' + ' ' + this.commonService.msPersonalForm?.schreibst2Name : ``;
   textRuns = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.liness.split('\n').map(line => new TextRun({ break: 1, text: line })) : this.liness.split('\n').map(line => new TextRun({ text: line }))
 
 
@@ -263,13 +263,8 @@ export class MsLehrPreviewComponent implements OnInit {
 
 
 
-                // {{commonService.msPersonalForm?.derFirma}}<br>
-                // <span *ngIf="commonService.msPersonalForm.schreibst != 'unknown'">
-                // {{commonService.msPersonalForm?.schreibst}} {{commonService.msPersonalForm?.schreibst1Name +'
-                // '+commonService.msPersonalForm?.schreibst2Name }}<br>
-                // </span>
-                // {{commonService.msPersonalForm?.dfStreet }}<br>
-                // {{commonService.msPersonalForm?.dfZip +' '+commonService.msPersonalForm?.dfPlace}}
+                
+
                 new TextRun({
                   break: 2,
                   font: 'Calibri',
@@ -290,7 +285,7 @@ export class MsLehrPreviewComponent implements OnInit {
                   font: 'Calibri',
                   size: 24,
                   children: this.textRuns,
-                  // text: `${this.commonService.msPersonalForm?.schreibst != 'unknown'? this.commonService.msPersonalForm?.schreibst+' '+this.commonService.msPersonalForm?.schreibst1Name + ' '+this.commonService.msPersonalForm?.schreibst2Name:``}`,
+                  // text: `${this.commonService.msPersonalForm?.schreibst != 'unknown'? this.commonService.msPersonalForm?.schreibst+ this.commonService.msPersonalForm?.schreibst1Name+' '+this.commonService.msPersonalForm?.schreibst2Name:``}`,
                 }),
 
 
@@ -310,8 +305,7 @@ export class MsLehrPreviewComponent implements OnInit {
 
 
 
-                // <p align="justify">{{commonService.msPersonalForm?.place ? commonService.msPersonalForm?.place + ',' : ''}} {{commonService.msPersonalForm?.dob | date : 'dd. MMMM yyyy'}} </p>
-
+             
                 new TextRun({
                   font: 'Calibri',
                   break: 2,
@@ -383,7 +377,7 @@ export class MsLehrPreviewComponent implements OnInit {
             new Paragraph({
               children: [
                 new TextRun({
-                  break: 2,
+                  
                   font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.lehrStepTwoData2.textArea1}`,
