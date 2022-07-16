@@ -344,7 +344,7 @@ export class MsSchnPreviewComponent implements OnInit {
                   break: 2,
                   size: 24,
                   // ${this.commonService.msPersonalForm?.dob ? new DatePipe('de-ch').transform(this.commonService.msPersonalForm?.dob, 'dd. MMMM yyyy') : ''}
-                  text: `${this.commonService.schnStepThreeData.T1Von!='' && this.commonService.schnStepThreeData.T1Bis!=''? new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T1Von, 'dd. MMMM yyyy')+' '+new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T1Bis, 'dd. MMMM yyyy'):''}`,
+                  text: `${this.commonService.schnStepThreeData.T1Von!='' && this.commonService.schnStepThreeData.T1Bis!=''? new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T1Von, 'dd.MM yyyy')+' - '+new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T1Bis, 'dd.MM yyyy'):''}`,
                 }),
               ],
             }),
@@ -353,7 +353,7 @@ export class MsSchnPreviewComponent implements OnInit {
                 new TextRun({
                   font: 'Calibri',
                   size: 24,
-                   text: `${this.commonService.schnStepThreeData.T2Von!='' && this.commonService.schnStepThreeData.T2Bis!=''? new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T2Von, 'dd. MMMM yyyy')+' '+new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T2Bis, 'dd. MMMM yyyy'):''}`,
+                   text: `${this.commonService.schnStepThreeData.T2Von!='' && this.commonService.schnStepThreeData.T2Bis!=''? new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T2Von, 'dd.MM yyyy')+' - '+new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T2Bis, 'dd.MM yyyy'):''}`,
                 }),
               ],
             }),
@@ -362,7 +362,7 @@ export class MsSchnPreviewComponent implements OnInit {
                 new TextRun({
                   font: 'Calibri',
                   size: 24,
-                   text: `${this.commonService.schnStepThreeData.T3Von!='' && this.commonService.schnStepThreeData.T3Bis!=''? new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T3Von, 'dd. MMMM yyyy')+' '+new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T3Bis, 'dd. MMMM yyyy'):''}`,
+                   text: `${this.commonService.schnStepThreeData.T3Von!='' && this.commonService.schnStepThreeData.T3Bis!=''? new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T3Von, 'dd.MM yyyy')+' - '+new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T3Bis, 'dd.MM yyyy'):''}`,
                 }),
               ],
             }),
