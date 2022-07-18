@@ -97,79 +97,13 @@ export class MsLehrPreviewComponent implements OnInit {
       pdf.save(name); // Generated PDF
       that.loader = false;
     });
-  }
-
-
-
-  // </p>
-  // <div class="mb-10"></div>
-  // <p align="justify">
-  //   {{commonService.msPersonalForm?.derFirma}}<br>
-  //   <span *ngIf="commonService.msPersonalForm.schreibst != 'unknown'">
-  //   {{commonService.msPersonalForm?.schreibst}} {{commonService.msPersonalForm?.schreibst1Name +'
-  //   '+commonService.msPersonalForm?.schreibst2Name }}<br>
-  //   </span>
-  //   {{commonService.msPersonalForm?.dfStreet }}<br>
-  //   {{commonService.msPersonalForm?.dfZip +' '+commonService.msPersonalForm?.dfPlace}}
-
-  // </p>
-  // <div class="mb-10"></div>
-  // <p align="justify">{{commonService.msPersonalForm?.place ? commonService.msPersonalForm?.place + ',' : ''}} {{commonService.msPersonalForm?.dob | date : 'dd. MMMM yyyy'}} </p>
-  // <div class="mb-10"></div>
-  // <!-- class="bold" -->
-  // <p align="justify"><b> Bewerbung um eine {{commonService.msType |titlecase}} als
-  //       {{commonService.msPersonalForm?.dfBeruf |titlecase}}
-  //       {{commonService.msPersonalForm?.ebaOrEfz }}</b>
-  // </p>
-  // <div class="mb-10"></div>
-  // <p class="mb-15px" *ngIf="commonService.msPersonalForm?.schreibst=='unknown'">
-  //   Sehr geehrte Damen und Herren
-  // </p>
-  // <p *ngIf="commonService.msPersonalForm?.schreibst!='unknown'  ">
-  //   Sehr
-  //   <span *ngIf="commonService.msPersonalForm?.schreibst=='Frau'">geehrte</span>
-  //   <span *ngIf="commonService.msPersonalForm?.schreibst=='Herr'">geehrter</span>
-  //   {{ commonService.msPersonalForm?.schreibst}}
-  //   {{commonService.msPersonalForm?.schreibst2Name}}
-  // </p>
-
-
-  //done
-  // <p class="mb-15px" align="justify"> {{commonService.lehrStepTwoData2.textArea1}}</p>
-  // <p class="mb-15px" align="justify">{{commonService.lehrStepTwoData2.textArea2}}</p>
-  // <p class="mb-15px" align="justify">{{commonService.lehrStepTwoData2.textArea3}}</p>
-  // <p class="mb-15px" align="justify">{{commonService.lehrStepThreeData.textArea1}}</p>
-
-
-
-  // <!-- Static text -->
-  // <p align="justify">Ich freue mich, wenn Sie mich zu einem Vorstellungsgespräch einladen, damit ich Sie von meiner Persönlichkeit überzeugen kann und warte gespannt auf Ihre Antwort.
-  // </p><br/>
-  // <!-- Static text -->
-  // <p align="justify">Freundliche Grüsse
-  // </p>
-
-  // <div class="mb-10"></div>
-  // <p align="justify">
-  //   {{commonService.msPersonalForm?.firstName +' '+commonService.msPersonalForm?.lastName}}
-  //   <!-- Mike Muster -->
-  // </p>
-
-  // <!-- Static heading -->
-  // <div class="mb-10"></div>
-  // <p class="ms-bottom-text" *ngIf="beilagen!=''">Beilagen: <br>
-  //   {{beilagen}}
-  // </p>
-
-
-
-
-
+  } 
 
 
   // `${this.commonService.msPersonalForm?.schreibst != 'unknown'? :``}`,
+  frname =  this.commonService.msPersonalForm?.schreibst1Name==''? ' ': ' '+this.commonService.msPersonalForm?.schreibst1Name+' ';
 
-  liness = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst + this.commonService.msPersonalForm?.schreibst1Name!=''? ' '+this.commonService.msPersonalForm?.schreibst1Name:'' + ' ' + this.commonService.msPersonalForm?.schreibst2Name : ``;
+  liness = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst + this.frname + this.commonService.msPersonalForm?.schreibst2Name : ``;
   textRuns = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.liness.split('\n').map(line => new TextRun({ break: 1, text: line })) : this.liness.split('\n').map(line => new TextRun({ text: line }))
 
 
@@ -350,20 +284,20 @@ export class MsLehrPreviewComponent implements OnInit {
                 new TextRun({
                   font: 'Calibri',
                   break: 2,
-                  size: 24,
-                  text: `${this.commonService.msPersonalForm?.schreibst == 'unknown' ? 'Sehr geehrte Damen und Herren' : ''}`,
+                  size: 24, 
+                  text: `${this.commonService.msPersonalForm?.schreibst == 'unknown' ? 'Sehr geehrte Damen und Herren' : this.commonService.msPersonalForm?.schreibst == 'Frau' ? 'Sehr geehrte Frau '+this.commonService.msPersonalForm?.schreibst2Name : '' + this.commonService.msPersonalForm?.schreibst == 'Herr' ? 'Sehr geehrter Herr '+ this.commonService.msPersonalForm?.schreibst2Name : ''}`,
                 }),
 
 
 
 
-                new TextRun({
-                  break: 2,
-                  // bold: true,
-                  font: 'Calibri',
-                  size: 24,
-                  text: `${this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst == 'Frau' ? 'Sehr geehrte Frau '+this.commonService.msPersonalForm?.schreibst2Name : '' + this.commonService.msPersonalForm?.schreibst == 'Herr' ? 'Sehr geehrter Herr '+ this.commonService.msPersonalForm?.schreibst2Name : '' : ''}`,
-                }),
+                // new TextRun({
+                //   break: 2,
+                //   // bold: true,
+                //   font: 'Calibri',
+                //   size: 24,
+                //   text: `${this.commonService.msPersonalForm?.schreibst != 'unknown' ?  : ''}`,
+                // }),
 
                 // new TextRun({
                 //   size: 24,
@@ -376,8 +310,13 @@ export class MsLehrPreviewComponent implements OnInit {
             }),
             new Paragraph({
               children: [
+                // new TextRun({
+                //   font: 'Calibri',
+                //   size: 24,
+                //   text: `${this.commonService.msPersonalForm?.schreibst == 'unknown' ? this.commonService.lehrStepTwoData2.textArea1:''}`,
+                // }),
                 new TextRun({
-                  
+                  break:1,
                   font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.lehrStepTwoData2.textArea1}`,
@@ -437,7 +376,7 @@ export class MsLehrPreviewComponent implements OnInit {
 
 
                 new TextRun({
-                  break: 3,
+                  break: 4,
                   size: 24,
                   font: 'Calibri',
                   text: `${this.beilagen != '' ? 'Beilagen: ' : ''}`,

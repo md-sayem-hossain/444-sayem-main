@@ -71,8 +71,10 @@ export class MsSchnPreviewComponent implements OnInit {
 
 
 
-  liness = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst + this.commonService.msPersonalForm?.schreibst1Name!=''? ' '+this.commonService.msPersonalForm?.schreibst1Name:'' + ' ' + this.commonService.msPersonalForm?.schreibst2Name : ``;
-  textRuns = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.liness.split('\n').map(line => new TextRun({ break: 1, text: line })) : this.liness.split('\n').map(line => new TextRun({ text: line }))
+  frname =  this.commonService.msPersonalForm?.schreibst1Name==''? ' ': ' '+this.commonService.msPersonalForm?.schreibst1Name+' ';
+
+  liness = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst + this.frname + this.commonService.msPersonalForm?.schreibst2Name : ``;
+   textRuns = this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.liness.split('\n').map(line => new TextRun({ break: 1, text: line })) : this.liness.split('\n').map(line => new TextRun({ text: line }))
 
   //sayem
   exportToWord() {
@@ -259,7 +261,7 @@ export class MsSchnPreviewComponent implements OnInit {
                   break: 2,
                   font: 'Calibri',
                   size: 24,
-                  text: `${this.commonService.msPersonalForm?.schreibst == 'unknown' ? 'Sehr geehrte Damen und Herren' : ' '}`,
+                  text: `${this.commonService.msPersonalForm?.schreibst == 'unknown' ? 'Sehr geehrte Damen und Herren' : this.commonService.msPersonalForm?.schreibst == 'Frau' ? 'Sehr geehrte Frau '+this.commonService.msPersonalForm?.schreibst2Name : '' + this.commonService.msPersonalForm?.schreibst == 'Herr' ? 'Sehr geehrter Herr '+ this.commonService.msPersonalForm?.schreibst2Name : ''}`,
                 }),
 
 
@@ -275,13 +277,13 @@ export class MsSchnPreviewComponent implements OnInit {
                 // </p>
 
 
-                new TextRun({
-                  break: 1,
-                  // bold: true,
-                  size: 24,
-                  font: 'Calibri',
-                  text: `${this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst == 'Frau' ? 'Sehr geehrte Frau '+this.commonService.msPersonalForm?.schreibst2Name : '' + this.commonService.msPersonalForm?.schreibst == 'Herr' ? 'Sehr geehrter Herr '+ this.commonService.msPersonalForm?.schreibst2Name : '' : ''}`,
-                }),
+                // new TextRun({
+                //   // break: 1,
+                //   // bold: true,
+                //   size: 24,
+                //   font: 'Calibri',
+                //   text: `${this.commonService.msPersonalForm?.schreibst != 'unknown' ? this.commonService.msPersonalForm?.schreibst == 'Frau' ? 'Sehr geehrte Frau '+this.commonService.msPersonalForm?.schreibst2Name : '' + this.commonService.msPersonalForm?.schreibst == 'Herr' ? 'Sehr geehrter Herr '+ this.commonService.msPersonalForm?.schreibst2Name : '' : ''}`,
+                // }),
                 // new TextRun({
                 //   // break:1,
                 //   size: 24,
@@ -301,8 +303,14 @@ export class MsSchnPreviewComponent implements OnInit {
             new Paragraph({
               
               children: [
-
+                // new TextRun({
+                //   // break:1,
+                //   font: 'Calibri',
+                //   size: 24,
+                //   text: `${this.commonService.msPersonalForm?.schreibst == 'unknown' ? '':''}`,
+                // }),
                 new TextRun({ 
+                  break:1,
                   font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.schnStepTwoData2.textArea1}`,
@@ -341,7 +349,7 @@ export class MsSchnPreviewComponent implements OnInit {
               children: [
                 new TextRun({
                   font: 'Calibri',
-                  break: 2,
+                  break: 1,
                   size: 24,
                   // ${this.commonService.msPersonalForm?.dob ? new DatePipe('de-ch').transform(this.commonService.msPersonalForm?.dob, 'dd. MMMM yyyy') : ''}
                   text: `${this.commonService.schnStepThreeData.T1Von!='' && this.commonService.schnStepThreeData.T1Bis!=''? new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T1Von, 'dd.MM yyyy')+' - '+new DatePipe('de-ch').transform(this.commonService.schnStepThreeData?.T1Bis, 'dd.MM yyyy'):''}`,
@@ -369,6 +377,7 @@ export class MsSchnPreviewComponent implements OnInit {
             new Paragraph({
               children: [
                 new TextRun({
+                  break:1,
                   font: 'Calibri',
                   size: 24,
                   text: `Ich freue mich von Ihnen zu hören.`,
@@ -396,7 +405,7 @@ export class MsSchnPreviewComponent implements OnInit {
 
 
                 new TextRun({
-                  break: 3,
+                  break: 4,
                   font: 'Calibri',
                   size: 24,
                   text: `${this.beilagen != '' ? 'Beilagen: ' : ''}`,
