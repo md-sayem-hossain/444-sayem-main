@@ -214,13 +214,11 @@ export class MsSchnPreviewComponent implements OnInit {
 
 
 
-                // <p align="justify">{{commonService.msPersonalForm?.place ? commonService.msPersonalForm?.place + ',' : ''}} {{commonService.msPersonalForm?.dob | date : 'dd. MMMM yyyy'}} </p>
-
                 new TextRun({
                   break: 2,
                   font: 'Calibri',
                   size: 24,
-                  text: `${this.commonService.msPersonalForm?.place ? this.commonService.msPersonalForm?.place + ',' : ''} ${this.commonService.msPersonalForm?.dob ? new DatePipe('de-ch').transform(this.commonService.msPersonalForm?.dob, 'dd. MMMM yyyy') : ''}`,
+                  text: `${this.commonService.msPersonalForm?.place ? this.commonService.msPersonalForm?.place + ',' : ''}${this.commonService.msPersonalForm?.dob ? new DatePipe('de-ch').transform(this.commonService.msPersonalForm?.dob, 'dd. MMMM yyyy') : ''}`,
                 }),
 
 
