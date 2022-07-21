@@ -68,9 +68,9 @@ export class CommonService {
     textArea1: '',
     textArea2: '',
     textArea3: '',
-    textArea1PlaceHolder: 'Ich habe im Internet gesehen, dass Sie eine Lehrstelle als Logistiker mit Beginn im August 2022 anbieten. Ich bewerbe mich hiermit um diese Lehrstelle. Sehr gerne würde ich in Ihrem Unternehmen mit anpacken und die Ausbildung zum Logistiker EBA absolvieren.',
-    textArea2PlaceHolder: 'Der Beruf des Logistikers habe ich bereits beim Schnuppern bei der Firma Logik AG kennengelernt. Dort merkte ich, dass ich mich für eine Ausbildung als Logistiker bewerben werde, da mir die Schnuppertage in diesem Beruf sehr gefallen haben.',
-    textArea3PlaceHolder: 'Die Kontrolle und der Transport der Waren mit dem Gabelstapler bereiten mir grosse Freude. Auch der Kontakt mit Kunden gefällt mir. Ich arbeite gerne praktisch, packe mit an und erledige Aufträge konzentriert und zügig. Die Firma Logistik AG würde mir als Lehrbetrieb gefallen, da es ein familiäres Unternehmen ist.',
+    textArea1PlaceHolder: 'Für die telefonische Auskunft vom 5. Januar danke ich Ihnen und bewerbe mich hiermit um eine Schnupperlehre als Logistiker.',
+    textArea2PlaceHolder: 'Zurzeit besuche ich die 2. Sekundarschule Niveau C in Luzern. Meine Lieblingsfächer sind bildnerisches Gestalten und Sport. ',
+    textArea3PlaceHolder: 'Ich habe im Internet den Berufsbeschrieb gelesen und nun interessiere ich mich sehr für diesen Beruf. In der Schnupperlehre möchte ich nun den Berufsalltag eines Logistikers besser kennen lernen.',
    }
 
 
