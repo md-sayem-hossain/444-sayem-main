@@ -900,7 +900,7 @@ body {
   }
   .mychcktable tbody{
     display: flex;
-    align-item: center;
+    align-items: center;
     justify-content:center;
     } 
     .mychcktable tbody tr{
