@@ -23,8 +23,8 @@
 
 .header .custom-navbar .nav-logo img {
   /* width: 200px; */
-  width: 100px;
-  height: 70px;
+  width: auto;
+  height: 80px;
 }
 
 .header .custom-navbar .meue-names {
