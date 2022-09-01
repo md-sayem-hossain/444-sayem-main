@@ -197,6 +197,26 @@ function CloseModal() {
 //     $('#CloseBTN').trigger('click');
 // }, 3000);
 // }
+
+function popupimgclose() {
+  document.getElementById("popup").style.display = "none";  
+}
  
 
-
+function displayCounter() {
+  if ('localStorage' in window && window['localStorage'] !== null) {
+     ('counter' in localStorage && localStorage['counter'] !== null) ? localStorage['counter']++ : localStorage['counter'] = 0;
+     var container = document.getElementById('container');
+     if (!container) {  return };
+     console.log(localStorage['counter']);
+     if(localStorage['counter']>2){
+      document.getElementById("popup").style.display = "block";  
+     }
+     else{
+      document.getElementById("popup").style.display = "none";  
+     } 
+ } 
+}
+window.onload = function () {
+ displayCounter();
+}
