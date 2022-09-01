@@ -909,3 +909,97 @@ body {
     .mychcktable tbody tr td {
       width: 80px;
   }
+
+
+
+
+  /* Custom modal by sayem */
+  .main2{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .main2 div{
+    width: 400px;
+    height: 400px;
+    margin:0 auto;
+    text-align: center;
+  
+  }
+  .main2 div button{
+    top: 500px;
+    height: 30px;
+    margin: 0 auto;
+  }
+  
+  
+  .container2{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    opacity: 0.9;
+    background: #222;
+    z-index: 40000;
+    top:0;
+    left: 0;
+    overflow: hidden; 
+    animation-name: fadeIn_Container;
+    animation-duration: 1s; 
+  }
+  
+  .modal2{
+    display:none;
+    top: 0;
+    min-width: 250px;
+    width: 80%;
+    height: 400px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 40001;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000;
+    margin-top: 30px;
+    margin-left: 10%; 
+    animation-name: fadeIn_Modal;
+    margin: auto;
+    animation-duration: 0.8s; 
+  } 
+    
+  /****MEDIA QUERIES****/
+  
+  @media screen and (min-width: 600px){
+  
+    .modal2{
+      width: 500px;
+              height: 250px;
+              margin: auto; 
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+    }
+  
+   
+  
+  /****ANIMATIONS****/
+  
+  @keyframes fadeIn_Modal {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn_Container {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 0.9;
+    }
+  }
+}

@@ -218,6 +218,59 @@
         <div class="mb-10"></div>
         <a class="next-btn back-btn" (click)="onBack()">zurück</a>
         <a class="next-btn second-btn" (click)="convertToPDF()">Download PDF</a>
-        <a class="next-btn" (click)="exportToWord()">Download Word</a>
+        <a class="next-btn" (click)="exportToWord()" id="open" onclick="OpenModal()">Download Word</a>
+
+
+
+
+<!-- 
+     
+<div class="container">
+   <button type="button" class="btn btn-success " >
+  Download
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       Your Download will start soon. Please wait
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="close-btn">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+ -->
     </div>
 </div>
+ 
+
+
+<div class="main2">
+  <div>
+    <!-- <button id="open" onclick="OpenModal()">Opn Modal</button> -->
+  </div>
+</div>
+<div class="container2" id="a">
+
+</div>
+<div class="modal2" id="b">
+   <div class="content2" style="text-align: center;">
+    <img src="assets/images/download.jpg" width="80%" style="padding: 10px;">
+  </div>
+  <div onclick="CloseModal()" id="CloseBTN" style="background-color: transparent; border:none; text-align: center;"><img src="assets/images/red cross.png" width="40"></div>
+
+</div>
+  
+
+ 

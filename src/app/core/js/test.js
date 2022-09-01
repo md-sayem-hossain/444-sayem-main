@@ -173,3 +173,30 @@ function generate() {
     console.log("Document created successfully");
   });
 }
+
+
+
+
+// cUSTOM MODAL BY  SAYEM
+function OpenModal() {
+  document.getElementById("a").style.display = "block";
+  document.getElementById("b").style.display = "block"; 
+  setTimeout(function() {
+    CloseModal();
+}, 5000);
+}
+
+function CloseModal() {
+  document.getElementById("a").style.display = "none";
+  document.getElementById("b").style.display = "none";  
+}
+
+
+// function DownloadFunction() {
+//   setTimeout(function() {
+//     $('#CloseBTN').trigger('click');
+// }, 3000);
+// }
+ 
+
+
