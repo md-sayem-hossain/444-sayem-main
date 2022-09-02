@@ -1,45 +1,60 @@
 <footer class="footer-content">
     <span class="ml-20px"> COPYRIGHT &copy; {{year}} Lehrstell.ch </span>
-<style>
-    /* 
+    <style>
+        /* 
 Popup 
 Arrows an  dropshadows are applied to .popup. Text align is "centered." You'll probably want to set it to "left."
 */
-.popup {
-  width: 300px;
-  margin: 0 auto;
-  position: absolute;
-  text-align: center;
-  z-index: 999;bottom: 70%;
- }
- 
- 
- 
-/* 
+        .popup {
+            width: 300px;
+            margin: 0 auto;
+            position: absolute;
+            text-align: center;
+            z-index: 999;
+            bottom: 70%;
+        }
+
+
+
+        /* 
 Popup wrapper
 This is where we add the white background and padding of the content within the popup
 */
-.popup-wrapper {
-  width: 100%;
-  padding: 32px;
-  border-radius: 4px;
-  background: #fff;
-  position: relative;
-  z-index: 998;  border: 1px solid darkgrey;
-}
-</style>
+        .popup-wrapper {
+            width: 100%;
+            padding: 32px;
+            border-radius: 4px;
+            background: #fff;
+            position: relative;
+            z-index: 998;
+            border: 1px solid darkgrey;
+        }
+    </style>
     <div class="">
-        
-        <span> 
-            <div class="popup arrow-top" id="popup" onclick="popupimgclose()" > 
-                <img src="assets/images/Home-popup.png" alt=""width="400px" style="margin-left: -15rem;">
-            </div>
+
+
+
+
+
+
+
+
+
+        <span *ngIf="firsttime == 'true'">
             <span class="clickable" (click)="clearCacheData()">
-                Alle Daten löschen 
+                Alle Daten löschen
             </span>
         </span>
 
-         
+
+        <span *ngIf="firsttime == 'false'">
+            <span class="clickable" (click)="clearCacheData()">
+                Alle Daten löschen
+            </span>
+            <div class="popup arrow-top" id="popup" onclick="popupimgclose()">
+                <img src="assets/images/Home-popup.png" alt="" width="400px" style="margin-left: -15rem;">
+            </div>
+        </span>
 
         <!-- <span class="clickable" (click)="clearCacheData()">Alle Daten löschen</span> -->
         <span class="clickable" (click)="navigateTo('/über-uns')">Über uns</span>

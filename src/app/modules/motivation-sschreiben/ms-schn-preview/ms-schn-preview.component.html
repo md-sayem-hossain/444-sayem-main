@@ -94,8 +94,28 @@
         </div>
         <div class="mb-50"></div>
         <a class="next-btn back-btn" (click)="onBack()">zurück</a>
-        <a class="next-btn second-btn" (click)="exportToPDF()">Download PDF</a>
-        <a class="next-btn" (click)="exportToWord()">Download Word</a>
+        <a class="next-btn second-btn" (click)="exportToPDF()" id="open" onclick="OpenModal()">Download PDF</a>
+        <a class="next-btn" (click)="exportToWord()" id="open" onclick="OpenModal()">Download Word</a>
     </div>
 
 </div>
+
+
+
+<div class="main2">
+    <div>
+      <!-- <button id="open" onclick="OpenModal()">Opn Modal</button> -->
+    </div>
+  </div>
+  <div class="container2" id="a">
+  
+  </div>
+  <div class="modal2" id="b">
+     <div class="content2" style="text-align: center;">
+      <img src="assets/images/download.jpg" width="80%" style="padding: 10px;">
+    </div>
+    <div onclick="CloseModal()" id="CloseBTN" style="background-color: transparent; border:none; text-align: center;"><img src="assets/images/red cross.png" width="40"></div>
+  
+  </div>
+    
+  

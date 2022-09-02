@@ -9,14 +9,26 @@ import { CommonService } from 'src/app/core/services/common.service';
 })
 export class FooterComponent implements OnInit {
   year: number = new Date().getFullYear();
+  firsttime: string = "true";
 
   constructor(
     private router: Router,
     private commonService: CommonService
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.firsttime = localStorage.getItem("firsttime")!;
+
+    if (
+      localStorage.getItem("firsttime") == null ||
+      localStorage.getItem("firsttime") == undefined
+    ) {
+      this.firsttime = 'true';
+      localStorage.setItem("firsttime", "true");
+    } else localStorage.setItem("firsttime", "false");
   }
+
+  
   navigateTo(path: string) {
     this.router.navigateByUrl(path)
   }

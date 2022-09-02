@@ -214,6 +214,7 @@ function displayCounter() {
      }
      else{
       document.getElementById("popup").style.display = "none";  
+      localStorage.clear();
      } 
  } 
 }

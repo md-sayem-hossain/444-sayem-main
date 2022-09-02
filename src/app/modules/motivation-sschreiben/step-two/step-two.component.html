@@ -150,5 +150,11 @@
 
 </div>
 <div class="mb-60"></div>
-<a class="next-btn back-btn" (click)="onBack()">zurück</a>
-<a class="next-btn" *ngIf="!showDoneBtn" (click)="onNext()">weiter</a>
+<!-- <a class="next-btn back-btn" (click)="onBack()">zurück</a>
+<a class="next-btn" *ngIf="!showDoneBtn" (click)="onNext()">weiter</a> -->
+
+
+
+<a class="next-btn back-btn" (click)="onBack()" style="background-color: white; z-index: 333333; position: fixed;bottom: 40%;left: 5%;">zurück</a>
+<a class="next-btn" (click)="onNext()" *ngIf="!showDoneBtn"  style=" z-index: 222222222; position: fixed;bottom:40%;right: 5%;">weiter</a>
+   

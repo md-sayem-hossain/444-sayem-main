@@ -96,9 +96,35 @@
         <!-- <a class="next-btn back-btn" (click)="onBack()" style="background-color: white; z-index: 333333; position: fixed;bottom: 40%;left: 5%;">zurück</a>
         <a class="next-btn" (click)="exportToWord()" style=" z-index: 222222222; position: fixed;bottom:40%;right: 5%;">Download Word</a>
      -->
-     <a class="next-btn back-btn" (click)="onBack()">zurück</a>
-     <a class="next-btn" (click)="exportToWord()">Download Word</a>
+     <a class="next-btn back-btn" (click)="onBack()" >zurück</a>
+     <a class="next-btn" (click)="exportToWord()"  id="open" onclick="OpenModal()">Download Word</a>
  
     </div>
 
 </div>
+
+
+
+<div class="main2">
+    <div>
+      <!-- <button id="open" onclick="OpenModal()">Opn Modal</button> -->
+    </div>
+  </div>
+  <div class="container2" id="a">
+  
+  </div>
+  <div class="modal2" id="b">
+     <div class="content2" style="text-align: center;">
+      <img src="assets/images/download.jpg" width="80%" style="padding: 10px;">
+    </div>
+    <div onclick="CloseModal()" id="CloseBTN" style="background-color: transparent; border:none; text-align: center;"><img src="assets/images/red cross.png" width="40"></div>
+  
+  </div>
+
+
+
+
+
+
+
+  
