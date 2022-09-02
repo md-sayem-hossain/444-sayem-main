@@ -23,7 +23,7 @@
 
                     </p>
                     <div class="mb-10"></div>
-                    <p align="justify">{{commonService.msPersonalForm?.place ? commonService.msPersonalForm?.place + ',' : ''}} {{commonService.msPersonalForm?.dob | date : 'dd. MMMM yyyy'}} </p>
+                    <p align="justify">{{commonService.msPersonalForm?.place ? commonService.msPersonalForm?.place + ', ' : ''}} {{commonService.msPersonalForm?.dob | date : 'dd. MMMM yyyy'}} </p>
                     <div class="mb-10"></div>
                     <!-- class="bold" -->
                     <p align="justify"> <b> Bewerbung um eine {{commonService.msType |titlecase}} als
@@ -53,20 +53,20 @@
                     <p align="justify">
                         <ng-container
                             *ngIf="commonService.schnStepThreeData.T1Von!='' && commonService.schnStepThreeData.T1Bis!=''">
-                            {{commonService.schnStepThreeData.T1Von | date : 'dd.MM yyyy'}} -
-                            {{commonService.schnStepThreeData.T1Bis | date : 'dd.MM yyyy'}} <br>
+                            {{commonService.schnStepThreeData.T1Von | date : 'dd.MM.yyyy'}} -
+                            {{commonService.schnStepThreeData.T1Bis | date : 'dd.MM.yyyy'}} <br>
 
                         </ng-container>
                         <ng-container
                             *ngIf="commonService.schnStepThreeData.T2Von!='' && commonService.schnStepThreeData.T2Bis!=''">
-                            {{commonService.schnStepThreeData.T2Von | date : 'dd.MM yyyy'}} -
-                            {{commonService.schnStepThreeData.T2Bis | date : 'dd.MM yyyy'}} <br>
+                            {{commonService.schnStepThreeData.T2Von | date : 'dd.MM.yyyy'}} -
+                            {{commonService.schnStepThreeData.T2Bis | date : 'dd.MM.yyyy'}} <br>
                         </ng-container>
 
                         <ng-container
                             *ngIf="commonService.schnStepThreeData.T3Von!='' && commonService.schnStepThreeData.T3Bis!=''">
-                            {{commonService.schnStepThreeData.T3Von | date : 'dd.MM yyyy'}} -
-                            {{commonService.schnStepThreeData.T3Bis | date : 'dd.MM yyyy'}}
+                            {{commonService.schnStepThreeData.T3Von | date : 'dd.MM.yyyy'}} -
+                            {{commonService.schnStepThreeData.T3Bis | date : 'dd.MM.yyyy'}}
                         </ng-container>
 
                     </p>
@@ -102,7 +102,7 @@
 
 
 
-<div class="main2">
+<div class="main2" id="main2" style="display: none;">
     <div>
       <!-- <button id="open" onclick="OpenModal()">Opn Modal</button> -->
     </div>

@@ -32,14 +32,20 @@ export class FooterComponent implements OnInit {
   navigateTo(path: string) {
     this.router.navigateByUrl(path)
   }
+  isShowCookiesContainer: boolean = true;
 
   clearCacheData() {
     const cokkiesAgreed = localStorage.getItem("cokkiesAgreed");
     if (confirm("Sind Sie sicher, alle Formulardaten zu löschen?")) {
-      this.commonService.initAllData()
-      localStorage.clear()
-      localStorage.setItem('cokkiesAgreed', cokkiesAgreed??'false');
-    }
+      this.commonService.initAllData();
+      localStorage.clear();
+      // localStorage.setItem('cokkiesAgreed', cokkiesAgreed??'false');
+      if (localStorage.getItem("cokkiesAgreed") == 'true') {
+        this.isShowCookiesContainer = true;
+      } else if (localStorage.getItem("cokkiesAgreed") == 'false') {
+        this.isShowCookiesContainer = false;
+      }
+     }
   }
 
 }

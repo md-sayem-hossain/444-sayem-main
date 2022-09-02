@@ -24,7 +24,7 @@
 
                     </p>
                     <div class="mb-10"></div>
-                    <p align="justify">{{commonService.msPersonalForm?.place ? commonService.msPersonalForm?.place + ',' : ''}} {{commonService.msPersonalForm?.dob | date : 'dd. MMMM yyyy'}} </p>
+                    <p align="justify">{{commonService.msPersonalForm?.place ? commonService.msPersonalForm?.place + ', ' : ''}} {{commonService.msPersonalForm?.dob | date : 'dd. MMMM yyyy'}} </p>
                     <div class="mb-10"></div>
                     <!-- class="bold" -->
                     <p align="justify"> <b> Bewerbung um eine {{commonService.msType|titlecase}} als
@@ -80,7 +80,7 @@
 
 
 
-<div class="main2">
+<div class="main2" id="main2" style="display: none;">
     <div>
       <!-- <button id="open" onclick="OpenModal()">Opn Modal</button> -->
     </div>
@@ -102,6 +102,6 @@
 
 
 
-  
+
     
   

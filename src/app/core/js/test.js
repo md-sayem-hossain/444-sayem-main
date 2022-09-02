@@ -179,14 +179,17 @@ function generate() {
 
 // cUSTOM MODAL BY  SAYEM
 function OpenModal() {
+  document.getElementById("main2").style.display = "block";
+
   document.getElementById("a").style.display = "block";
   document.getElementById("b").style.display = "block"; 
   setTimeout(function() {
     CloseModal();
-}, 5000);
+}, 3000);
 }
 
 function CloseModal() {
+  document.getElementById("main2").style.display = "none";
   document.getElementById("a").style.display = "none";
   document.getElementById("b").style.display = "none";  
 }

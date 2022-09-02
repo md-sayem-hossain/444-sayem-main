@@ -216,10 +216,12 @@
 
         </div>
         <div class="mb-10"></div>
-        <a class="next-btn back-btn" (click)="onBack()">zurück</a>
-        <a class="next-btn second-btn" (click)="convertToPDF()" id="open" onclick="OpenModal()">Download PDF</a>
-        <a class="next-btn" (click)="exportToWord()" id="open" onclick="OpenModal()">Download Word</a>
+        <a class="next-btn back-btn" (click)="onBack()" style="background-color: white; z-index: 333333; position: fixed;bottom: 40%;left: 5%;">zurück</a>
+        <a class="next-btn second-btn" (click)="convertToPDF()" id="open" onclick="OpenModal()" style=" z-index: 222222222; position: fixed;bottom:40%;right: 1%;">Download PDF</a>
+        <a class="next-btn" (click)="exportToWord()" id="open" onclick="OpenModal()" style=" z-index: 222222222; position: fixed;bottom:40%;right: 4%;">Download Word</a>
 
+
+         
 
 
 
@@ -251,14 +253,17 @@
 </div>
 </div>
  -->
+
+
+ 
+
     </div>
 </div>
  
 
-
-<div class="main2">
+<div class="main2" id="main2" style="display: none;">
   <div>
-    <!-- <button id="open" onclick="OpenModal()">Opn Modal</button> -->
+    <!-- <button id="open"  onclick="OpenModal()">Opn Modal</button> -->
   </div>
 </div>
 <div class="container2" id="a">
@@ -271,6 +276,7 @@
   <div onclick="CloseModal()" id="CloseBTN" style="background-color: transparent; border:none; text-align: center;"><img src="assets/images/red cross.png" width="40"></div>
 
 </div>
+
   
 
  
