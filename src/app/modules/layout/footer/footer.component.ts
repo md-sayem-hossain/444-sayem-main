@@ -39,7 +39,8 @@ export class FooterComponent implements OnInit {
     if (confirm("Sind Sie sicher, alle Formulardaten zu löschen?")) {
       this.commonService.initAllData();
       localStorage.clear();
-      // localStorage.setItem('cokkiesAgreed', cokkiesAgreed??'false');
+      location.reload();
+       // localStorage.setItem('cokkiesAgreed', cokkiesAgreed??'false');
       if (localStorage.getItem("cokkiesAgreed") == 'true') {
         this.isShowCookiesContainer = true;
       } else if (localStorage.getItem("cokkiesAgreed") == 'false') {

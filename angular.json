@@ -50,7 +50,7 @@
               "src/styles.scss" 
             ],
             "scripts": [
-              "src/app/core/js/test.js" ,
+              "src/app/core/js/test_v2.js" ,
               "src/app/core/js/doc_maker.js" ,
               "src/app/core/js/FileSaver.js" 
             ]
