@@ -50,7 +50,6 @@
               "src/styles.scss" 
             ],
             "scripts": [
-              "src/app/core/js/test_v{version}.js",
               "src/app/core/js/doc_maker.js" ,
               "src/app/core/js/FileSaver.js" 
             ]
@@ -109,7 +108,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "src/test_v2.ts",
+            "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
