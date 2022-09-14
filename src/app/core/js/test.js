@@ -88,7 +88,7 @@ function modelOff4Click() {
 }
  
 
- console.log("i am running");
+ console.log("i am running 3");
 // if (screen.width > 1024) {
 //   // document.getElementById("myModal3").style.display = "block";
 //   $("#myModal3").modal('show');
