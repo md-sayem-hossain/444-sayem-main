@@ -224,3 +224,6 @@ function displayCounter() {
 window.onload = function () {
  displayCounter();
 }
+
+
+console.log("I am loaded");
