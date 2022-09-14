@@ -88,7 +88,7 @@ function modelOff4Click() {
 }
  
 
- console.log("i am running");
+ console.log("i am running & loaded");
 // if (screen.width > 1024) {
 //   // document.getElementById("myModal3").style.display = "block";
 //   $("#myModal3").modal('show');
@@ -224,6 +224,4 @@ function displayCounter() {
 window.onload = function () {
  displayCounter();
 }
-
-
-console.log("I am loaded");
+ console.log("i am running & loaded 2");
