@@ -231,8 +231,7 @@ export class CvPdfPreviewComponent implements OnInit {
                                 bold: true,
                             }),
                             new TextRun({
-                                text: `\t\t\t${this.commonService.personalData?.street + ' '
-                                    + this.commonService.personalData?.number}`
+                                text: `\t\t\t${this.commonService.personalData?.street}`
                             })
                         ],
                     }),
@@ -290,6 +289,21 @@ export class CvPdfPreviewComponent implements OnInit {
                             }),
                             new TextRun({
                                 text: `\t\t${this.commonService.personalData?.dob ? new DatePipe('de-ch').transform(this.commonService.personalData?.dob, 'dd. MMMM yyyy') : ''}`
+                            })
+                        ],
+                    }),
+                    new Paragraph({
+                        style: "paragraphStyle",
+                        spacing: {
+                            before: 100,
+                        },
+                        children: [
+                            new TextRun({
+                                text: 'Nationalität',
+                                bold: true,
+                            }),
+                            new TextRun({
+                                text: `\t\t${this.commonService.personalData?.national}`
                             })
                         ],
                     }),

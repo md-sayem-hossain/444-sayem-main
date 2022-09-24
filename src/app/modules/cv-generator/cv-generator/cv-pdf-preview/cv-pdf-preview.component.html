@@ -48,6 +48,10 @@
                         <span class="right-side">{{commonService.personalData?.dob | date : 'dd. MMMM yyyy'}} </span>
                     </div>
                     <div class="line">
+                        <span class="left-side w-30"> Nationalität</span>
+                        <span class="right-side">{{commonService.personalData?.national || 'N/A'}} </span>
+                    </div>
+                    <div class="line">
                         <span class="left-side w-30"> Eltern</span>
                         <span class="right-side">{{commonService.personalData?.fFirstName +'
                             '+commonService.personalData?.fLastName }}
