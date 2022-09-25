@@ -55,11 +55,13 @@ export class CvPdfPreviewComponent implements OnInit {
             allowTaint: true,
             scale: 4,
             width: this.content.nativeElement.offsetWidth,
-            height: this.content.nativeElement.offsetHeight
+            height: this.content.nativeElement.offsetHeight 
         }).then(function (canvas) {
             const contentDataURL = canvas.toDataURL('image/jpeg')
+            // let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
             let pdf = new jsPDF('p', 'mm', 'a4'); // A4 size page of PDF
             var width = pdf.internal.pageSize.getWidth();
+            
             var height = canvas.height * width / canvas.width;
             pdf.addImage(contentDataURL, 'JPEG', 0, 0, width, height)
             let name = 'lehrstell-' + new Date().toUTCString() + '.pdf'
@@ -122,7 +124,7 @@ export class CvPdfPreviewComponent implements OnInit {
                 default: {
                     heading2: {
                         run: {
-                            size: 30,
+                            size: 32,
                             bold: true,
                             color: "000000",
                             font: "Calibri"
@@ -141,6 +143,7 @@ export class CvPdfPreviewComponent implements OnInit {
                         basedOn: "Normal",
                         next: "Normal",
                         run: {
+                            size: 24,
                             color: "000000",
                             font: "Calibri"
                         }
@@ -152,10 +155,14 @@ export class CvPdfPreviewComponent implements OnInit {
                 properties: {
                     page: {
                         margin: {
-                            top: 700,
-                            bottom: 700,
-                            left: 700,
-                            right: 700
+                            // top: 700,
+                            // bottom: 700,
+                            // left: 700,
+                            // right: 700
+                            top: '1.75cm',
+                            bottom:'1.75cm',
+                            left: '2.5cm',
+                            right: '2.5cm'
                         }
                     }
                 },
@@ -170,7 +177,7 @@ export class CvPdfPreviewComponent implements OnInit {
                                 },
                                 floating: {
                                     horizontalPosition: {
-                                        offset: 5850000,
+                                        offset: 5350000,
                                     },
                                     verticalPosition: {
                                         offset: 1111500,

@@ -83,7 +83,7 @@ export class MsSchnPreviewComponent implements OnInit {
         default: {
           heading2: {
             run: {
-              size: 36,
+              size: 26,
               bold: true,
               color: '000000',
 
@@ -105,6 +105,7 @@ export class MsSchnPreviewComponent implements OnInit {
 
             next: 'Normal',
             run: {
+              size: 24,
               color: '000000',
               font: 'Calibri',
             },
@@ -117,10 +118,10 @@ export class MsSchnPreviewComponent implements OnInit {
           properties: {
             page: {
               margin: {
-                top: 1500,
-                bottom: 1500,
-                left: 1500,
-                right: 1500,
+                top: '2.5cm',
+                bottom: '2.5cm',
+                left: '2.5cm',
+                right: '2.5cm',
               },
             },
           },

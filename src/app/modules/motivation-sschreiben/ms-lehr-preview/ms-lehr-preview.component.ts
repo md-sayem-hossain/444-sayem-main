@@ -114,7 +114,7 @@ export class MsLehrPreviewComponent implements OnInit {
         default: {
           heading2: {
             run: {
-              size: 36,
+              size: 26,
               bold: true,
               color: '000000',
               font: 'Calibri',
@@ -134,6 +134,7 @@ export class MsLehrPreviewComponent implements OnInit {
             next: 'Normal',
             quickFormat: true,
             run: {
+              size: 24,
               color: '000000',
               font: 'Calibri',
             },
@@ -146,10 +147,10 @@ export class MsLehrPreviewComponent implements OnInit {
           properties: {
             page: {
               margin: {
-                top: 1500,
-                bottom: 1500,
-                left: 1500,
-                right: 1500,
+                top: '2.5cm',
+                bottom: '2.5cm',
+                left: '2.5cm',
+                right: '2.5cm',
               },
             },
           },
