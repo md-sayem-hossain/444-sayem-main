@@ -238,7 +238,7 @@ export class CvPdfPreviewComponent implements OnInit {
                                 bold: true,
                             }),
                             new TextRun({
-                                text: `\t\t${this.commonService.personalData?.street}`
+                                text: `\t\t\t${this.commonService.personalData?.street}`
                             })
                         ],
                     }),
@@ -249,7 +249,7 @@ export class CvPdfPreviewComponent implements OnInit {
                         },
                         children: [
                             new TextRun({
-                                text: `\t\t${this.commonService.personalData?.zip + ' '
+                                text: `\t\t\t${this.commonService.personalData?.zip + ' '
                                     + this.commonService.personalData?.place}`
                             })
                         ],
@@ -265,7 +265,7 @@ export class CvPdfPreviewComponent implements OnInit {
                                 bold: true,
                             }),
                             new TextRun({
-                                text: `\t\t${this.commonService.personalData?.mobile}`
+                                text: `\t\t\t${this.commonService.personalData?.mobile}`
                             })
                         ],
                     }),
@@ -280,7 +280,7 @@ export class CvPdfPreviewComponent implements OnInit {
                                 bold: true,
                             }),
                             new TextRun({
-                                text: `\t\t${this.commonService.personalData?.email}`
+                                text: `\t\t\t${this.commonService.personalData?.email}`
                             })
                         ],
                     }),
@@ -325,7 +325,7 @@ export class CvPdfPreviewComponent implements OnInit {
                                 bold: true,
                             }),
                             new TextRun({
-                                text: `\t\t${this.commonService.personalData?.fFirstName + ' ' + this.commonService.personalData?.fLastName}`
+                                text: `\t\t\t${this.commonService.personalData?.fFirstName + ' ' + this.commonService.personalData?.fLastName}`
                             }),
                             new TextRun({
                                 text: `${this.commonService.personalData?.fJob ? ' (' + this.commonService.personalData?.fJob + ')' : ''}`
@@ -339,7 +339,7 @@ export class CvPdfPreviewComponent implements OnInit {
                         },
                         children: [
                             new TextRun({
-                                text: `\t\t${this.commonService.personalData?.mFirstName + ' ' + this.commonService.personalData?.mLastName}`
+                                text: `\t\t\t${this.commonService.personalData?.mFirstName + ' ' + this.commonService.personalData?.mLastName}`
                             }),
                             new TextRun({
                                 text: `${this.commonService.personalData?.mJob ? ' (' + this.commonService.personalData?.mJob + ')' : ''}`
@@ -372,7 +372,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 120,
+                            before: 150,
                         },
                         children: [
                             new TextRun({
@@ -399,7 +399,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 120,
+                            before: 150,
                         },
                         children: [
                             new TextRun({
@@ -426,7 +426,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 120,
+                            before: 150,
                         },
                         children: [
                             new TextRun({
@@ -446,14 +446,14 @@ export class CvPdfPreviewComponent implements OnInit {
                             },
                         },
                         spacing: {
-                            before: 120,
+                            before: 150,
                         }
                     }),
 
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 120,
+                            before: 150,
                         },
                         children: [
                             new TextRun({
@@ -480,7 +480,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 120,
+                            before: 150,
                         },
                         children: [
                             new TextRun({
