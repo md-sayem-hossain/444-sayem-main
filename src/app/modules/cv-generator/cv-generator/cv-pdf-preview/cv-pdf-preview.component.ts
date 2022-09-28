@@ -118,6 +118,7 @@ export class CvPdfPreviewComponent implements OnInit {
         return true;
     }
 
+ 
     exportToWord() {
         const doc = new Document({
             styles: {
@@ -238,7 +239,7 @@ export class CvPdfPreviewComponent implements OnInit {
                                 bold: true,
                             }),
                             new TextRun({
-                                text: `\t\t\t${this.commonService.personalData?.street}`
+                                text: `\t\t${this.commonService.personalData?.street}`
                             })
                         ],
                     }),
@@ -265,7 +266,7 @@ export class CvPdfPreviewComponent implements OnInit {
                                 bold: true,
                             }),
                             new TextRun({
-                                text: `\t\t\t${this.commonService.personalData?.mobile}`
+                                text: `\t\t${this.commonService.personalData?.mobile}`
                             })
                         ],
                     }),
@@ -295,7 +296,7 @@ export class CvPdfPreviewComponent implements OnInit {
                                 bold: true,
                             }),
                             new TextRun({
-                                text: `\t\t${this.commonService.personalData?.dob ? new DatePipe('de-ch').transform(this.commonService.personalData?.dob, 'dd. MMMM yyyy') : ''}`
+                                text: `\t${this.commonService.personalData?.dob ? new DatePipe('de-ch').transform(this.commonService.personalData?.dob, 'dd. MMMM yyyy') : ''}`
                             })
                         ],
                     }),
@@ -542,7 +543,7 @@ export class CvPdfPreviewComponent implements OnInit {
                 break: br
             }));
             sprachenParagraph.addChildElement(new TextRun({
-                text: `${language.language?.length <= 8 || language.language == 'Englisch' ? '\t' : ''}\t\t${language.type}`
+                text: `${language.language?.length <= 8 || language.language == 'Englisch' ? '\t' : ''}\t${language.type}`
             }));
             br = 1;
         });

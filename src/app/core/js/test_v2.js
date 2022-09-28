@@ -225,3 +225,7 @@ window.onload = function () {
  displayCounter();
 }
  console.log("i am running & loaded 2");
+
+
+
+ 
