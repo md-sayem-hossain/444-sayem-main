@@ -4,12 +4,18 @@ import html2canvas from 'html2canvas';
 import { CommonService } from 'src/app/core/services/common.service';
 import { Router } from '@angular/router';
 import { DomSanitizer } from "@angular/platform-browser";
+
+
 import {
     Document,
     Packer,
     Paragraph,
     TextRun,
     HeadingLevel,
+    Table, 
+    TableCell, 
+    TableRow, 
+    WidthType,
     BorderStyle,
     ImageRun,
     TextWrappingType,
@@ -155,11 +161,7 @@ export class CvPdfPreviewComponent implements OnInit {
             sections: [{
                 properties: {
                     page: {
-                        margin: {
-                            // top: 700,
-                            // bottom: 700,
-                            // left: 700,
-                            // right: 700
+                        margin: { 
                             top: '1.75cm',
                             bottom:'1.75cm',
                             left: '2.5cm',
@@ -194,6 +196,7 @@ export class CvPdfPreviewComponent implements OnInit {
                             }),
                         ],
                     }),
+                    
                     new Paragraph({
                         text: "Lebenslauf",
                         heading: HeadingLevel.HEADING_2
@@ -201,7 +204,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 400,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -216,7 +219,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 100,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -231,7 +234,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 100,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -246,7 +249,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 100,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -258,7 +261,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 100,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -273,7 +276,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 100,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -288,7 +291,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 100,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -303,7 +306,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 100,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -318,7 +321,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 100,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -336,7 +339,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 100,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -358,7 +361,7 @@ export class CvPdfPreviewComponent implements OnInit {
                             },
                         },
                         spacing: {
-                            before: 100,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -373,7 +376,7 @@ export class CvPdfPreviewComponent implements OnInit {
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 150,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -393,14 +396,14 @@ export class CvPdfPreviewComponent implements OnInit {
                             },
                         },
                         spacing: {
-                            before: 150,
+                            before: 50,
                         }
                     }),
 
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 150,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -420,14 +423,14 @@ export class CvPdfPreviewComponent implements OnInit {
                             },
                         },
                         spacing: {
-                            before: 150,
+                            before: 50,
                         }
                     }),
 
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 150,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -447,14 +450,14 @@ export class CvPdfPreviewComponent implements OnInit {
                             },
                         },
                         spacing: {
-                            before: 150,
+                            before: 50,
                         }
                     }),
 
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 150,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -474,14 +477,14 @@ export class CvPdfPreviewComponent implements OnInit {
                             },
                         },
                         spacing: {
-                            before: 150,
+                            before: 50,
                         }
                     }),
 
                     new Paragraph({
                         style: "paragraphStyle",
                         spacing: {
-                            before: 150,
+                            before: 50,
                         },
                         children: [
                             new TextRun({
@@ -512,7 +515,7 @@ export class CvPdfPreviewComponent implements OnInit {
         let schulbildungParagraph = new Paragraph({
             style: "paragraphStyle",
             spacing: {
-                before: 100,
+                before: 50,
             }
         });
         var br = 0;
@@ -533,7 +536,7 @@ export class CvPdfPreviewComponent implements OnInit {
         let sprachenParagraph = new Paragraph({
             style: "paragraphStyle",
             spacing: {
-                before: 100,
+                before: 50,
             }
         });
         var br = 0;
@@ -543,7 +546,7 @@ export class CvPdfPreviewComponent implements OnInit {
                 break: br
             }));
             sprachenParagraph.addChildElement(new TextRun({
-                text: `${language.language?.length <= 8 || language.language == 'Englisch' ? '\t' : ''}\t${language.type}`
+                text: `${language.language?.length <= 8 || language.language == 'Englisch' ? '\t' : ''}\t\t${language.type}`
             }));
             br = 1;
         });
@@ -554,7 +557,7 @@ export class CvPdfPreviewComponent implements OnInit {
         let hobbysParagraph = new Paragraph({
             style: "paragraphStyle",
             spacing: {
-                before: 100,
+                before: 50,
             }
         });
         var br = 0;
@@ -575,7 +578,7 @@ export class CvPdfPreviewComponent implements OnInit {
         let schnupperlehrenParagraph = new Paragraph({
             style: "paragraphStyle",
             spacing: {
-                before: 100,
+                before: 50,
             }
         });
         if(this.trailApprentice){
@@ -603,7 +606,7 @@ export class CvPdfPreviewComponent implements OnInit {
         let referenzenParagraph = new Paragraph({
             style: "paragraphStyle",
             spacing: {
-                before: 100,
+                before: 50,
             }
         });
         var br = 0;

@@ -174,7 +174,7 @@
                     <input type="text" placeholder="{{hobby.leftBoxPlaceHolder}}" class="" [(ngModel)]="hobby.name" />
                 </div>
                 <div class="col-8">
-                    <textarea id="description" placeholder="{{hobby.rightBoxPlaceHolder}}" [maxlength]="78"
+                    <textarea id="description" placeholder="{{hobby.rightBoxPlaceHolder}}" [maxlength]="60"
                         name="comment-area" [(ngModel)]="hobby.description" rows="3"></textarea>
                     <span *ngIf="i>0" class="clickable" (click)="deleteHobbyObj(i)"> &nbsp;&nbsp; &#10060;</span>
                     <span *ngIf="i>0" class="clickable delete-text" (click)="deleteHobbyObj(i)">Löschen</span>
