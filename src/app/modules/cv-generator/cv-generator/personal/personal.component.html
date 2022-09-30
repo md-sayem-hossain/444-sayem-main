@@ -182,7 +182,7 @@
         <div class="col-1-5">
           <label for="siblingsjob" class="label-float-right">Job/Schule</label>
         </div>
-        <div class="col-1-7" style="width: 368px;">
+        <div class="col-1-7" style="width: 48%;">
           <input type="text" id="siblingsjob" placeholder="z.B. Maurer/Primarschüler" [(ngModel)]="sibling.job"
             name="siblingsjob" class="col-9" />
         </div>
@@ -201,9 +201,9 @@
                     <input type="text" style="width: 333px" id="siblingsjob" placeholder="z.B. Maurer/Primarschüler" [(ngModel)]="sibling.job" name="siblingsjob" />
                 </div> -->
         <div style="width: 10px;"></div>
-        <div *ngIf="i!=0" style="width: 10px;">
+        <div *ngIf="i!=0" style="width: auto;" >
           <span class="clickable" (click)="deleteSiblingObj(i)">&#10060;</span>
-          <span class="clickable delete-text" (click)="deleteSiblingObj(i)" style="margin-top: 4px;">Löschen</span>
+          <span class="clickable delete-text" (click)="deleteSiblingObj(i)" style="margin-top: 4px; cursor: pointer !important;">Löschen</span>
         </div>
 
       </div>
@@ -237,53 +237,28 @@
       <div class="ml-7 imag-box clickable" [ngStyle]="{'background-image':'url('+ [croppedImage] +')'}">
 
                 <input class="inputfile" style="cursor: pointer !important;" type="file" (change)="fileChangeEvent($event)" name="file" id="file"
-                    accept="image/*" />
+                    accept="image/*" onchange="OpenModal()" />
 
                 <span *ngIf="croppedImage==''" class="image-content text-center" for="file">
                     <b>Klicke hier!</b><br><br>
                     <b> Foto hochladen</b> <br>
                 </span>
+                <button type="button" class="clickable" *ngIf="showDoneBtn" (click)="imageCropedDone()"  id="open" style="background: #ffdf59; border: none; border-radius: 17px; padding: 6px 25px 6px 25px; margin-top: 14vw; z-index: 15000; margin-right: -20vw;">Bild einfügen</button>
 
             </div>
-            <image-cropper style="height: 215px !important;" *ngIf="showDoneBtn" class="imag-box" [imageChangedEvent]="imageChangedEvent"
+
+            <div >
+
+            
+
+               <image-cropper style="height: 215px !important; margin-top: 5px;" *ngIf="showDoneBtn" class="imag-box" [imageChangedEvent]="imageChangedEvent"
                 [maintainAspectRatio]="true" [aspectRatio]="3/ 4" (imageCropped)="imageCropped($event)"
                 (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()"></image-cropper>
 
                 
-            <button type="button" class="clickable" *ngIf="showDoneBtn" (click)="imageCropedDone()"  id="open" onclick="OpenModal()" style="background: #ffdf59;border: none;border-radius: 17px;padding: 6px 25px 6px 25px;margin-top: 3px; z-index: 1561561;">Bild
-                einfügen</button>
+              </div> 
 
-
-
-
-
-      <!-- Sayem Image Cropper -->
-     
-      <!-- <div class="demo-wrap upload-demo">
-        <div class="container">
-            <div class="grid">
-                <div class="col-md-12">
-                    <span id="year" style="display: none;"> 2017</span>
-                    <div class="actions">
-                        <a class="btn file-btn">
-                            <span>Upload</span>
-                            <input type="file" id="upload" value="Choose a file" accept="image/*" />
-                        </a>
-                        <button class="upload-result">Result</button>
-                    </div>
-                    <div class="upload-msg">
-                        Upload a file to start cropping
-                    </div>
-                    <div class="upload-demo-wrap">
-                        <div id="upload-demo"></div>
-                    </div>
-                </div> 
-            </div>
-        </div>
-    </div> -->
-
-
-
+ 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <script src="/src/app/core/js/sweetalert.min.js"></script>
     <script src="/src/app/core/js/croppie.js"></script>
     <script src="/src/app/core/js/demo.js"></script>
@@ -300,11 +275,9 @@
   </div>
 
 </div>
-<!-- <a class="next-btn" *ngIf="!showDoneBtn" (click)="onNext()">weiter</a> -->
+ 
 
-
-<!-- <a class="next-btn back-btn" (click)="onBack()" style="background-color: white; z-index: 333333; position: fixed;bottom: 40%;left: 5%;">zurück</a> -->
-<a class="next-btn" (click)="onNext()" *ngIf="!showDoneBtn"  style=" z-index: 10000 ; position: fixed;bottom:40%;margin-right: 4%;">weiter</a>
+ <a class="next-btn" (click)="onNext()" *ngIf="!showDoneBtn"  style=" z-index: 10000 ; position: fixed;bottom:40%;margin-right: 4%;">weiter</a>
    
 <div class="floating-window-message">
   <div>
@@ -316,10 +289,9 @@
 
 <div class="main2" id="main2" style="display: none;"  style="z-index: 121351324 !important; position: fixed;"> 
   <div>
-    <!-- <button id="open" onclick="OpenModal()">Opn Modal</button> -->
-  </div>
+   </div>
 </div>
-<div class="container2" id="a" style="z-index: 1000000;"> 
+<div class="container2" id="a" style="z-index: 1000000;" >  
 
 </div> 
 <div class="modal2" id="b"  style="z-index: 121351324 !important;">
