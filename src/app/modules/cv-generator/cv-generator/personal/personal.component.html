@@ -170,7 +170,8 @@
         </div>
       </div>
     </form>
-    <ng-container *ngFor="let sibling of commonService.siblings;let i = index">
+    
+    <!-- <ng-container *ngFor="let sibling of commonService.siblings;let i = index">
       <div class="row">
         <div class="col-1-3">
           <label for="siblingsName">Vorname</label>
@@ -182,32 +183,54 @@
         <div class="col-1-5">
           <label for="siblingsjob" class="label-float-right">Job/Schule</label>
         </div>
-        <div class="col-1-7" style="width: 48%;">
+        <div class="col-1-7" style="width: 368px;">
           <input type="text" id="siblingsjob" placeholder="z.B. Maurer/Primarschüler" [(ngModel)]="sibling.job"
             name="siblingsjob" class="col-9" />
         </div>
 
-        <!-- <div style="width: 95.84px;">
-                    <label for="siblingsName" class="">Vorname</label>
-                </div>
-                <div style="width: 112.8px;">
-                    <input style="width: 112px;" type="text" [(ngModel)]="sibling.firstname" id="siblingsName" name="siblingsName" />
-                </div> -->
-
-        <!-- <div style="width: 110.58px;">
-                    <label for="siblingsjob" class="label-float-right">Job/Schule</label>
-                </div>
-                <div style="width: 333px;">
-                    <input type="text" style="width: 333px" id="siblingsjob" placeholder="z.B. Maurer/Primarschüler" [(ngModel)]="sibling.job" name="siblingsjob" />
-                </div> -->
+        
         <div style="width: 10px;"></div>
-        <div *ngIf="i!=0" style="width: auto;" >
+        <div *ngIf="i!=0" style="width: 10px;" >
           <span class="clickable" (click)="deleteSiblingObj(i)">&#10060;</span>
           <span class="clickable delete-text" (click)="deleteSiblingObj(i)" style="margin-top: 4px; cursor: pointer !important;">Löschen</span>
         </div>
 
       </div>
+    </ng-container> -->
+
+
+
+
+    <ng-container *ngFor="let sibling of commonService.siblings;let i = index">
+      <div class="row">
+        <div class="col-1-3">
+          <label for="siblingssName">Vorname</label>
+        </div>
+        <div class="col-1-7">
+          <input type="text" [(ngModel)]="sibling.firstname" id="siblingsName" class="col-9" name="siblingsName" />
+        </div>
+        <div class="col-1-5">
+          <label for="siblingsjob" class="label-float-right">Job/Schule</label>
+        </div>
+        <div class="col-5-5" style="width:50%;">
+          <input type="text" id="siblingsjob" placeholder="z.B. Maurer/Primarschüler" [(ngModel)]="sibling.job"
+            name="siblingsjob" class="col-9" />
+        </div>
+        <div *ngIf="i!=0" style="width: 10px; z-index: 55555555;"  (click)="deleteSiblingObj(i)">
+          <div>
+                      <span class="clickable" (click)="deleteSiblingObj(i)">&#10060;</span>
+          <span class="clickable delete-text" (click)="deleteSiblingObj(i)" style="margin-top: 4px; cursor: pointer !important;">Löschen</span>
+
+          </div>
+        </div>
+
+      </div>
     </ng-container>
+
+
+
+
+
 
 
 
