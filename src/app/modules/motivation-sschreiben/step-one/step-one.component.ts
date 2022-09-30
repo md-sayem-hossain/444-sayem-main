@@ -78,7 +78,7 @@ export class StepOneComponent implements OnInit {
         dfPlace: [''],
         dfBeruf: [''],
         ebaOrEfz: ['EBA'],
-        schreibst: ['Frau:'],
+        schreibst: ['unknown'],
         schreibstName: [''],
         schreibst1Name: [''],
         schreibst2Name: ['']

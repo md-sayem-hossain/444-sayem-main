@@ -25,8 +25,8 @@ export class CommonService {
   //=============================== Generate motivation-sschreiben Section Start ================================//
   public msStep: Number = 1
   public msType = 'lehrstelle' //schnupperlehre
+  public schreibst = 'unknown' //schnupperlehre
   public msPersonalForm: any
-
   lehrStepOneData = {
     textArea10: '',
     textArea11: '',
@@ -420,6 +420,11 @@ export class CommonService {
     let msType = localStorage.getItem('msType')
     if (msType) {
       this.msType = JSON.parse(msType)
+    }
+
+    let schreibst = localStorage.getItem('schreibst')
+    if (schreibst) {
+      this.schreibst = JSON.parse(schreibst)
     }
 
     let msPersonalForm = localStorage.getItem('msPersonalForm')

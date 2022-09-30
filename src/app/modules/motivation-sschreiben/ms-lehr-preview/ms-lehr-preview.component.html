@@ -1,3 +1,4 @@
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <div class="cv-generator" id="cvGenerator">
     <div class="content auto-Width">
         <div class="page page-ms" id="pdf-page" #content style="  padding-right: 2.5cm; padding-left: 2.5cm;   padding-top: 2.5cm;">
@@ -15,10 +16,12 @@
                     <div class="mb-10"></div>
                     <p align="justify">
                         {{commonService.msPersonalForm?.derFirma}}<br>
+
                         <span *ngIf="commonService.msPersonalForm.schreibst != 'unknown'">
                         {{commonService.msPersonalForm?.schreibst}} {{commonService.msPersonalForm?.schreibst1Name +'
                         '+commonService.msPersonalForm?.schreibst2Name }}<br>
-                        </span>
+                        </span> 
+
                         {{commonService.msPersonalForm?.dfStreet }}<br>
                         {{commonService.msPersonalForm?.dfZip +' '+commonService.msPersonalForm?.dfPlace}}
 
@@ -35,7 +38,7 @@
                     <p class="mb-15px" *ngIf="commonService.msPersonalForm?.schreibst=='unknown'">
                         Sehr geehrte Damen und Herren
                     </p>
-                    <p *ngIf="commonService.msPersonalForm?.schreibst!='unknown'">
+                    <p *ngIf="commonService.msPersonalForm?.schreibst != 'unknown'">
                         Sehr
                         <span *ngIf="commonService.msPersonalForm?.schreibst=='Frau'">geehrte</span>
                         <span *ngIf="commonService.msPersonalForm?.schreibst=='Herr'">geehrter</span>
