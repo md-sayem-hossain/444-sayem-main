@@ -567,7 +567,7 @@ export class CvPdfPreviewComponent implements OnInit {
                 break: br
             }));
             hobbysParagraph.addChildElement(new TextRun({
-                text: `${hobby.name?.length <= 6 ? '\t' : ''}\t\t${hobby.description}`
+                text: `${hobby.name?.length >=15 ? '\t' :hobby.name?.length >= 6? '\t\t' : hobby.name?.length <=6 ? '\t\t\t' :  ''}${hobby.description}`
             }));
             br = 1;
         });
