@@ -546,7 +546,7 @@ export class CvPdfPreviewComponent implements OnInit {
                 break: br
             }));
             sprachenParagraph.addChildElement(new TextRun({
-                text: `${language.language?.length <= 8 || language.language == 'Englisch' ? '\t' : ''}\t\t${language.type}`
+                text: `${language.language?.length < 7 ? '\t' : ''}\t\t${language.type}`
             }));
             br = 1;
         });
@@ -567,7 +567,7 @@ export class CvPdfPreviewComponent implements OnInit {
                 break: br
             }));
             hobbysParagraph.addChildElement(new TextRun({
-                text: `${hobby.name?.length <= 8 ? '\t' : ''}\t\t${hobby.description}`
+                text: `${hobby.name?.length <= 6 ? '\t' : ''}\t\t${hobby.description}`
             }));
             br = 1;
         });

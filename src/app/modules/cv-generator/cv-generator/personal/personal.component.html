@@ -216,7 +216,7 @@
           <input type="text" id="siblingsjob" placeholder="z.B. Maurer/Primarschüler" [(ngModel)]="sibling.job"
             name="siblingsjob" class="col-9" />
         </div>
-        <div *ngIf="i!=0" style="width: 10px; z-index: 55555555;"  (click)="deleteSiblingObj(i)">
+        <div *ngIf="i!=0" style="width: 10px; z-index: 20;"  (click)="deleteSiblingObj(i)">
           <div>
                       <span class="clickable" (click)="deleteSiblingObj(i)">&#10060;</span>
           <span class="clickable delete-text" (click)="deleteSiblingObj(i)" style="margin-top: 4px; cursor: pointer !important;">Löschen</span>
@@ -266,7 +266,7 @@
                     <b>Klicke hier!</b><br><br>
                     <b> Foto hochladen</b> <br>
                 </span>
-                <button type="button" class="clickable" *ngIf="showDoneBtn" (click)="imageCropedDone()"  id="open" style="background: #ffdf59; border: none; border-radius: 17px; padding: 6px 25px 6px 25px; margin-top: 14vw; z-index: 15000; margin-right: -20vw;">Bild einfügen</button>
+                <button type="button" class="clickable" *ngIf="showDoneBtn" (click)="imageCropedDone()"  id="open" style="background: #ffdf59; border-radius: 3px;  margin-top: 17vw; z-index: 15000; margin-right: -22vw;">Bild einfügen</button>
 
             </div>
 
@@ -274,7 +274,7 @@
 
             
 
-               <image-cropper style="height: 215px !important; margin-top: 5px;" *ngIf="showDoneBtn" class="imag-box" [imageChangedEvent]="imageChangedEvent"
+               <image-cropper style="height: 215px !important; margin-top: 5px;z-index: 22;" *ngIf="showDoneBtn" class="imag-box" [imageChangedEvent]="imageChangedEvent"
                 [maintainAspectRatio]="true" [aspectRatio]="3/ 4" (imageCropped)="imageCropped($event)"
                 (cropperReady)="cropperReady()" (loadImageFailed)="loadImageFailed()"></image-cropper>
 
@@ -304,7 +304,7 @@
    
 <div class="floating-window-message">
   <div>
-      <img src="assets/images/Notify1.png" style="width: 27%; z-index: 10; float: right; position: absolute; top: 0; margin-top: 0%; margin-right: -20%; right: 0;" alt="">
+      <img src="assets/images/Notify1.png" style="width: 25%; z-index: 10; float: right; position: absolute; top: 0; margin-top: -10%; margin-right: -20%; right: 0;" alt="">
   </div>
 </div>
 
