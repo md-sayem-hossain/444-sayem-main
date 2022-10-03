@@ -176,7 +176,7 @@
                                 }} </span>
                         </div>
                         <!-- <div class="mb-10"></div> -->
-                        <ng-container *ngIf="commonService.trailApprentice.length < 6">
+                        <ng-container *ngIf="commonService.trailApprentice.length < 4">
                             <div class="line flex-wrap">
                                 <div class="reference-box">
                                     <span class="">
@@ -203,7 +203,7 @@
                             </div>
                         </ng-container>
 
-                        <ng-container *ngIf="commonService.trailApprentice.length > 5">
+                        <ng-container *ngIf="commonService.trailApprentice.length >= 4">
                             <div class="line flex-wrap">
                                 <div class="reference-box"
                                     *ngFor="let reference of commonService.references; let i=index">
