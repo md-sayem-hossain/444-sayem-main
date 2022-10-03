@@ -11,3 +11,7 @@
 .content.content2 {
   display: contents !important;
 }
+
+.floating-window-message  img{
+  display: none !important;
+}

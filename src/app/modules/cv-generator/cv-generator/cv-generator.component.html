@@ -19,14 +19,17 @@
         <ng-container *ngIf="commonService.step==3">
             <span class="heading-btn wth-60">SCHNUPPERLEHREN UND REFERENZEN</span>
             <app-trail-and-reference></app-trail-and-reference>
-        </ng-container>
-
-
-         <!-- Four -step -->
-        
+        </ng-container> 
     </div>
     <ng-container *ngIf="commonService.step==4">
         <!-- <span class="heading-btn wth-60">CV Preview</span> -->
         <app-cv-pdf-preview></app-cv-pdf-preview>
     </ng-container>
+
+    <div class="floating-window-message"  *ngIf="commonService.step!=4">
+        <div>
+            <img src="assets/images/Notify1.png" style="width: 17%; z-index: 10; float: right; position: absolute; top: 0; margin-top: 9%; right: 0;" alt="">
+        </div>
+      </div>
 </div>
+
