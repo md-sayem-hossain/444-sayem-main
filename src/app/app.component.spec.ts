@@ -23,13 +23,13 @@ describe('AppComponent', () => {
   it(`should have as title 'ehrstell-cv-maker'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ehrstell-cv-maker');
+    expect(app.title).toEqual('lehrstell-cv-maker');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('ehrstell-cv-maker app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('lehrstell-cv-maker app is running!');
   });
 });

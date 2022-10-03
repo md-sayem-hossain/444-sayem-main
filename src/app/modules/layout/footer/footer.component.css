@@ -14,6 +14,8 @@
   position: fixed;
   left: 0;
   bottom: 0;
+  z-index: 15155;
+
 }
 
 .footer-content span {

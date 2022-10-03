@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { BewerbungsgesprachRoutingModule } from './bewerbungsgesprach-routing.module';
+
 import { StepOneComponent } from './step-one/step-one.component';
+
 import { StepTwoLehrComponent } from './step-two-lehr/step-two-lehr.component';
-import { StepThreeLehrComponent } from './step-three-lehr/step-three-lehr.component';
 import { StepTwoSchnComponent } from './step-two-schn/step-two-schn.component';
+
+import { StepThreeLehrComponent } from './step-three-lehr/step-three-lehr.component';
 import { StepThreeSchnComponent } from './step-three-schn/step-three-schn.component';
 
 import { StepFourLehrComponent } from './step-four-lehr/step-four-lehr.component';
@@ -26,17 +30,24 @@ import { MsSchnPreviewComponent } from './ms-schn-preview/ms-schn-preview.compon
 @NgModule({
   declarations: [
     BewerbungsgesprachComponent,
+    
     StepOneComponent,
+
     StepTwoLehrComponent,
-    StepThreeLehrComponent,
     StepTwoSchnComponent,
+
+    StepThreeLehrComponent,
     StepThreeSchnComponent,
+
     StepFourLehrComponent,
     StepFourSchnComponent,
+
     StepFiveLehrComponent,
     StepFiveSchnComponent,
+
     StepSixLehrComponent,
     StepSixSchnComponent,
+
     MsLehrPreviewComponent,
     MsSchnPreviewComponent
   ],
