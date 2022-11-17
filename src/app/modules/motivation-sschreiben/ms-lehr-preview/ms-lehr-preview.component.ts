@@ -258,7 +258,7 @@ export class MsLehrPreviewComponent implements OnInit {
 
                 new TextRun({
                   font: 'Calibri',
-                  break: 2,
+                  break: 3,
                   size: 24,
                   bold: true,
                   text: `${this.commonService?.msType == 'lehrstelle' ? 'Bewerbung um eine Lehrstelle als ' : 'Bewerbung um eine Schnupperlehre als '}`,
@@ -284,7 +284,7 @@ export class MsLehrPreviewComponent implements OnInit {
 
                 new TextRun({
                   font: 'Calibri',
-                  break: 2,
+                  break: 3,
                   size: 24, 
                   text: `${this.commonService.msPersonalForm?.schreibst == 'unknown' ? 'Sehr geehrte Damen und Herren' : this.commonService.msPersonalForm?.schreibst == 'Frau' ? 'Sehr geehrte Frau '+this.commonService.msPersonalForm?.schreibst2Name : '' + this.commonService.msPersonalForm?.schreibst == 'Herr' ? 'Sehr geehrter Herr '+ this.commonService.msPersonalForm?.schreibst2Name : ''}`,
                 }),

@@ -231,7 +231,7 @@ export class MsSchnPreviewComponent implements OnInit {
                 // </p>
 
                 new TextRun({
-                  break: 2,
+                  break: 3,
                   size: 24,
                   font: 'Calibri',
                   bold: true,
@@ -257,7 +257,7 @@ export class MsSchnPreviewComponent implements OnInit {
                 //       </p>
 
                 new TextRun({
-                  break: 2,
+                  break: 3,
                   font: 'Calibri',
                   size: 24,
                   text: `${this.commonService.msPersonalForm?.schreibst == 'unknown' ? 'Sehr geehrte Damen und Herren' : this.commonService.msPersonalForm?.schreibst == 'Frau' ? 'Sehr geehrte Frau '+this.commonService.msPersonalForm?.schreibst2Name : '' + this.commonService.msPersonalForm?.schreibst == 'Herr' ? 'Sehr geehrter Herr '+ this.commonService.msPersonalForm?.schreibst2Name : ''}`,
