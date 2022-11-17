@@ -1,8 +1,7 @@
 <div class="first-step">
     <div class="left-side">
-        <form [formGroup]="msPersonalForm">
-            
-
+        <form [formGroup]="msPersonalForm"> 
+ 
             <div class="row">
                 <div style="width: auto;">
                     <label for="date" class="">Ich schreibe ein Motivationsschreiben für eine:</label>
@@ -11,8 +10,8 @@
                     <!-- <select style="width: 215px; margin-left: 10px;" data-placeholder="" > -->
 
                         <select style="width: 215px; margin-left: 10px;" data-placeholder="" [ngModelOptions]="{standalone: true}"
-                        [(ngModel)]="commonService.msType"  >
-                        <option value="lehrstelle">Lehrstelle</option>
+                        [(ngModel)]="commonService.msType"   >
+                        <option value="lehrstelle" >Lehrstelle</option> 
                         <option value="schnupperlehre" selected>Schnupperlehre</option>
 
                     </select>
