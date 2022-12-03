@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './modules/shared/components/about/about.component';
 import { HomeComponent } from './modules/cv-generator/home/home.component';
 import { ImpressumComponent } from './modules/shared/components/impressum/impressum.component';
+import { BerufswahlUnterrichtsmaterialComponent } from './modules/shared/components/berufswahl-unterrichtsmaterial/berufswahl-unterrichtsmaterial.component';
 import { AgbComponent } from './modules/shared/components/agb/agb.component';
 import { DatenschutzerklärungComponent } from './modules/shared/components/datenschutzerklärung/datenschutzerklärung.component';
 import { ErrorComponent } from './modules/shared/components/error/error.component';
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, pathMatch: 'full' },
   { path: 'agb', component: AgbComponent, pathMatch: 'full' },
   { path: 'impressum', component: ImpressumComponent, pathMatch: 'full' },
+  { path: 'berufswahl-unterrichtsmaterial', component: BerufswahlUnterrichtsmaterialComponent, pathMatch: 'full' },
   { path: 'über-uns', component: AboutComponent, pathMatch: 'full' },
   { path: 'datenschutzerklärung', component: DatenschutzerklärungComponent, pathMatch: 'full' },
   { path: 'error', component: ErrorComponent, pathMatch: 'full' },

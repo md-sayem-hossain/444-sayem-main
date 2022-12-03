@@ -51,9 +51,7 @@ function CreatePDFfromHTML() {
     pdf.save("invoice_<?php echo $trackingNumber ;?>.pdf");
     $(".page").hide();
   });
-}
-
-
+} 
 
 
 function modelOnClick() {
@@ -84,11 +82,11 @@ function modelOff3Click() {
 }
 
 function modelOff4Click() {
-  document.getElementById("myModal3").attr("display","none !important");
+  document.getElementById("myModal3").attr("display", "none !important");
 }
- 
 
- console.log("i am running & loaded");
+
+console.log("i am running & loaded");
 // if (screen.width > 1024) {
 //   // document.getElementById("myModal3").style.display = "block";
 //   $("#myModal3").modal('show');
@@ -113,54 +111,54 @@ function generate() {
         children: [
           new docx.Paragraph({
             children: [
-             new docx.TextRun({
+              new docx.TextRun({
                 text: "1) Wer hat dich beim Schreiben deines Bewerbungsdossiers unterstützt?",
                 bold: true,
-               }),
-                new docx.TextRun({
+              }),
+              new docx.TextRun({
                 text: "DOCX browser Word document generation",
                 spacing: {
-                   before: 400,
-                       },
+                  before: 400,
+                },
                 size: 50,
-                break:1,
+                break: 1,
                 italics: true,
                 color: "8282ff",
               }),
-               new docx.TextRun({
+              new docx.TextRun({
                 text: "Note:",
-                break:1,
+                break: 1,
               }),
-                new docx.TextRun({
+              new docx.TextRun({
                 text: "2) Wie sind deine Schulnoten?",
                 bold: true,
-                break:1,
+                break: 1,
               }),
-                new docx.TextRun({
+              new docx.TextRun({
                 text: "",
-                break:1,
+                break: 1,
                 italics: true,
               }),
               new docx.TextRun({
                 text: "Note:",
-                break:1,
+                break: 1,
               }),
-               new docx.TextRun({
+              new docx.TextRun({
                 text: "3) Wie sind deine Zeugnisse (Verhalten/ Absenzen)?",
                 bold: true,
-                 break:1,
+                break: 1,
               }),
-                new docx.TextRun({
+              new docx.TextRun({
                 text: " ",
-                break:1,
+                break: 1,
                 italics: true,
                 color: "8282ff",
               }),
               new docx.TextRun({
                 text: "Note:",
-                break:1,
-              })           
-        ]
+                break: 1,
+              })
+            ]
           })
         ]
       }
@@ -182,16 +180,16 @@ function OpenModal() {
   document.getElementById("main2").style.display = "block";
 
   document.getElementById("a").style.display = "block";
-  document.getElementById("b").style.display = "block"; 
-  setTimeout(function() {
+  document.getElementById("b").style.display = "block";
+  setTimeout(function () {
     CloseModal();
-}, 4000);
+  }, 4000);
 }
 
 function CloseModal() {
   document.getElementById("main2").style.display = "none";
   document.getElementById("a").style.display = "none";
-  document.getElementById("b").style.display = "none";  
+  document.getElementById("b").style.display = "none";
 }
 
 
@@ -202,33 +200,54 @@ function CloseModal() {
 // }
 
 function popupimgclose() {
-  document.getElementById("popup").style.display = "none";  
+  document.getElementById("popup").style.display = "none";
 }
- 
+
 
 function displayCounter() {
   if ('localStorage' in window && window['localStorage'] !== null) {
-     ('counter' in localStorage && localStorage['counter'] !== null) ? localStorage['counter']++ : localStorage['counter'] = 0;
-     var container = document.getElementById('container');
-     if (!container) {  return };
-     console.log(localStorage['counter']);
-     if(localStorage['counter']>2){
-      document.getElementById("popup").style.display = "block";  
-     }
-     else{
-      document.getElementById("popup").style.display = "none";  
+    ('counter' in localStorage && localStorage['counter'] !== null) ? localStorage['counter']++ : localStorage['counter'] = 0;
+    var container = document.getElementById('container');
+    if (!container) { return };
+    console.log(localStorage['counter']);
+    if (localStorage['counter'] > 2) {
+      document.getElementById("popup").style.display = "block";
+    }
+    else {
+      document.getElementById("popup").style.display = "none";
       localStorage.clear();
-     } 
- } 
+    }
+  }
 }
 window.onload = function () {
- displayCounter();
- 
+  displayCounter();
+
 }
+
+
+console.log("i am running & loaded 244");
+
   
-
- console.log("i am running & loaded 2");
-
-
+// Import the filesystem module
 
  
+// function readTextFile(file)
+// {
+//     var rawFile = new XMLHttpRequest();
+//     rawFile.open("GET", file, false);
+//     rawFile.onreadystatechange = function ()
+//     {
+//         if(rawFile.readyState === 4)
+//         {
+//             if(rawFile.status === 200 || rawFile.status == 0)
+//             {
+//                 var allText = rawFile.responseText;
+//                 allText= allText.split("\n");
+//                 alert(allText[0]);
+//             }
+//         }
+//     }
+//     rawFile.send(null);
+// }
+
+// readTextFile("/assets/documents/myfile.txt");

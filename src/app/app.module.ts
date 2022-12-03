@@ -9,6 +9,7 @@ import { HeaderComponent } from './modules/layout/header/header.component';
 import { registerLocaleData } from '@angular/common';
 import localeDe from '@angular/common/locales/de-CH';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BerufswahlUnterrichtsmaterialComponent } from './modules/shared/components/berufswahl-unterrichtsmaterial/berufswahl-unterrichtsmaterial.component';
 
 registerLocaleData(localeDe);
 @NgModule({
@@ -16,6 +17,7 @@ registerLocaleData(localeDe);
     AppComponent,
     HeaderComponent,
     FooterComponent,
+    BerufswahlUnterrichtsmaterialComponent,
 
   ],
   imports: [
