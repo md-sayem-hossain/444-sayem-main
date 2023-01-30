@@ -14,8 +14,8 @@ export class CommonService {
   public languages = [{ language: '', type: '' }]
   public custLanguages = [{ language: '', type: '' }]
   public hobbys = [
-    { name: '', description: '', leftBoxPlaceHolder: 'Karate', rightBoxPlaceHolder: 'Ich mache seit 4 Jahren Karate und habe den grünen Gürtel' },
-    { name: '', description: '', leftBoxPlaceHolder: 'Freunde treffen', rightBoxPlaceHolder: 'Ich treffe mich in meiner Freizeit gerne mit Freunden und gehe gerne shoppen in der Stadt' }
+    { name: '', description: '', leftBoxPlaceHolder: 'Karate', rightBoxPlaceHolder: 'Ich mache seit 4 Jahren Karate und habe den grünen Gürtel.' },
+    { name: '', description: '', leftBoxPlaceHolder: 'Fotografie', rightBoxPlaceHolder: 'Das Fotografieren ist meine grosse Leidenschaft.' }
   ]
   public trailApprentice = [{ von: '', bis: '', beruf: '', firma: '', ort: '' }]
   public references = [{ firstName: '', lastName: '', email: '', mobile: '', function: '' }]
@@ -198,8 +198,8 @@ export class CommonService {
     this.languages = [{ language: '', type: '' }]
     this.custLanguages = [{ language: '', type: '' }]
     this.hobbys = [
-      { name: '', description: '', leftBoxPlaceHolder: 'Karate', rightBoxPlaceHolder: 'Ich mache seit 4 Jahren Karate und habe den grünen Gürtel' },
-      { name: '', description: '', leftBoxPlaceHolder: 'Freunde treffen', rightBoxPlaceHolder: 'Ich treffe mich in meiner Freizeit gerne mit Freunden und gehe gerne shoppen in der Stadt' }
+      { name: '', description: '', leftBoxPlaceHolder: 'Karate', rightBoxPlaceHolder: 'Ich mache seit 4 Jahren Karate und habe den grünen Gürtel.' },
+      { name: '', description: '', leftBoxPlaceHolder: 'Fotografie', rightBoxPlaceHolder: 'Das Fotografieren ist meine grosse Leidenschaft.' }
     ];
     this.trailApprentice = [{ von: '', bis: '', beruf: '', firma: '', ort: '' }]
     this.references = [{ firstName: '', lastName: '', email: '', mobile: '', function: '' }]
