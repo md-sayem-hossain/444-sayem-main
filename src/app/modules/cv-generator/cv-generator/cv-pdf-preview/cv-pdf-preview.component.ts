@@ -561,13 +561,24 @@ export class CvPdfPreviewComponent implements OnInit {
             }
         });
         var br = 0;
+        // this.commonService.hobbys.forEach(hobby => {
+        //     hobbysParagraph.addChildElement(new TextRun({
+        //         text: `${hobby.name.length > 20 ? hobby.name.substring(0,18): hobby.name}`,
+        //         break: br
+        //     }));
+        //     hobbysParagraph.addChildElement(new TextRun({
+        //         text: `${hobby.name?.length >=15 ? '\t' :hobby.name?.length >= 6? '\t\t' : hobby.name?.length <=6 ? '\t\t\t' :  ''}${hobby.description}`
+        //     }));
+        //     br = 1;
+        // });
+
         this.commonService.hobbys.forEach(hobby => {
             hobbysParagraph.addChildElement(new TextRun({
-                text: `${hobby.name.length > 20 ? hobby.name.substring(0,18): hobby.name}`,
+                text: `${hobby.name}`,
                 break: br
             }));
             hobbysParagraph.addChildElement(new TextRun({
-                text: `${hobby.name?.length >=15 ? '\t' :hobby.name?.length >= 6? '\t\t' : hobby.name?.length <=6 ? '\t\t\t' :  ''}${hobby.description}`
+                text: `${hobby.name?.length >=13 ? '\t' :hobby.name?.length >= 6? '\t\t' : hobby.name?.length <=6 ? '\t\t\t' :  ''}${hobby.description}`
             }));
             br = 1;
         });
