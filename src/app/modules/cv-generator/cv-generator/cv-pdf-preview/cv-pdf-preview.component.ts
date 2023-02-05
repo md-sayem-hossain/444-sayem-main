@@ -546,7 +546,7 @@ export class CvPdfPreviewComponent implements OnInit {
                 break: br
             }));
             sprachenParagraph.addChildElement(new TextRun({
-                text: `${language.language?.length < 7 ? '\t' : ''}\t\t${language.type}`
+                text: `$\t\t\t${language.type}`
             }));
             br = 1;
         });
